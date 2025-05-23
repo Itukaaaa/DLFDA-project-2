@@ -43,7 +43,7 @@ def init_logger():
                         format='%(asctime)s %(message)s',
                         datefmt='%H:%M:%S')
     def _log(msg:str):
-        print(msg);
+        print(msg)
         logging.info(msg)
     _log(f"Log file: {log_file}")
     return _log
