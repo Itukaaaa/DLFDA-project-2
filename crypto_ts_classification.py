@@ -74,9 +74,16 @@ class CFG:
 # ────────────────────────────────────────────────────────────────────────────
 
 def chronological_split(cfg:CFG, log):
-    df=pd.read_csv(cfg.csv)
-    df['trade_time']=pd.to_datetime(df['trade_time'])
-    df=df.sort_values('trade_time').reset_index(drop=True)
+    df = pd.read_csv(cfg.csv)
+    df['trade_time'] = pd.to_datetime(df['trade_time'])
+    df = df.sort_values('trade_time').reset_index(drop=True)
+
+    # 对 high, low, close 执行 (值 - open) / open 操作
+    for col in ['high', 'low', 'close']:
+        df[col] = (df[col] - df['open']) / df['open']
+
+    # 删除 open 列
+    df.drop(columns=['open'], inplace=True)
     tot=len(df)
     tr_end=int(tot*(1-cfg.test_pct-cfg.val_pct))
     val_end=tr_end+int(tot*cfg.val_pct)
