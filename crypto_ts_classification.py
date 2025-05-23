@@ -119,7 +119,7 @@ class FinDataset(Dataset):
         return torch.from_numpy(x), torch.tensor(y)
 
 def make_loaders(cfg:CFG,paths:dict,log):
-    base=['open','high','low','close','volume']
+    base=['high','low','close','volume']
     feats=base+(cfg.extra_feats or [])
     tr=FinDataset(paths['train'],cfg.seq_len,feats,cfg.label_col,log)
     val=FinDataset(paths['val'],cfg.seq_len,feats,cfg.label_col,log)
