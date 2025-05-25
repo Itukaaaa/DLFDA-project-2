@@ -35,10 +35,11 @@ class CFG:
     epochs:int=50
     patience:int=7
     model:str="transformer"
-    hidden:int=128
+    hidden:int=256
     layers:int=2
-    dropout:float=0.2
+    dropout:float=0.4
     nhead:int=4
+    resample: bool = True 
     extra_feats:List[str]|None=None
     device:str="cuda" if torch.cuda.is_available() else "cpu"
 
@@ -69,7 +70,7 @@ def build_model(model_type: str, input_dim: int, num_classes: int, ckpt: str, de
 @torch.no_grad()
 def infer(model, loader, device):
     preds = []
-    for x in loader:                       # x:[B, L, F]
+    for x, _ in loader:                       # x:[B, L, F]
         x = x.to(device)
         out = model(x)                    # logits
         pred = out
@@ -100,8 +101,10 @@ def main():
 
     # 5) 将预测写回 csv（与最后一个时间步对齐）
     out_df = pd.read_csv(csv_path).sort_values("trade_time").reset_index(drop=True)
-    out_df = out_df.iloc[args.seq - 1:]        # 对齐滑动窗口最后一步
-    out_df["pred"] = predictions               # 顺序一致
+    out_df = out_df.iloc[args.seq:]        # 对齐滑动窗口最后一步
+    out_df["pred0"] = predictions[:,0]
+    out_df["pred1"] = predictions[:,1]
+    out_df["pred2"] = predictions[:,2]
     out_df.to_csv(args.outfile, index=False)
     print(f"✅  推断完成，已保存到 {args.outfile}\n"
           f"    rows={len(out_df)}, seq_len={args.seq}")
