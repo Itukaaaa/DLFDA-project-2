@@ -2,121 +2,26 @@ import pandas as pd
 import numpy as np
 import torch
 from torch.utils.data import Dataset, DataLoader
+from typing import List
 import os
 
-class FinancialDataset(Dataset):
-    def __init__(self, csv_file, seq_length=300, num_classes=9, resample=False, target_samples_per_class=1000000):
-        """
-        Args:
-            csv_file (string): 数据集CSV文件的路径
-            seq_length (int): 输入序列的长度（天数）
-            num_classes (int): 标签的类别数量
-            resample (bool): 是否进行重采样均衡类别
-            target_samples_per_class (int): 重采样时每个类别的目标样本数量
-        """
-        # 读取CSV文件
-        self.data_frame = pd.read_csv(csv_file)
-        
-        # 提取特征和标签
-        self.features = self.data_frame[['open', 'high', 'low', 'close', 'volume']].values
-        self.labels = self.data_frame['label'].values
-        
-        # 序列长度
-        self.seq_length = seq_length
-        
-        # 类别数量
-        self.num_classes = num_classes
-        
-        # 计算有效的样本数量
-        self.valid_idx = len(self.features) - self.seq_length
-        
-        # 创建有效样本的索引
-        self.indices = list(range(self.valid_idx))
-        
-        # 如果需要重采样，创建重采样索引
-        if resample and self.valid_idx > 0:
-            self.indices = self._get_resampled_indices(target_samples_per_class)
-        
-        self.normalize_features()
-            
-    def _get_resampled_indices(self, target_samples_per_class):
-        """获取重采样后的索引列表，确保每个类别样本数量相同
-        
-        Args:
-            target_samples_per_class (int): 每个类别的目标样本数量
-            
-        Returns:
-            list: 重采样后的索引列表
-        """
-        # 按类别划分索引
-        class_indices = [[] for _ in range(self.num_classes)]
-        for idx in range(self.valid_idx):
-            label = int(self.labels[idx + self.seq_length - 1])
-            class_indices[label].append(idx)
-        
-        # 重采样
-        resampled_indices = []
-        for label, indices in enumerate(class_indices):
-            n_samples = len(indices)
-            
-            if n_samples == 0:
-                print(f"警告: 类别 {label} 没有样本")
-                continue  # 跳过没有样本的类别
-            
-            # 计算需要重复的次数
-            repeats = target_samples_per_class // n_samples
-            remainder = target_samples_per_class % n_samples
-            
-            # 添加完整重复的部分
-            for _ in range(repeats):
-                resampled_indices.extend(indices)
-            
-            # 添加余数部分（随机抽样）
-            if remainder > 0:
-                extra_indices = np.random.choice(indices, remainder, replace=False)
-                resampled_indices.extend(extra_indices)
-        
-        # 随机打乱
-        np.random.shuffle(resampled_indices)
-        
-        return resampled_indices
-        
-    def normalize_features(self):
-        """对特征进行归一化处理"""
-        # 对每个特征分别进行归一化
-        for i in range(self.features.shape[1]):
-            mean = np.mean(self.features[:, i])
-            std = np.std(self.features[:, i])
-            if std != 0:
-                self.features[:, i] = (self.features[:, i] - mean) / std
-            
-    def __len__(self):
-        """返回数据集中样本的数量"""
-        return len(self.indices)
-    
-    def __getitem__(self, idx):
-        """获取指定索引的样本
-        
-        Args:
-            idx (int): 样本索引
-            
-        Returns:
-            tuple: (x, y) 其中 x 是输入特征序列,y 是one-hot编码的目标标签
-        """
-        if idx >= len(self.indices):
-            raise IndexError("索引超出范围")
-            
-        # 获取实际的样本索引
-        sample_idx = self.indices[idx]
-        
-        # 提取序列数据
-        x = self.features[sample_idx:sample_idx + self.seq_length]
-        # 使用序列最后一天对应的标签
-        label = int(self.labels[sample_idx + self.seq_length - 1])
-        
-        x = torch.FloatTensor(x)
-        y = torch.tensor(label, dtype=torch.long)
-        return x, y
+class FinDataset(Dataset):
+    def __init__(self,csv_file:str,seq_len:int,feat_cols:List[str],label_col:str,log = -1):
+        self.df=pd.read_csv(csv_file)
+        assert label_col in self.df.columns, f"{csv_file} 缺少列 {label_col}"
+        self.labels=self.df[label_col].values.astype(int)
+        if self.labels.min()==1: self.labels-=1  # 1-based -> 0-based
+        self.features=self.df[feat_cols].values.astype(np.float32)
+        self.features=(self.features-self.features.mean(0))/(self.features.std(0)+1e-9)
+        self.seq_len=seq_len
+        self.valid=len(self.df)-seq_len
+        if log != -1:
+            log(f"{csv_file.name}: samples={self.valid}  class_dist={np.bincount(self.labels)[:4]}")
+    def __len__(self):return self.valid
+    def __getitem__(self,idx):
+        x=self.features[idx:idx+self.seq_len]
+        y=self.labels[idx+self.seq_len-1]
+        return torch.from_numpy(x), torch.tensor(y)
 
 def get_data_loaders(batch_size=128, seq_length=300, shuffle=True, num_workers=4, resample_train=False, target_samples_per_class=350000, verbose=True):
     """创建训练集、验证集和测试集的DataLoader
