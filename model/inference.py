@@ -78,7 +78,11 @@ def infer(model, loader, device):
     return np.concatenate(preds, axis=0)
 
 # ──────────────────────────────────────────────────────────────────────────────
+
 def main():
+    print("========== 开始推断 ==========")
+    print(torch.cuda.is_available())
+    print("当前设备:", CFG.device)
     args = parse_args()
     csv_path  = Path(args.csv)
     ckpt_path = Path(args.ckpt)
@@ -92,12 +96,14 @@ def main():
     # 2) 构建数据集
     ds = FinDataset(csv_path, args.seq, feats, CFG.label_col)
     dl = DataLoader(ds,CFG.batch,True,num_workers=4,pin_memory=True)
-
+    print("✅  数据集加载完成，样本数:", len(ds))
     # 3) 构建并载入模型
     model = build_model(args.model, n_feat, num_classes, ckpt_path, args.device)
-
+    print("✅  模型加载完成，类型:", args.model, "输入特征数:", n_feat, "类别数:", num_classes)
+    
     # 4) 推断
     predictions = infer(model, dl, args.device)
+    print("✅  推断完成，预测结果形状:", predictions.shape)
 
     # 5) 将预测写回 csv（与最后一个时间步对齐）
     out_df = pd.read_csv(csv_path).sort_values("trade_time").reset_index(drop=True)
