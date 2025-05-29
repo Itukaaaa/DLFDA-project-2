@@ -14,11 +14,6 @@ def process_data(filename="infer_result/example.csv",use_threshold = True,long_t
     for col in pred_columns:
         df[col] = np.exp(df[col]) / df['total_exp']
     
-    # 对pred0, pred1, pred2三列进行统计性描述
-    stats_description = df[pred_columns].describe()
-    print("预测列的统计描述:")
-    print(stats_description)
-    
     # 根据三列中的最大值创建预测标签
     df['predicted_label'] = df[pred_columns].idxmax(axis=1)       
         
@@ -75,7 +70,7 @@ def calculate_10min_returns(relative_returns, initial_price=7000):
 
 if __name__ == "__main__":
     # 调用测试函数
-    df = process_data(use_threshold=True, long_threshold=0.53, short_threshold=0.5)
+    df = process_data(filename = "infer_result/example2.csv",use_threshold=True, long_threshold=0.52, short_threshold=0.48)
     return_df = calculate_10min_returns(df['close'])
     
     true_labels = df['label'].values
