@@ -1,0 +1,12 @@
+21:15:50 Log file: logs/train_20250526_211550.log
+21:16:00 ✔ Using only first 30% of data: 839010 / 2796701 rows
+21:16:22 ✔ Split → 587307/83901/167802
+21:16:24 train.csv: samples=587187  class_dist=[179820 219864 187623]
+21:16:25 val.csv: samples=83781  class_dist=[24478 34408 25015]
+21:16:25 test.csv: samples=167682  class_dist=[50083 68455 49264]
+21:16:33 [train] batch 200/2294 | loss 1.1033 | acc 0.3532
+21:16:40 [train] batch 400/2294 | loss 1.1010 | acc 0.3589
+21:16:47 [train] batch 600/2294 | loss 1.0997 | acc 0.3636
+21:16:53 [train] batch 800/2294 | loss 1.0987 | acc 0.3654
+21:17:00 [train] batch 1000/2294 | loss 1.0977 | acc 0.3671
+21:17:06 [train] batch 1200/2294 | loss 1.0968 | acc 0.3688

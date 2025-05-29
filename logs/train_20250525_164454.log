@@ -1,0 +1,314 @@
+16:44:54 Log file: logs/train_20250525_164454.log
+16:45:26 ✔ Data split: 1958081/279725/559453 rows ➜ splits
+16:45:28 train.csv: samples=1957961  class_dist=[ 242173 1465142  250766]
+16:45:29 val.csv: samples=279605  class_dist=[ 29458 218014  32253]
+16:45:29 test.csv: samples=559333  class_dist=[ 68225 420338  70890]
+16:45:30 CFG:CFG(csv='/data4/private/rmy/hw/data/BTCUSDT_feature_derived.csv', label_col='label', seed=1337, test_pct=0.2, val_pct=0.1, seq_len=120, batch=256, lr=1e-05, epochs=50, patience=3, model='transformer', hidden=256, layers=2, dropout=0.4, nhead=4, resample=True, extra_feats=None, device='cuda')
+16:45:53 [train] batch 200/7649 | loss 1.0790 | acc 0.5414
+16:46:18 [train] batch 400/7649 | loss 1.0693 | acc 0.5585
+16:46:47 [train] batch 600/7649 | loss 1.0669 | acc 0.5572
+16:47:22 [train] batch 800/7649 | loss 1.0641 | acc 0.5570
+16:47:58 [train] batch 1000/7649 | loss 1.0626 | acc 0.5551
+16:48:35 [train] batch 1200/7649 | loss 1.0615 | acc 0.5537
+16:49:12 [train] batch 1400/7649 | loss 1.0603 | acc 0.5520
+16:49:49 [train] batch 1600/7649 | loss 1.0593 | acc 0.5503
+16:50:25 [train] batch 1800/7649 | loss 1.0584 | acc 0.5502
+16:51:02 [train] batch 2000/7649 | loss 1.0577 | acc 0.5502
+16:51:39 [train] batch 2200/7649 | loss 1.0572 | acc 0.5495
+16:52:15 [train] batch 2400/7649 | loss 1.0568 | acc 0.5491
+16:52:52 [train] batch 2600/7649 | loss 1.0560 | acc 0.5497
+16:53:29 [train] batch 2800/7649 | loss 1.0556 | acc 0.5491
+16:54:06 [train] batch 3000/7649 | loss 1.0553 | acc 0.5492
+16:54:42 [train] batch 3200/7649 | loss 1.0550 | acc 0.5492
+16:55:19 [train] batch 3400/7649 | loss 1.0547 | acc 0.5494
+16:55:56 [train] batch 3600/7649 | loss 1.0543 | acc 0.5496
+16:56:32 [train] batch 3800/7649 | loss 1.0542 | acc 0.5491
+16:57:09 [train] batch 4000/7649 | loss 1.0540 | acc 0.5491
+16:57:46 [train] batch 4200/7649 | loss 1.0536 | acc 0.5495
+16:58:23 [train] batch 4400/7649 | loss 1.0534 | acc 0.5497
+16:58:59 [train] batch 4600/7649 | loss 1.0530 | acc 0.5504
+16:59:36 [train] batch 4800/7649 | loss 1.0530 | acc 0.5505
+17:00:13 [train] batch 5000/7649 | loss 1.0528 | acc 0.5506
+17:00:49 [train] batch 5200/7649 | loss 1.0527 | acc 0.5506
+17:01:26 [train] batch 5400/7649 | loss 1.0525 | acc 0.5508
+17:02:03 [train] batch 5600/7649 | loss 1.0523 | acc 0.5512
+17:02:39 [train] batch 5800/7649 | loss 1.0521 | acc 0.5513
+17:03:16 [train] batch 6000/7649 | loss 1.0520 | acc 0.5515
+17:03:53 [train] batch 6200/7649 | loss 1.0519 | acc 0.5518
+17:04:30 [train] batch 6400/7649 | loss 1.0518 | acc 0.5518
+17:05:06 [train] batch 6600/7649 | loss 1.0517 | acc 0.5518
+17:05:43 [train] batch 6800/7649 | loss 1.0516 | acc 0.5520
+17:06:20 [train] batch 7000/7649 | loss 1.0516 | acc 0.5521
+17:06:56 [train] batch 7200/7649 | loss 1.0515 | acc 0.5521
+17:07:33 [train] batch 7400/7649 | loss 1.0514 | acc 0.5523
+17:08:10 [train] batch 7600/7649 | loss 1.0513 | acc 0.5523
+17:08:19 [train] batch 7649/7649 | loss 1.0513 | acc 0.5525
+17:09:44 ✔ saved validation confusion matrix → confusion_val/run_20250525_164531/epoch_01.png
+17:09:44 Epoch 01 | train 1.0513/0.5525 | val 1.0089/0.5769 | lr 1.00e-05
+17:09:44 ✓ save best
+17:10:21 [train] batch 200/7649 | loss 1.0504 | acc 0.5558
+17:10:57 [train] batch 400/7649 | loss 1.0474 | acc 0.5639
+17:11:34 [train] batch 600/7649 | loss 1.0479 | acc 0.5639
+17:12:11 [train] batch 800/7649 | loss 1.0480 | acc 0.5653
+17:12:47 [train] batch 1000/7649 | loss 1.0484 | acc 0.5640
+17:13:24 [train] batch 1200/7649 | loss 1.0483 | acc 0.5625
+17:14:01 [train] batch 1400/7649 | loss 1.0483 | acc 0.5624
+17:14:38 [train] batch 1600/7649 | loss 1.0484 | acc 0.5612
+17:15:14 [train] batch 1800/7649 | loss 1.0485 | acc 0.5605
+17:15:51 [train] batch 2000/7649 | loss 1.0485 | acc 0.5600
+17:16:28 [train] batch 2200/7649 | loss 1.0482 | acc 0.5603
+17:17:05 [train] batch 2400/7649 | loss 1.0481 | acc 0.5598
+17:17:42 [train] batch 2600/7649 | loss 1.0481 | acc 0.5599
+17:18:18 [train] batch 2800/7649 | loss 1.0481 | acc 0.5601
+17:18:55 [train] batch 3000/7649 | loss 1.0481 | acc 0.5604
+17:19:32 [train] batch 3200/7649 | loss 1.0480 | acc 0.5605
+17:20:09 [train] batch 3400/7649 | loss 1.0480 | acc 0.5604
+17:20:46 [train] batch 3600/7649 | loss 1.0479 | acc 0.5607
+17:21:22 [train] batch 3800/7649 | loss 1.0478 | acc 0.5607
+17:21:59 [train] batch 4000/7649 | loss 1.0478 | acc 0.5604
+17:22:36 [train] batch 4200/7649 | loss 1.0477 | acc 0.5607
+17:23:13 [train] batch 4400/7649 | loss 1.0477 | acc 0.5605
+17:23:50 [train] batch 4600/7649 | loss 1.0477 | acc 0.5603
+17:24:26 [train] batch 4800/7649 | loss 1.0478 | acc 0.5607
+17:25:03 [train] batch 5000/7649 | loss 1.0477 | acc 0.5607
+17:25:40 [train] batch 5200/7649 | loss 1.0476 | acc 0.5608
+17:26:17 [train] batch 5400/7649 | loss 1.0476 | acc 0.5610
+17:26:54 [train] batch 5600/7649 | loss 1.0475 | acc 0.5612
+17:27:30 [train] batch 5800/7649 | loss 1.0475 | acc 0.5613
+17:28:07 [train] batch 6000/7649 | loss 1.0474 | acc 0.5614
+17:28:44 [train] batch 6200/7649 | loss 1.0474 | acc 0.5616
+17:29:21 [train] batch 6400/7649 | loss 1.0473 | acc 0.5615
+17:29:57 [train] batch 6600/7649 | loss 1.0472 | acc 0.5615
+17:30:34 [train] batch 6800/7649 | loss 1.0470 | acc 0.5614
+17:31:11 [train] batch 7000/7649 | loss 1.0469 | acc 0.5613
+17:31:48 [train] batch 7200/7649 | loss 1.0469 | acc 0.5613
+17:32:25 [train] batch 7400/7649 | loss 1.0469 | acc 0.5615
+17:33:02 [train] batch 7600/7649 | loss 1.0469 | acc 0.5614
+17:33:11 [train] batch 7649/7649 | loss 1.0470 | acc 0.5613
+17:34:36 ✔ saved validation confusion matrix → confusion_val/run_20250525_164531/epoch_02.png
+17:34:36 Epoch 02 | train 1.0470/0.5613 | val 1.0130/0.5652 | lr 1.00e-05
+17:34:36 ✓ save best
+17:35:13 [train] batch 200/7649 | loss 1.0459 | acc 0.5601
+17:35:49 [train] batch 400/7649 | loss 1.0474 | acc 0.5605
+17:36:26 [train] batch 600/7649 | loss 1.0469 | acc 0.5616
+17:37:03 [train] batch 800/7649 | loss 1.0465 | acc 0.5639
+17:37:40 [train] batch 1000/7649 | loss 1.0460 | acc 0.5635
+17:38:17 [train] batch 1200/7649 | loss 1.0460 | acc 0.5646
+17:38:53 [train] batch 1400/7649 | loss 1.0461 | acc 0.5647
+17:39:30 [train] batch 1600/7649 | loss 1.0461 | acc 0.5651
+17:40:07 [train] batch 1800/7649 | loss 1.0463 | acc 0.5658
+17:40:44 [train] batch 2000/7649 | loss 1.0462 | acc 0.5652
+17:41:20 [train] batch 2200/7649 | loss 1.0464 | acc 0.5646
+17:41:57 [train] batch 2400/7649 | loss 1.0465 | acc 0.5652
+17:42:34 [train] batch 2600/7649 | loss 1.0467 | acc 0.5652
+17:43:11 [train] batch 2800/7649 | loss 1.0465 | acc 0.5650
+17:43:48 [train] batch 3000/7649 | loss 1.0466 | acc 0.5645
+17:44:24 [train] batch 3200/7649 | loss 1.0467 | acc 0.5640
+17:45:01 [train] batch 3400/7649 | loss 1.0467 | acc 0.5634
+17:45:38 [train] batch 3600/7649 | loss 1.0469 | acc 0.5627
+17:46:15 [train] batch 3800/7649 | loss 1.0467 | acc 0.5632
+17:46:51 [train] batch 4000/7649 | loss 1.0466 | acc 0.5635
+17:47:28 [train] batch 4200/7649 | loss 1.0466 | acc 0.5638
+17:48:05 [train] batch 4400/7649 | loss 1.0464 | acc 0.5639
+17:48:42 [train] batch 4600/7649 | loss 1.0464 | acc 0.5640
+17:49:19 [train] batch 4800/7649 | loss 1.0464 | acc 0.5640
+17:49:55 [train] batch 5000/7649 | loss 1.0464 | acc 0.5639
+17:50:32 [train] batch 5200/7649 | loss 1.0464 | acc 0.5637
+17:51:09 [train] batch 5400/7649 | loss 1.0464 | acc 0.5639
+17:51:46 [train] batch 5600/7649 | loss 1.0465 | acc 0.5639
+17:52:22 [train] batch 5800/7649 | loss 1.0465 | acc 0.5643
+17:52:59 [train] batch 6000/7649 | loss 1.0464 | acc 0.5644
+17:53:36 [train] batch 6200/7649 | loss 1.0464 | acc 0.5643
+17:54:13 [train] batch 6400/7649 | loss 1.0464 | acc 0.5643
+17:54:50 [train] batch 6600/7649 | loss 1.0464 | acc 0.5641
+17:55:26 [train] batch 6800/7649 | loss 1.0463 | acc 0.5640
+17:56:03 [train] batch 7000/7649 | loss 1.0463 | acc 0.5642
+17:56:40 [train] batch 7200/7649 | loss 1.0462 | acc 0.5643
+17:57:17 [train] batch 7400/7649 | loss 1.0462 | acc 0.5643
+17:57:54 [train] batch 7600/7649 | loss 1.0462 | acc 0.5643
+17:58:03 [train] batch 7649/7649 | loss 1.0462 | acc 0.5643
+17:59:27 ✔ saved validation confusion matrix → confusion_val/run_20250525_164531/epoch_03.png
+17:59:28 Epoch 03 | train 1.0462/0.5643 | val 1.0131/0.5770 | lr 1.00e-05
+17:59:28 ✓ save best
+18:00:04 [train] batch 200/7649 | loss 1.0454 | acc 0.5733
+18:00:41 [train] batch 400/7649 | loss 1.0448 | acc 0.5702
+18:01:18 [train] batch 600/7649 | loss 1.0451 | acc 0.5726
+18:01:55 [train] batch 800/7649 | loss 1.0455 | acc 0.5715
+18:02:32 [train] batch 1000/7649 | loss 1.0460 | acc 0.5715
+18:03:08 [train] batch 1200/7649 | loss 1.0460 | acc 0.5707
+18:03:45 [train] batch 1400/7649 | loss 1.0461 | acc 0.5697
+18:04:22 [train] batch 1600/7649 | loss 1.0460 | acc 0.5690
+18:04:59 [train] batch 1800/7649 | loss 1.0458 | acc 0.5685
+18:05:35 [train] batch 2000/7649 | loss 1.0458 | acc 0.5685
+18:06:12 [train] batch 2200/7649 | loss 1.0460 | acc 0.5678
+18:06:49 [train] batch 2400/7649 | loss 1.0459 | acc 0.5683
+18:07:26 [train] batch 2600/7649 | loss 1.0459 | acc 0.5674
+18:08:03 [train] batch 2800/7649 | loss 1.0459 | acc 0.5671
+18:08:39 [train] batch 3000/7649 | loss 1.0459 | acc 0.5670
+18:09:16 [train] batch 3200/7649 | loss 1.0460 | acc 0.5672
+18:09:53 [train] batch 3400/7649 | loss 1.0459 | acc 0.5670
+18:10:30 [train] batch 3600/7649 | loss 1.0457 | acc 0.5672
+18:11:07 [train] batch 3800/7649 | loss 1.0458 | acc 0.5668
+18:11:44 [train] batch 4000/7649 | loss 1.0458 | acc 0.5667
+18:12:20 [train] batch 4200/7649 | loss 1.0457 | acc 0.5666
+18:12:57 [train] batch 4400/7649 | loss 1.0458 | acc 0.5659
+18:13:34 [train] batch 4600/7649 | loss 1.0457 | acc 0.5657
+18:14:11 [train] batch 4800/7649 | loss 1.0457 | acc 0.5654
+18:14:48 [train] batch 5000/7649 | loss 1.0457 | acc 0.5651
+18:15:24 [train] batch 5200/7649 | loss 1.0457 | acc 0.5649
+18:16:01 [train] batch 5400/7649 | loss 1.0457 | acc 0.5648
+18:16:38 [train] batch 5600/7649 | loss 1.0457 | acc 0.5648
+18:17:15 [train] batch 5800/7649 | loss 1.0457 | acc 0.5651
+18:17:52 [train] batch 6000/7649 | loss 1.0457 | acc 0.5651
+18:18:28 [train] batch 6200/7649 | loss 1.0457 | acc 0.5653
+18:19:05 [train] batch 6400/7649 | loss 1.0456 | acc 0.5652
+18:19:42 [train] batch 6600/7649 | loss 1.0457 | acc 0.5651
+18:20:19 [train] batch 6800/7649 | loss 1.0458 | acc 0.5652
+18:20:55 [train] batch 7000/7649 | loss 1.0458 | acc 0.5652
+18:21:32 [train] batch 7200/7649 | loss 1.0458 | acc 0.5650
+18:22:09 [train] batch 7400/7649 | loss 1.0458 | acc 0.5651
+18:22:46 [train] batch 7600/7649 | loss 1.0457 | acc 0.5653
+18:22:55 [train] batch 7649/7649 | loss 1.0457 | acc 0.5652
+18:24:20 ✔ saved validation confusion matrix → confusion_val/run_20250525_164531/epoch_04.png
+18:24:20 Epoch 04 | train 1.0457/0.5652 | val 1.0176/0.5473 | lr 1.00e-05
+18:24:20 ✓ save best
+18:24:57 [train] batch 200/7649 | loss 1.0463 | acc 0.5606
+18:25:33 [train] batch 400/7649 | loss 1.0471 | acc 0.5622
+18:26:10 [train] batch 600/7649 | loss 1.0465 | acc 0.5646
+18:26:47 [train] batch 800/7649 | loss 1.0471 | acc 0.5638
+18:27:24 [train] batch 1000/7649 | loss 1.0470 | acc 0.5639
+18:28:01 [train] batch 1200/7649 | loss 1.0463 | acc 0.5646
+18:28:37 [train] batch 1400/7649 | loss 1.0462 | acc 0.5654
+18:29:14 [train] batch 1600/7649 | loss 1.0462 | acc 0.5651
+18:29:51 [train] batch 1800/7649 | loss 1.0460 | acc 0.5652
+18:30:28 [train] batch 2000/7649 | loss 1.0460 | acc 0.5651
+18:31:04 [train] batch 2200/7649 | loss 1.0461 | acc 0.5640
+18:31:41 [train] batch 2400/7649 | loss 1.0461 | acc 0.5640
+18:32:18 [train] batch 2600/7649 | loss 1.0461 | acc 0.5647
+18:32:55 [train] batch 2800/7649 | loss 1.0459 | acc 0.5656
+18:33:31 [train] batch 3000/7649 | loss 1.0459 | acc 0.5656
+18:34:08 [train] batch 3200/7649 | loss 1.0459 | acc 0.5661
+18:34:45 [train] batch 3400/7649 | loss 1.0460 | acc 0.5659
+18:35:22 [train] batch 3600/7649 | loss 1.0459 | acc 0.5659
+18:35:58 [train] batch 3800/7649 | loss 1.0457 | acc 0.5659
+18:36:35 [train] batch 4000/7649 | loss 1.0456 | acc 0.5658
+18:37:12 [train] batch 4200/7649 | loss 1.0456 | acc 0.5660
+18:37:49 [train] batch 4400/7649 | loss 1.0457 | acc 0.5657
+18:38:26 [train] batch 4600/7649 | loss 1.0457 | acc 0.5656
+18:39:02 [train] batch 4800/7649 | loss 1.0457 | acc 0.5652
+18:39:39 [train] batch 5000/7649 | loss 1.0456 | acc 0.5653
+18:40:16 [train] batch 5200/7649 | loss 1.0458 | acc 0.5653
+18:40:53 [train] batch 5400/7649 | loss 1.0457 | acc 0.5655
+18:41:29 [train] batch 5600/7649 | loss 1.0457 | acc 0.5655
+18:42:06 [train] batch 5800/7649 | loss 1.0457 | acc 0.5654
+18:42:43 [train] batch 6000/7649 | loss 1.0457 | acc 0.5654
+18:43:20 [train] batch 6200/7649 | loss 1.0456 | acc 0.5658
+18:43:56 [train] batch 6400/7649 | loss 1.0455 | acc 0.5659
+18:44:33 [train] batch 6600/7649 | loss 1.0455 | acc 0.5662
+18:45:10 [train] batch 6800/7649 | loss 1.0455 | acc 0.5660
+18:45:47 [train] batch 7000/7649 | loss 1.0455 | acc 0.5659
+18:46:24 [train] batch 7200/7649 | loss 1.0455 | acc 0.5658
+18:47:00 [train] batch 7400/7649 | loss 1.0455 | acc 0.5656
+18:47:37 [train] batch 7600/7649 | loss 1.0454 | acc 0.5656
+18:47:46 [train] batch 7649/7649 | loss 1.0454 | acc 0.5655
+18:49:11 ✔ saved validation confusion matrix → confusion_val/run_20250525_164531/epoch_05.png
+18:49:11 Epoch 05 | train 1.0454/0.5655 | val 1.0113/0.5662 | lr 5.00e-06
+18:49:48 [train] batch 200/7649 | loss 1.0458 | acc 0.5677
+18:50:25 [train] batch 400/7649 | loss 1.0453 | acc 0.5679
+18:51:02 [train] batch 600/7649 | loss 1.0451 | acc 0.5674
+18:51:39 [train] batch 800/7649 | loss 1.0447 | acc 0.5680
+18:52:16 [train] batch 1000/7649 | loss 1.0450 | acc 0.5680
+18:52:53 [train] batch 1200/7649 | loss 1.0453 | acc 0.5670
+18:53:30 [train] batch 1400/7649 | loss 1.0450 | acc 0.5677
+18:54:07 [train] batch 1600/7649 | loss 1.0453 | acc 0.5667
+18:54:44 [train] batch 1800/7649 | loss 1.0454 | acc 0.5668
+18:55:21 [train] batch 2000/7649 | loss 1.0455 | acc 0.5666
+18:55:58 [train] batch 2200/7649 | loss 1.0456 | acc 0.5664
+18:56:35 [train] batch 2400/7649 | loss 1.0455 | acc 0.5666
+18:57:12 [train] batch 2600/7649 | loss 1.0456 | acc 0.5664
+18:57:49 [train] batch 2800/7649 | loss 1.0456 | acc 0.5658
+18:58:26 [train] batch 3000/7649 | loss 1.0456 | acc 0.5658
+18:59:03 [train] batch 3200/7649 | loss 1.0456 | acc 0.5658
+18:59:40 [train] batch 3400/7649 | loss 1.0455 | acc 0.5662
+19:00:17 [train] batch 3600/7649 | loss 1.0455 | acc 0.5663
+19:00:54 [train] batch 3800/7649 | loss 1.0454 | acc 0.5661
+19:01:31 [train] batch 4000/7649 | loss 1.0454 | acc 0.5660
+19:02:08 [train] batch 4200/7649 | loss 1.0453 | acc 0.5659
+19:02:46 [train] batch 4400/7649 | loss 1.0453 | acc 0.5653
+19:03:23 [train] batch 4600/7649 | loss 1.0453 | acc 0.5654
+19:04:00 [train] batch 4800/7649 | loss 1.0454 | acc 0.5653
+19:04:37 [train] batch 5000/7649 | loss 1.0454 | acc 0.5652
+19:05:14 [train] batch 5200/7649 | loss 1.0454 | acc 0.5653
+19:05:51 [train] batch 5400/7649 | loss 1.0454 | acc 0.5654
+19:06:28 [train] batch 5600/7649 | loss 1.0453 | acc 0.5654
+19:07:05 [train] batch 5800/7649 | loss 1.0453 | acc 0.5657
+19:07:42 [train] batch 6000/7649 | loss 1.0452 | acc 0.5658
+19:08:19 [train] batch 6200/7649 | loss 1.0453 | acc 0.5655
+19:08:56 [train] batch 6400/7649 | loss 1.0452 | acc 0.5657
+19:09:33 [train] batch 6600/7649 | loss 1.0452 | acc 0.5659
+19:10:10 [train] batch 6800/7649 | loss 1.0451 | acc 0.5663
+19:10:47 [train] batch 7000/7649 | loss 1.0451 | acc 0.5663
+19:11:25 [train] batch 7200/7649 | loss 1.0451 | acc 0.5665
+19:12:02 [train] batch 7400/7649 | loss 1.0451 | acc 0.5664
+19:12:39 [train] batch 7600/7649 | loss 1.0451 | acc 0.5664
+19:12:48 [train] batch 7649/7649 | loss 1.0451 | acc 0.5663
+19:14:14 ✔ saved validation confusion matrix → confusion_val/run_20250525_164531/epoch_06.png
+19:14:14 Epoch 06 | train 1.0451/0.5663 | val 1.0146/0.5460 | lr 5.00e-06
+19:14:51 [train] batch 200/7649 | loss 1.0440 | acc 0.5693
+19:15:28 [train] batch 400/7649 | loss 1.0439 | acc 0.5687
+19:16:05 [train] batch 600/7649 | loss 1.0440 | acc 0.5655
+19:16:42 [train] batch 800/7649 | loss 1.0438 | acc 0.5655
+19:17:19 [train] batch 1000/7649 | loss 1.0438 | acc 0.5659
+19:17:56 [train] batch 1200/7649 | loss 1.0441 | acc 0.5661
+19:18:33 [train] batch 1400/7649 | loss 1.0441 | acc 0.5671
+19:19:10 [train] batch 1600/7649 | loss 1.0445 | acc 0.5672
+19:19:47 [train] batch 1800/7649 | loss 1.0446 | acc 0.5679
+19:20:24 [train] batch 2000/7649 | loss 1.0444 | acc 0.5680
+19:21:01 [train] batch 2200/7649 | loss 1.0446 | acc 0.5673
+19:21:39 [train] batch 2400/7649 | loss 1.0447 | acc 0.5672
+19:22:16 [train] batch 2600/7649 | loss 1.0446 | acc 0.5670
+19:22:53 [train] batch 2800/7649 | loss 1.0445 | acc 0.5668
+19:23:30 [train] batch 3000/7649 | loss 1.0446 | acc 0.5668
+19:24:07 [train] batch 3200/7649 | loss 1.0446 | acc 0.5667
+19:24:44 [train] batch 3400/7649 | loss 1.0446 | acc 0.5663
+19:25:21 [train] batch 3600/7649 | loss 1.0446 | acc 0.5658
+19:25:58 [train] batch 3800/7649 | loss 1.0446 | acc 0.5657
+19:26:35 [train] batch 4000/7649 | loss 1.0447 | acc 0.5658
+19:27:12 [train] batch 4200/7649 | loss 1.0446 | acc 0.5663
+19:27:49 [train] batch 4400/7649 | loss 1.0447 | acc 0.5663
+19:28:26 [train] batch 4600/7649 | loss 1.0447 | acc 0.5666
+19:29:03 [train] batch 4800/7649 | loss 1.0447 | acc 0.5664
+19:29:40 [train] batch 5000/7649 | loss 1.0448 | acc 0.5663
+19:30:17 [train] batch 5200/7649 | loss 1.0448 | acc 0.5661
+19:30:54 [train] batch 5400/7649 | loss 1.0448 | acc 0.5661
+19:31:31 [train] batch 5600/7649 | loss 1.0449 | acc 0.5659
+19:32:08 [train] batch 5800/7649 | loss 1.0448 | acc 0.5661
+19:32:45 [train] batch 6000/7649 | loss 1.0448 | acc 0.5661
+19:33:22 [train] batch 6200/7649 | loss 1.0448 | acc 0.5660
+19:33:59 [train] batch 6400/7649 | loss 1.0448 | acc 0.5661
+19:34:36 [train] batch 6600/7649 | loss 1.0448 | acc 0.5660
+19:35:14 [train] batch 6800/7649 | loss 1.0448 | acc 0.5659
+19:35:51 [train] batch 7000/7649 | loss 1.0449 | acc 0.5656
+19:36:28 [train] batch 7200/7649 | loss 1.0449 | acc 0.5655
+19:37:05 [train] batch 7400/7649 | loss 1.0449 | acc 0.5655
+19:37:42 [train] batch 7600/7649 | loss 1.0449 | acc 0.5656
+19:37:51 [train] batch 7649/7649 | loss 1.0449 | acc 0.5657
+19:39:29 ✔ saved validation confusion matrix → confusion_val/run_20250525_164531/epoch_07.png
+19:39:29 Epoch 07 | train 1.0449/0.5657 | val 1.0129/0.5629 | lr 5.00e-06
+19:39:29 Early-stop
+19:39:46 [eval ] batch 200/2185 | loss 1.0844 | acc 0.4004
+19:40:03 [eval ] batch 400/2185 | loss 1.0358 | acc 0.5325
+19:40:19 [eval ] batch 600/2185 | loss 1.0301 | acc 0.5430
+19:40:36 [eval ] batch 800/2185 | loss 1.0399 | acc 0.5228
+19:40:53 [eval ] batch 1000/2185 | loss 1.0405 | acc 0.5326
+19:41:09 [eval ] batch 1200/2185 | loss 1.0340 | acc 0.5542
+19:41:26 [eval ] batch 1400/2185 | loss 1.0389 | acc 0.5380
+19:41:43 [eval ] batch 1600/2185 | loss 1.0407 | acc 0.5347
+19:41:59 [eval ] batch 1800/2185 | loss 1.0418 | acc 0.5296
+19:42:16 [eval ] batch 2000/2185 | loss 1.0402 | acc 0.5252
+19:42:31 [eval ] batch 2185/2185 | loss 1.0406 | acc 0.5269
+19:42:31 TEST loss/acc 1.0406/0.5269
+19:44:47 Confusion matrix saved ➜ confusion_matrix.png
+
+
+/data4/private/rmy/hw/confusion_val/run_20250525_164531
