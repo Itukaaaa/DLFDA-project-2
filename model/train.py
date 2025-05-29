@@ -1,194 +1,193 @@
-import os
-import time
-import torch
-import torch.nn as nn
-import torch.optim as optim
-from multiprocessing import freeze_support
-from data_loader import get_data_loaders , load_single_dataset
-from model import LSTMModel,TransformerModel  # 可替换为 TransformerModel
-import hyperparameters as hp
-import numpy as np
 import matplotlib.pyplot as plt
+import torch
 from sklearn.metrics import confusion_matrix
-from collections import Counter
+import os, argparse, math, random, time, json, logging, datetime
+from pathlib import Path
+import torch.nn as nn
 from sklearn.utils.class_weight import compute_class_weight
 
 
-def log_message(message, file):
-    with open(file, 'a', encoding='utf-8') as f:
-        f.write(message + '\n')
-    print(message)
+def acc(logits,y):return (logits.argmax(1)==y).float().mean().item()
 
-def calculate_accuracy(outputs, targets):
-    preds = torch.argmax(outputs, dim=1)
-    correct = (preds == targets).sum().item()
-    return correct / targets.size(0)
-
-def train_one_epoch(model, data_loader, criterion, optimizer, device, log_file=None):
-    model.train()
-    total_loss, total_acc = 0, 0
-
-    for batch_idx, (x, y) in enumerate(data_loader):
-        x, y = x.to(device), y.to(device)
-        optimizer.zero_grad()
-        output = model(x)
-        loss = criterion(output, y)
-        acc = calculate_accuracy(output, y)
-        loss.backward()
-        optimizer.step()
-
-        total_loss += loss.item()
-        total_acc += acc
-
-        if (batch_idx + 1) % 200 == 0:
-            msg = f"[训练] Batch {batch_idx+1}/{len(data_loader)} | Loss: {loss.item():.4f} | Acc: {acc:.4f}"
-            log_message(msg, log_file)
-
-
-    return total_loss / len(data_loader), total_acc / len(data_loader)
-
-
-def validate(model, data_loader, criterion, device, log_file, show_confusion_matrix=True):
+def validate(model, loader, criterion, device, log,
+             save_dir="confusion_val", epoch=None):
+    """
+    • 评估模式 (no grad)
+    • 计算 val_loss / val_acc
+    • 生成并保存混淆矩阵图片
+      └ 文件名:  confusion_val/epoch_XX.png  (若 epoch 为 None → val_cm.png)
+    """
     model.eval()
-    total_loss, total_acc = 0, 0
+    os.makedirs(save_dir, exist_ok=True)
+
+    tot_loss = tot_acc = 0
     all_preds, all_targets = [], []
+
     with torch.no_grad():
-        for x, y in data_loader:
+        for x, y in loader:
             x, y = x.to(device), y.to(device)
-            output = model(x)
-            loss = criterion(output, y)
-            acc = calculate_accuracy(output, y)
-            total_loss += loss.item()
-            total_acc += acc
-            all_preds.extend(torch.argmax(output, dim=1).cpu().numpy())
+            out = model(x)
+            loss = criterion(out, y)
+
+            tot_loss += loss.item()
+            tot_acc  += (out.argmax(1) == y).float().mean().item()
+
+            all_preds.extend(out.argmax(1).cpu().numpy())
             all_targets.extend(y.cpu().numpy())
 
-    if show_confusion_matrix:
-        cm = confusion_matrix(all_targets, all_preds)
-        log_message(f"混淆矩阵:\n{cm}", log_file)
-        # 创建图形
-        plt.figure(figsize=(10, 8))
-        plt.imshow(cm, interpolation='nearest', cmap=plt.cm.Blues)
-        plt.title('confusion matrix')
-        plt.colorbar()
-        # 设置坐标轴
-        classes = np.unique(all_targets)
-        tick_marks = np.arange(len(classes))
-        plt.xticks(tick_marks, classes)
-        plt.yticks(tick_marks, classes)
-        # 添加数值标签
-        thresh = cm.max() / 2.
-        for i in range(cm.shape[0]):
-            for j in range(cm.shape[1]):
-                plt.text(j, i, format(cm[i, j], 'd'),
-                         horizontalalignment="center",
-                         color="white" if cm[i, j] > thresh else "black")
-        plt.ylabel('true label')
-        plt.xlabel('predicted label')
-        plt.tight_layout()
-        # 保存图片
-        cm_path = os.path.join('log', f'confusion_matrix_{time.strftime("%Y%m%d-%H%M%S")}.png')
-        plt.savefig(cm_path)
-        log_message(f"混淆矩阵已保存到: {cm_path}", log_file)
-        plt.close()
-    return total_loss / len(data_loader), total_acc / len(data_loader)
+    # —— 保存混淆矩阵 ————————————————
+    cm = confusion_matrix(all_targets, all_preds)
+    fig_name = f"epoch_{epoch:02d}.png" if epoch is not None else "val_cm.png"
+    fig_path = os.path.join(save_dir, fig_name)
 
-def back_test(model,data_loader,device,log_file,seq_length):
-    model.eval()
-    test_preds , test_targets = [], []
-    with torch.no_grad():
-        for x, y in data_loader:
-            x, y = x.to(device), y.to(device)
-            output = model(x)
-            preds = torch.argmax(output, dim=1)
-            test_preds.extend(preds.cpu().numpy())
-            test_targets.extend(y.cpu().numpy())
-    test_df = pd.read_csv('data/test.csv')
-    test_df = test_df.iloc[seq_length-1:]
-    if len(test_df) != len(test_preds):
-        log_message("测试数据长度不匹配", log_file)
-        return
-    test_df['predictions'] = test_preds
-    total_gain = 0
-    total_trades = 0
-    for i in range(len(test_df) - 10):
-        if test_df['predictions'][i] == 0:
-            gain = (test_df['close'][i + 1] - test_df['close'][i + 10]) / test_df['close'][i + 1]
-            total_gain += gain*10000
-            total_trades += 1
-        elif test_df['predictions'][i] == 1:
-            continue
-        elif test_df['predictions'][i] == 2:
-            gain = (test_df['close'][i + 10] - test_df['close'][i + 1]) / test_df['close'][i + 1]
-            total_gain += gain*10000
-            total_trades += 1
-    if total_trades > 0:
-        average_gain = total_gain / total_trades
+    plt.figure(figsize=(6, 5))
+    plt.imshow(cm, cmap="Blues")
+    plt.title("Validation Confusion Matrix")
+    plt.xlabel("Predicted")
+    plt.ylabel("True")
+    plt.colorbar()
+    thresh = cm.max() / 2
+    for i in range(cm.shape[0]):
+        for j in range(cm.shape[1]):
+            plt.text(j, i, int(cm[i, j]),
+                     ha="center", va="center",
+                     color="white" if cm[i, j] > thresh else "black")
+    plt.tight_layout()
+    plt.savefig(fig_path)
+    plt.close()
+
+    log(f"✔ saved validation confusion matrix → {fig_path}")
+
+    avg_loss = tot_loss / len(loader)
+    avg_acc  = tot_acc  / len(loader)
+    # —— 计算 focus_acc：只看0/2的预测质量 ————————
+    focus_numer = cm[0, 0] + cm[2, 2]
+    focus_denom = cm[0, 0] + cm[0, 2] + cm[2, 0] + cm[2, 2] + cm[0,1] + cm[2,1]
+    focus_acc = focus_numer / focus_denom if focus_denom > 0 else 0.0
+
+    log(f"◎ Focus Acc (0&2 only): {focus_acc:.4f}")
+
+    return avg_loss, avg_acc, focus_acc
+
+    # return avg_loss, avg_acc
+
+def run_epoch(model, loader, criterion, optimizer, device, log, train=True):
+    """
+    单个 epoch 的训练或评估。
+    ──────────────────────────────
+    * train=True  →  反向传播 + 更新参数
+    * 每 200 个 batch(或最后一个 batch)打印一次累积 loss / acc
+    """
+    if train:
+        model.train()
     else:
-        average_gain = 0
-    log_message(f"总收益: {total_gain:.2f} | 平均收益: {average_gain:.2f}", log_file)
-    log_message(f"总交易次数: {total_trades}", log_file)
-    
+        model.eval()
 
-def main():
-    freeze_support()
-    device = torch.device('cuda' if torch.cuda.is_available() else 'cpu')
-    timestamp = time.strftime("%Y%m%d-%H%M%S")
-    log_file = f'log/train_log_{timestamp}.txt'
-    os.makedirs('log/models', exist_ok=True)
+    running_loss = 0.0
+    running_acc  = 0.0
 
-    train_loader, val_loader, test_loader = get_data_loaders(
-        batch_size=hp.BATCH_SIZE,
-        seq_length=hp.SEQ_LENGTH,
-        shuffle=True,
-        resample_train=False,
-        target_samples_per_class=1000000
-    )
+    for i, (x, y) in enumerate(loader, start=1):      # i 从 1 开始便于取模
+        x, y = x.to(device), y.to(device)
 
-    test_loader_not_shuffle = load_single_dataset('test')
-    
-    model = TransformerModel(
-        input_dim=hp.INPUT_DIM,
-        hidden_dim=hp.HIDDEN_DIM,
-        num_layers=hp.NUM_LAYERS,
-        output_dim=hp.OUTPUT_DIM,
-        dropout=hp.DROPOUT
-    ).to(device)
+        if train:
+            optimizer.zero_grad()
 
-    # label_list = [int(train_loader.dataset.labels[i + hp.SEQ_LENGTH - 1]) for i in train_loader.dataset.indices]
-    # class_weights = compute_class_weight('balanced', classes=np.array([0, 1, 2]), y=label_list)
-    # weights = torch.tensor(class_weights, dtype=torch.float32).to(device)
-    criterion = nn.CrossEntropyLoss()
-    # criterion = nn.CrossEntropyLoss()
-    optimizer = optim.Adam(model.parameters(), lr=hp.LEANRING_RATE)
+        with torch.set_grad_enabled(train):
+            outputs = model(x)
+            loss = criterion(outputs, y)
 
-    best_acc, best_epoch = 0, 0
-    no_improvement = 0
+            if train:
+                loss.backward()
+                optimizer.step()
 
-    for epoch in range(hp.NUM_EPOCHS):
-        log_message(f"Epoch {epoch+1}/{hp.NUM_EPOCHS}", log_file)
-        train_loss, train_acc = train_one_epoch(model, train_loader, criterion, optimizer, device,log_file)
-        val_loss, val_acc = validate(model, val_loader, criterion, device, log_file)
-        # back_test(model,test_loader_not_shuffle,device,log_file,hp.SEQ_LENGTH)
+        # 累计统计
+        running_loss += loss.item()
+        running_acc  += (outputs.argmax(1) == y).float().mean().item()
 
-        log_message(f"Train Loss: {train_loss:.4f}, Train Acc: {train_acc:.4f}", log_file)
-        log_message(f"Val   Loss: {val_loss:.4f}, Val   Acc: {val_acc:.4f}", log_file)
+        # 每 200 个 batch 记录一次，或在最后一个 batch 记录一次
+        if i % 200 == 0 or i == len(loader):
+            log(f"[{'train' if train else 'eval '}]"           # 标签
+                f" batch {i}/{len(loader)} | "
+                f"loss {running_loss / i:.4f} | "
+                f"acc {running_acc / i:.4f}")
 
-        if val_acc > best_acc:
-            best_acc, best_epoch = val_acc, epoch
-            torch.save(model.state_dict(), f'log/models/best_model_{timestamp}.pth')
-            log_message("[保存] 最佳模型已保存", log_file)
-            no_improvement = 0
+    # 返回 epoch 平均指标
+    epoch_loss = running_loss / len(loader)
+    epoch_acc  = running_acc  / len(loader)
+    return epoch_loss, epoch_acc
+
+def train_model(cfg, model, loaders, log):
+    train_loader, val_loader, test_loader, n_cls = loaders
+
+    # 类别权重
+    labels_for_weights = train_loader.dataset.labels[cfg.seq_len - 1:]
+    cls_w = compute_class_weight('balanced', classes=torch.arange(n_cls).numpy(), y=labels_for_weights)
+    cls_w = torch.tensor(cls_w, dtype=torch.float32).to(cfg.device)
+    crit = nn.CrossEntropyLoss(weight=cls_w)
+
+    # 优化器与学习率调度器
+    opt = torch.optim.AdamW(model.parameters(), lr=cfg.lr)
+    sched = torch.optim.lr_scheduler.ReduceLROnPlateau(opt, patience=3, factor=0.5)
+
+    timestamp = time.strftime("%Y%m%d_%H%M%S")
+    ckpt = Path("checkpoints") / timestamp
+    ckpt.mkdir(parents=True, exist_ok=True)
+    cm_dir = Path("confusion_val") / timestamp
+    cm_dir.mkdir(parents=True, exist_ok=True)
+
+    best_loss = float("inf")
+    no_improve = 0
+
+    for epoch in range(1, cfg.epochs + 1):
+        tr_loss, tr_acc = run_epoch(model, train_loader, crit, opt, cfg.device, log, train=True)
+        val_loss, val_acc, val_acc_focus = validate(model, val_loader, crit, cfg.device, log,
+                                                    save_dir=str(cm_dir), epoch=epoch)
+        sched.step(val_loss)
+
+        log(f"Epoch {epoch:02d} | train {tr_loss:.4f}/{tr_acc:.4f} | "
+            f"val {val_loss:.4f}/{val_acc:.4f} | lr {opt.param_groups[0]['lr']:.2e}")
+
+        if val_loss - best_loss < 1e-3:
+            best_loss = val_loss
+            no_improve = 0
+            torch.save(model.state_dict(), ckpt / 'best.pt')
+            log("✓ Best model saved")
         else:
-            no_improvement += 1
-            if no_improvement >= hp.PATIENCE:
-                log_message("[早停] 验证准确率未提升，训练终止", log_file)
+            no_improve += 1
+            if no_improve >= cfg.patience:
+                log("Early stopping")
                 break
 
-    model.load_state_dict(torch.load(f'log/models/best_model_{timestamp}.pth'))
-    test_loss, test_acc = validate(model, test_loader, criterion, device, log_file)
-    # back_test(model,test_loader_not_shuffle,device,log_file,hp.SEQ_LENGTH)
-    log_message(f"[测试] Loss: {test_loss:.4f}, Acc: {test_acc:.4f}", log_file)
+    # 加载最佳模型
+    model.load_state_dict(torch.load(ckpt / 'best.pt'))
+    te_loss, te_acc = run_epoch(model, test_loader, crit, opt, cfg.device, log, train=False)
+    log(f"[TEST] loss/acc = {te_loss:.4f} / {te_acc:.4f}")
 
-if __name__ == '__main__':
-    main()
+    # 画混淆矩阵
+    model.eval()
+    all_preds, all_targets = [], []
+    with torch.no_grad():
+        for x, y in test_loader:
+            x, y = x.to(cfg.device), y.to(cfg.device)
+            out = model(x)
+            all_preds.extend(out.argmax(1).cpu().numpy())
+            all_targets.extend(y.cpu().numpy())
+
+    cm = confusion_matrix(all_targets, all_preds)
+    focus_classes = [0, 2]
+    total = cm[np.ix_(focus_classes, focus_classes)].sum()
+    log(f"Adjusted ACC = {(cm[0][0] + cm[2][2]) / total}")
+    plt.figure(figsize=(6, 5))
+    plt.imshow(cm, cmap='Blues')
+    plt.title('Test Confusion Matrix')
+    plt.xlabel('Predicted')
+    plt.ylabel('True')
+    for i in range(cm.shape[0]):
+        for j in range(cm.shape[1]):
+            plt.text(j, i, int(cm[i, j]), ha='center', va='center',
+                     color='white' if cm[i, j] > cm.max() / 2 else 'black')
+    plt.colorbar()
+    plt.tight_layout()
+    plt.savefig('confusion_matrix.png')
+    plt.close()
+    log("✓ Test confusion matrix saved to confusion_matrix.png")
