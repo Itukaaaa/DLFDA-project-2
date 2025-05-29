@@ -4,12 +4,17 @@ from sklearn.metrics import confusion_matrix, classification_report
 import matplotlib.pyplot as plt
 import seaborn as sns
 
-def describe(filename="infer_result/example.csv"):
+def process_data(filename="infer_result/example.csv",use_threshold = True,long_threshold = 0.5, short_threshold = 0.5):
     # Read the CSV file
     df = pd.read_csv(filename)
     
-    # 对pred0, pred1, pred2三列进行统计性描述
+    # 先进行softmax操作
     pred_columns = ['pred0', 'pred1', 'pred2']
+    df['total_exp'] = np.exp(df[pred_columns]).sum(axis=1)
+    for col in pred_columns:
+        df[col] = np.exp(df[col]) / df['total_exp']
+    
+    # 对pred0, pred1, pred2三列进行统计性描述
     stats_description = df[pred_columns].describe()
     print("预测列的统计描述:")
     print(stats_description)
@@ -21,14 +26,12 @@ def describe(filename="infer_result/example.csv"):
     df['predicted_label'] = df['predicted_label'].str.replace('pred', '').astype(int)
     
     # 应用阈值规则 - 使用向量化操作
-    mask_0 = (df['predicted_label'] == 0) & (df['pred0'] > 0.1)
-    mask_2 = (df['predicted_label'] == 2) & (df['pred2'] > 0.1)
-    mask_default = ~(mask_0 | mask_2)
-
-    # 应用条件
-    df.loc[mask_default, 'predicted_label'] = 1
+    if use_threshold:
+        mask_0 = (df['predicted_label'] == 0) & (df['pred0'] > short_threshold)
+        mask_2 = (df['predicted_label'] == 2) & (df['pred2'] > long_threshold)
+        mask_default = ~(mask_0 | mask_2)
+        df.loc[mask_default, 'predicted_label'] = 1
     
-    print(f"已创建预测标签")
     return df
 
     
@@ -72,11 +75,13 @@ def calculate_10min_returns(relative_returns, initial_price=7000):
 
 if __name__ == "__main__":
     # 调用测试函数
-    df = describe()
+    df = process_data(use_threshold=True, long_threshold=0.53, short_threshold=0.5)
     return_df = calculate_10min_returns(df['close'])
     
     true_labels = df['label'].values
     predicted_labels = df['predicted_label'].values
+    
+    print("整体准确率:", np.mean(true_labels == predicted_labels))
     
     # 计算混淆矩阵
     cm = confusion_matrix(true_labels, predicted_labels)
