@@ -146,7 +146,7 @@ if __name__ == "__main__":
     top_features = correlation_results['Feature'].head(20).tolist()
     
     # 构建包含前20个高相关性因子和标签的数据框
-    training_data = feature_df[['trade_time','open','close','high','low','volume','label'] + top_features]
+    training_data = feature_df[[,'open','close','high','low','volume','label'] + top_features]
     
     # 保存用于训练的数据
     training_data.to_csv('data/BTCUSDT-feture-label.csv', index=False)
