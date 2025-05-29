@@ -20,28 +20,27 @@ from typing import List
 from torch.utils.data import Dataset, DataLoader
 
 from model import LSTMClassifier, TransEncoder
-from data_loader import FinDataset
+from data import FinDataset
 
 @dataclass
 class CFG:
-    csv:str
-    label_col:str="label"
-    seed:int=1337
-    test_pct:float=0.2
-    val_pct:float=0.1
-    seq_len:int=120
-    batch:int=256
-    lr:float=1e-5
-    epochs:int=50
-    patience:int=7
-    model:str="transformer"
-    hidden:int=256
-    layers:int=2
-    dropout:float=0.4
-    nhead:int=4
-    resample: bool = True 
-    extra_feats:List[str]|None=None
-    device:str="cuda" if torch.cuda.is_available() else "cpu"
+    csv: str
+    label_col: str = "label"
+    seed: int = 1337
+    test_pct: float = 0.2
+    val_pct: float = 0.1
+    seq_len: int = 120
+    batch: int = 256
+    lr: float = 1e-5
+    epochs: int = 50
+    patience: int = 3
+    model: str = "transformer"
+    hidden: int = 512
+    layers: int = 3
+    dropout: float = 0.4
+    nhead: int = 4
+    resample: bool = True
+    device: str = "cuda" if torch.cuda.is_available() else "cpu"
 
 # ──────────────────────────────────────────────────────────────────────────────
 def parse_args():
@@ -85,13 +84,19 @@ def main():
 
     # 1) 选定与训练完全一致的特征列
     base=['high','low','close','volume']
-    feats=base+(CFG.extra_feats or [])
+    extra_f=['ma_deviation_60','ma_deviation_30','rsi_20','rsi_30','ma_deviation_100','momentum_20','ma_deviation_20','rsi_60','momentum_30','momentum_60','rsi_100','rsi_10','ma_deviation_10','momentum_10','momentum_100','rsi_5','momentum_5','ma_deviation_5','obv_change','direction']
+    feats=base+extra_f
     n_feat = len(feats)
     num_classes = 3   # 若训练时自动推断，请相应调整
 
     # 2) 构建数据集
     ds = FinDataset(csv_path, args.seq, feats, CFG.label_col)
-    dl = DataLoader(ds,CFG.batch,True,num_workers=4,pin_memory=True)
+    # with open("assist.txt", "w") as file:
+    #     for i in range(5):
+    #         x, y = ds[i]
+    #         file.write(f"Features: {x.tolist()}, Label: {y.item()}\n")
+    # input("press enter to continue")
+    dl = DataLoader(ds, batch_size=CFG.batch, shuffle=False, num_workers=4, pin_memory=True)
 
     # 3) 构建并载入模型
     model = build_model(args.model, n_feat, num_classes, ckpt_path, args.device)
@@ -100,11 +105,14 @@ def main():
     predictions = infer(model, dl, args.device)
 
     # 5) 将预测写回 csv（与最后一个时间步对齐）
-    out_df = pd.read_csv(csv_path).sort_values("trade_time").reset_index(drop=True)
+    out_df = pd.read_csv(csv_path)
     out_df = out_df.iloc[args.seq:]        # 对齐滑动窗口最后一步
     out_df["pred0"] = predictions[:,0]
     out_df["pred1"] = predictions[:,1]
     out_df["pred2"] = predictions[:,2]
+    for feat in extra_f:
+        out_df.drop(columns=[feat], inplace=True)
+    out_df.drop(columns=['volume'], inplace=True)
     out_df.to_csv(args.outfile, index=False)
     print(f"✅  推断完成，已保存到 {args.outfile}\n"
           f"    rows={len(out_df)}, seq_len={args.seq}")
