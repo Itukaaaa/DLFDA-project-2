@@ -5,4 +5,5 @@ __pycache__
 log/
 logs/
 *.csv
-backtest/confusion_matrix.png
+backtest/images
+backtest/logs
