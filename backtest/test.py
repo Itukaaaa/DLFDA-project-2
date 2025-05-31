@@ -94,7 +94,8 @@ if __name__ == "__main__":
     logging.info("=====================================")
     
     # 调用测试函数
-    df = process_data(filename = "infer_result/example.csv",use_threshold=True, long_threshold=0.51, short_threshold=0.49)
+    df = process_data(filename = "infer_result/example1.csv",use_threshold=True,
+                        long_threshold=0.55, short_threshold=0.53)
     return_df = calculate_10min_returns(df['close'])
     
     true_labels = df['label'].values
@@ -106,6 +107,9 @@ if __name__ == "__main__":
     
     # 计算混淆矩阵
     cm = confusion_matrix(true_labels, predicted_labels)
+    
+    logging.info(f"Confusion matrix:\n{cm}")
+    print("混淆矩阵:\n", cm)
     
     # 打印分类报告
     report = classification_report(true_labels, predicted_labels)
@@ -143,13 +147,13 @@ if __name__ == "__main__":
         else:
             continue
     
-    result_msg = f"total minutes:{len(df)-10}, total trade: {totl_trade}"
+    result_msg = f"Total minutes:{len(df)-10}, total trade: {totl_trade}"
     print(result_msg)
     logging.info(result_msg)
     
-    return_msg = f"total pnl:{total_return*10000:.4f}, average pnl:{total_return*10000/totl_trade if totl_trade > 0 else 0:.4f}"
+    return_msg = f"Total pnl:{total_return*10000:.4f}, average pnl:{total_return*10000/totl_trade if totl_trade > 0 else 0:.4f}"
     print(return_msg)
     logging.info(return_msg)
     
-    logging.info("finished")
-    print("finished")
+    logging.info("Finished\n")
+    print("Finished\n")

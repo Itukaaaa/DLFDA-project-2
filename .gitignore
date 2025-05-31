@@ -6,4 +6,5 @@ log/
 logs/
 *.csv
 backtest/images
+backtest/multi_images
 backtest/logs
