@@ -18,9 +18,9 @@ df['feature3'] = (df['mid'].shift(-10) - df['mid'].shift(-1)) / df['mid']
 
 # 创建标签
 def create_label(row):
-    if row['feature1'] < 0:
+    if row['feature1'] < -1e-3:
         return 0
-    elif row['feature2'] > 0:
+    elif row['feature2'] > 1e-3:
         return 2
     else:
         return 1
