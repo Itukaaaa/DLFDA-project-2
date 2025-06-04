@@ -3,7 +3,7 @@ import os
 import json
 import numpy as np
 
-def calculate_label_distribution(file_path, chunk_size=10000):
+def calculate_label_distribution(file_path, chunk_size=100000):
     """
     计算CSV文件中按时间顺序的标签分布
     

@@ -60,7 +60,6 @@ def process_data(filename="infer_result/example.csv",use_threshold = True,long_t
     logger.info(f"Data processing completed, {len(df)} rows processed")
     return df
 
-
 def process_data_bin(filename="infer_result/example.csv"):
     logger.info(f"{filename}")
     df = pd.read_csv(filename)
@@ -152,24 +151,24 @@ def multi_test_bin(file1='infer_result/example1.csv',file2='infer_result/example
     print(confusion_matrix(true_labels1, pred_labels1))
     
     for i in range(len(true_labels1)):
-        if pred_labels1[i] == 2 and pred_labels2[i] == 1:
-            pred_labels2[i] = 2
+        if pred_labels1[i] == 2 and pred_labels2[i] == 0:
+            pred_labels1[i] = 2
         elif pred_labels1[i] == 0 and pred_labels2[i] == 0:
-            pred_labels2[i] = 0
+            pred_labels1[i] = 0
         else:
-            pred_labels2[i] = 1
+            pred_labels1[i] = 1
     
-    cm_combined = confusion_matrix(true_labels2, pred_labels2)
+    cm_combined = confusion_matrix(true_labels1, pred_labels1)
     logger.info(f"Combined Confusion matrix:\n{cm_combined}")
     print("Combined Classification Report:")
-    print(confusion_matrix(true_labels2, pred_labels2))
+    print(confusion_matrix(true_labels1, pred_labels1))
     
     # 计算并记录准确率
-    accuracy = np.mean(true_labels2 == pred_labels2)
+    accuracy = np.mean(true_labels1 == pred_labels1)
     logger.info(f"Combined accuracy: {accuracy:.4f}")
     
     # 记录分类报告
-    report = classification_report(true_labels2, pred_labels2)
+    report = classification_report(true_labels1, pred_labels1)
     logger.info(f"Combined classification report:\n{report}")
     
     # 可视化混淆矩阵
@@ -189,14 +188,14 @@ def multi_test_bin(file1='infer_result/example1.csv',file2='infer_result/example
     plt.savefig(cm_img_path)
     logger.info(f"Combined confusion matrix saved to: {cm_img_path}")
     
-    return df2,pred_labels2
+    return df1,pred_labels1
             
 if __name__ == "__main__":
     logger.info("=====================================")
     logger.info("Starting multi-model backtest")
     
-    df2,pred_labels2 = multi_test(file1='infer_result/middle_004530.csv',file2='infer_result/middle_204822.csv',long_threshold=0.475, short_threshold=0.465)
-    # df2,pred_labels2 = multi_test_bin(file1='infer_result/example1.csv',file2='infer_result/example_bin1.csv',long_threshold=0.57, short_threshold=0.6)
+    df2,pred_labels2 = multi_test(file1='infer_result/big_230741.csv',file2='infer_result/big_204822.csv',long_threshold=0.56, short_threshold=0.53)
+    # df2,pred_labels2 = multi_test_bin(file1='infer_result/big_230741.csv',file2='infer_result/big_1-02_105510.csv',long_threshold=0.6, short_threshold=0.56)
     return_df = test.calculate_10min_returns(df2['close'])
     
     total_return = 0.0
