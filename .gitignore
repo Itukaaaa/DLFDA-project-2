@@ -3,8 +3,4 @@
 __pycache__
 *.pyc
 log/
-logs/
 *.csv
-backtest/images
-backtest/multi_images
-backtest/logs
