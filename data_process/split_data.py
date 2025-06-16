@@ -11,21 +11,11 @@ print(f"正在读取数据: {input_file}")
 df = pd.read_csv(input_file)
 print(f"数据形状: {df.shape}")
 
-df['trade_time'] = pd.to_datetime(df['trade_time'])
-df = df.sort_values('trade_time').reset_index(drop=True)
+# 第一次分割：将数据分为训练集(70%)和临时集(30%)
+train_data, temp_data = train_test_split(df, test_size=0.3, random_state=42)
 
-total = len(df)
-train_end = int(total * 0.7)    # 前70%训练集
-val_end = train_end + int(total * 0.1)  # 接下来10%验证集
-
-train_data = df.iloc[:train_end]
-val_data = df.iloc[train_end:val_end]
-test_data = df.iloc[val_end:]   # 最后20%测试集
-
-# 重置每个子集的索引（可选）
-train_data = train_data.reset_index(drop=True)
-val_data = val_data.reset_index(drop=True)
-test_data = test_data.reset_index(drop=True)
+# 第二次分割：将临时集分为验证集(10%)和测试集(20%)
+val_data, test_data = train_test_split(temp_data, test_size=2/3, random_state=42)
 
 # 打印分割后的数据集大小
 print(f"训练集大小: {train_data.shape} ({len(train_data)/len(df)*100:.1f}%)")

@@ -5,6 +5,7 @@ import os, argparse, math, random, time, json, logging, datetime
 from pathlib import Path
 import torch.nn as nn
 from sklearn.utils.class_weight import compute_class_weight
+import numpy as np
 
 
 def acc(logits,y):return (logits.argmax(1)==y).float().mean().item()
@@ -62,7 +63,7 @@ def validate(model, loader, criterion, device, log,
     avg_acc  = tot_acc  / len(loader)
     # —— 计算 focus_acc：只看0/2的预测质量 ————————
     focus_numer = cm[0, 0] + cm[2, 2]
-    focus_denom = cm[0, 0] + cm[0, 2] + cm[2, 0] + cm[2, 2] + cm[0,1] + cm[2,1]
+    focus_denom = cm[0, 0] + cm[0, 2] + cm[2, 0] + cm[2, 2] + cm[1, 0] + cm[1, 2]
     focus_acc = focus_numer / focus_denom if focus_denom > 0 else 0.0
 
     log(f"◎ Focus Acc (0&2 only): {focus_acc:.4f}")
@@ -123,6 +124,7 @@ def train_model(cfg, model, loaders, log):
     labels_for_weights = train_loader.dataset.labels[cfg.seq_len - 1:]
     cls_w = compute_class_weight('balanced', classes=torch.arange(n_cls).numpy(), y=labels_for_weights)
     cls_w = torch.tensor(cls_w, dtype=torch.float32).to(cfg.device)
+    # cls_w[1] *= 1.5
     crit = nn.CrossEntropyLoss(weight=cls_w)
 
     # 优化器与学习率调度器
@@ -147,7 +149,7 @@ def train_model(cfg, model, loaders, log):
         log(f"Epoch {epoch:02d} | train {tr_loss:.4f}/{tr_acc:.4f} | "
             f"val {val_loss:.4f}/{val_acc:.4f} | lr {opt.param_groups[0]['lr']:.2e}")
 
-        if val_loss - best_loss < 1e-3:
+        if val_loss - best_loss < 5e-5:
             best_loss = val_loss
             no_improve = 0
             torch.save(model.state_dict(), ckpt / 'best.pt')
@@ -174,9 +176,13 @@ def train_model(cfg, model, loaders, log):
             all_targets.extend(y.cpu().numpy())
 
     cm = confusion_matrix(all_targets, all_preds)
-    focus_classes = [0, 2]
-    total = cm[np.ix_(focus_classes, focus_classes)].sum()
-    log(f"Adjusted ACC = {(cm[0][0] + cm[2][2]) / total}")
+
+    focus_numer = cm[0, 0] + cm[2, 2]
+    focus_denom = cm[0, 0] + cm[0, 2] + cm[2, 0] + cm[2, 2] + cm[1, 0] + cm[1, 2]
+    focus_acc = focus_numer / focus_denom if focus_denom > 0 else 0.0
+
+    log(f"◎ Focus Acc (0&2 only): {focus_acc:.4f}")
+    
     plt.figure(figsize=(6, 5))
     plt.imshow(cm, cmap='Blues')
     plt.title('Test Confusion Matrix')
@@ -188,6 +194,6 @@ def train_model(cfg, model, loaders, log):
                      color='white' if cm[i, j] > cm.max() / 2 else 'black')
     plt.colorbar()
     plt.tight_layout()
-    plt.savefig('confusion_matrix.png')
+    plt.savefig(str(cm_dir) + '/confusion_matrix.png')
     plt.close()
     log("✓ Test confusion matrix saved to confusion_matrix.png")

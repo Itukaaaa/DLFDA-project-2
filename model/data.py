@@ -4,15 +4,16 @@ from torch.utils.data import Dataset, DataLoader
 import torch
 
 class FinDataset(Dataset):
-    def __init__(self, csv_file, seq_len, feat_cols, label_col, log):
+    def __init__(self, csv_file, seq_len, feat_cols, label_col, log = -1):
         self.df = pd.read_csv(csv_file)
         self.labels = self.df[label_col].values.astype(int)
-        if self.labels.min() == 1: self.labels -= 1
+        # if self.labels.min() == 1: self.labels -= 1
         self.features = self.df[feat_cols].values.astype(np.float32)
         self.features = (self.features - self.features.mean(0)) / (self.features.std(0) + 1e-9)
         self.seq_len = seq_len
         self.valid = len(self.df) - seq_len
-        log(f"{Path(csv_file).name}: samples={self.valid}  class_dist={np.bincount(self.labels)[:4]}")
+        if log != -1:
+            log(f"{Path(csv_file).name}: samples={self.valid}  class_dist={np.bincount(self.labels)[:4]}")
     def __len__(self): return self.valid
     def __getitem__(self, idx):
         x = self.features[idx:idx+self.seq_len]

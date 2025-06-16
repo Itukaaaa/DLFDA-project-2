@@ -47,6 +47,7 @@ def parse_args():
     p = argparse.ArgumentParser()
     p.add_argument("--csv",      required=True,  help="待推断的 csv 文件")
     p.add_argument("--ckpt",     required=True,  help="训练好的 best.pt")
+    p.add_argument("--nclasses", required=True,  help="模型输出维度")
     p.add_argument("--model",    choices=["transformer", "lstm"], default="transformer")
     p.add_argument("--seq",      type=int, default=CFG.seq_len, help="滑动窗口长度")
     p.add_argument("--batch",    type=int, default=CFG.batch)
@@ -87,7 +88,7 @@ def main():
     extra_f=['ma_deviation_60','ma_deviation_30','rsi_20','rsi_30','ma_deviation_100','momentum_20','ma_deviation_20','rsi_60','momentum_30','momentum_60','rsi_100','rsi_10','ma_deviation_10','momentum_10','momentum_100','rsi_5','momentum_5','ma_deviation_5','obv_change','direction']
     feats=base+extra_f
     n_feat = len(feats)
-    num_classes = 3   # 若训练时自动推断，请相应调整
+    num_classes = int(args.nclasses)
 
     # 2) 构建数据集
     ds = FinDataset(csv_path, args.seq, feats, CFG.label_col)
@@ -109,7 +110,8 @@ def main():
     out_df = out_df.iloc[args.seq:]        # 对齐滑动窗口最后一步
     out_df["pred0"] = predictions[:,0]
     out_df["pred1"] = predictions[:,1]
-    out_df["pred2"] = predictions[:,2]
+    if num_classes == 3:
+        out_df["pred2"] = predictions[:,2]
     for feat in extra_f:
         out_df.drop(columns=[feat], inplace=True)
     out_df.drop(columns=['volume'], inplace=True)
