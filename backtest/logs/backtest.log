@@ -465,3 +465,228 @@ weighted avg       0.60      0.74      0.65    111748
 2025-06-02 11:51:24,527 - INFO - Data processing completed, 279550 rows processed
 2025-06-02 11:51:57,442 - INFO - Data processing completed, 279550 rows processed
 2025-06-02 11:52:18,416 - INFO - Data processing completed, 279550 rows processed
+2025-06-17 21:19:03,789 - INFO - =====================================
+2025-06-17 21:19:03,794 - INFO - infer_result/big_161224.csv threshold settings: 
+use_threshold=True, long_threshold=0.52, short_threshold=0.5
+2025-06-17 21:19:04,161 - INFO - Data processing completed, 279550 rows processed
+2025-06-17 21:19:07,664 - INFO - Overall accuracy: 0.5944
+2025-06-17 21:19:07,697 - INFO - Confusion matrix:
+[[  6182  23116   6010]
+ [ 27804 152865  26701]
+ [  5628  24118   7126]]
+2025-06-17 21:19:07,936 - INFO - Classification report:
+              precision    recall  f1-score   support
+
+           0       0.16      0.18      0.17     35308
+           1       0.76      0.74      0.75    207370
+           2       0.18      0.19      0.19     36872
+
+    accuracy                           0.59    279550
+   macro avg       0.37      0.37      0.37    279550
+weighted avg       0.61      0.59      0.60    279550
+
+2025-06-17 21:19:08,387 - INFO - Confusion matrix saved to: backtest/images\confusion_matrix_20250617_211907.png
+2025-06-17 21:19:13,122 - INFO - Total minutes:279540, total trade: 79451
+2025-06-17 21:19:13,122 - INFO - Total pnl:1958.4751, average pnl:0.0247
+2025-06-17 21:19:13,122 - INFO - Finished
+
+2025-06-17 21:19:29,580 - INFO - =====================================
+2025-06-17 21:19:29,580 - INFO - infer_result/big_161224.csv threshold settings: 
+use_threshold=True, long_threshold=0.52, short_threshold=0.55
+2025-06-17 21:19:29,914 - INFO - Data processing completed, 279550 rows processed
+2025-06-17 21:19:33,348 - INFO - Overall accuracy: 0.6121
+2025-06-17 21:19:33,371 - INFO - Confusion matrix:
+[[  4956  24342   6010]
+ [ 21634 159035  26701]
+ [  4496  25250   7126]]
+2025-06-17 21:19:33,595 - INFO - Classification report:
+              precision    recall  f1-score   support
+
+           0       0.16      0.14      0.15     35308
+           1       0.76      0.77      0.76    207370
+           2       0.18      0.19      0.19     36872
+
+    accuracy                           0.61    279550
+   macro avg       0.37      0.37      0.37    279550
+weighted avg       0.61      0.61      0.61    279550
+
+2025-06-17 21:19:33,852 - INFO - Confusion matrix saved to: backtest/images\confusion_matrix_20250617_211933.png
+2025-06-17 21:19:37,221 - INFO - Total minutes:279540, total trade: 70923
+2025-06-17 21:19:37,221 - INFO - Total pnl:781.2652, average pnl:0.0110
+2025-06-17 21:19:37,221 - INFO - Finished
+
+2025-06-17 21:20:44,656 - INFO - =====================================
+2025-06-17 21:20:44,656 - INFO - infer_result/big_161224.csv threshold settings: 
+use_threshold=True, long_threshold=0.55, short_threshold=0.55
+2025-06-17 21:20:44,996 - INFO - Data processing completed, 279550 rows processed
+2025-06-17 21:20:48,237 - INFO - Overall accuracy: 0.6202
+2025-06-17 21:20:48,262 - INFO - Confusion matrix:
+[[  4956  24845   5507]
+ [ 21634 161900  23836]
+ [  4496  25859   6517]]
+2025-06-17 21:20:48,549 - INFO - Classification report:
+              precision    recall  f1-score   support
+
+           0       0.16      0.14      0.15     35308
+           1       0.76      0.78      0.77    207370
+           2       0.18      0.18      0.18     36872
+
+    accuracy                           0.62    279550
+   macro avg       0.37      0.37      0.37    279550
+weighted avg       0.61      0.62      0.61    279550
+
+2025-06-17 21:20:48,825 - INFO - Confusion matrix saved to: backtest/images\confusion_matrix_20250617_212048.png
+2025-06-17 21:20:52,369 - INFO - Total minutes:279540, total trade: 66946
+2025-06-17 21:20:52,370 - INFO - Total pnl:-971.9522, average pnl:-0.0145
+2025-06-17 21:20:52,370 - INFO - Finished
+
+2025-06-17 21:21:07,914 - INFO - =====================================
+2025-06-17 21:21:07,914 - INFO - infer_result/big_161224.csv threshold settings: 
+use_threshold=True, long_threshold=0.6, short_threshold=0.6
+2025-06-17 21:21:08,246 - INFO - Data processing completed, 279550 rows processed
+2025-06-17 21:21:11,320 - INFO - Overall accuracy: 0.6484
+2025-06-17 21:21:11,352 - INFO - Confusion matrix:
+[[  3777  26797   4734]
+ [ 15924 171873  19573]
+ [  3430  27818   5624]]
+2025-06-17 21:21:11,580 - INFO - Classification report:
+              precision    recall  f1-score   support
+
+           0       0.16      0.11      0.13     35308
+           1       0.76      0.83      0.79    207370
+           2       0.19      0.15      0.17     36872
+
+    accuracy                           0.65    279550
+   macro avg       0.37      0.36      0.36    279550
+weighted avg       0.61      0.65      0.63    279550
+
+2025-06-17 21:21:11,870 - INFO - Confusion matrix saved to: backtest/images\confusion_matrix_20250617_212111.png
+2025-06-17 21:21:16,806 - INFO - Total minutes:279540, total trade: 53062
+2025-06-17 21:21:16,806 - INFO - Total pnl:3355.9072, average pnl:0.0632
+2025-06-17 21:21:16,806 - INFO - Finished
+
+2025-06-17 21:22:03,152 - INFO - =====================================
+2025-06-17 21:22:03,152 - INFO - infer_result/big_161224.csv threshold settings: 
+use_threshold=True, long_threshold=0.65, short_threshold=0.65
+2025-06-17 21:22:03,501 - INFO - Data processing completed, 279550 rows processed
+2025-06-17 21:22:06,900 - INFO - Overall accuracy: 0.6727
+2025-06-17 21:22:06,919 - INFO - Confusion matrix:
+[[  2736  28597   3975]
+ [ 11043 180546  15781]
+ [  2483  29607   4782]]
+2025-06-17 21:22:07,150 - INFO - Classification report:
+              precision    recall  f1-score   support
+
+           0       0.17      0.08      0.11     35308
+           1       0.76      0.87      0.81    207370
+           2       0.19      0.13      0.16     36872
+
+    accuracy                           0.67    279550
+   macro avg       0.37      0.36      0.36    279550
+weighted avg       0.61      0.67      0.63    279550
+
+2025-06-17 21:22:07,397 - INFO - Confusion matrix saved to: backtest/images\confusion_matrix_20250617_212207.png
+2025-06-17 21:22:11,212 - INFO - Total minutes:279540, total trade: 40800
+2025-06-17 21:22:11,212 - INFO - Total pnl:4479.1016, average pnl:0.1098
+2025-06-17 21:22:11,212 - INFO - Finished
+
+2025-06-17 21:22:50,733 - INFO - =====================================
+2025-06-17 21:22:50,733 - INFO - infer_result/big_161224.csv threshold settings: 
+use_threshold=True, long_threshold=0.7, short_threshold=0.7
+2025-06-17 21:22:51,041 - INFO - Data processing completed, 279550 rows processed
+2025-06-17 21:22:54,570 - INFO - Overall accuracy: 0.6937
+2025-06-17 21:22:54,587 - INFO - Confusion matrix:
+[[  1817  30215   3276]
+ [  6929 188131  12310]
+ [  1646  31238   3988]]
+2025-06-17 21:22:54,811 - INFO - Classification report:
+              precision    recall  f1-score   support
+
+           0       0.17      0.05      0.08     35308
+           1       0.75      0.91      0.82    207370
+           2       0.20      0.11      0.14     36872
+
+    accuracy                           0.69    279550
+   macro avg       0.38      0.36      0.35    279550
+weighted avg       0.61      0.69      0.64    279550
+
+2025-06-17 21:22:55,131 - INFO - Confusion matrix saved to: backtest/images\confusion_matrix_20250617_212254.png
+2025-06-17 21:23:02,618 - INFO - Total minutes:279540, total trade: 29966
+2025-06-17 21:23:02,618 - INFO - Total pnl:2568.1561, average pnl:0.0857
+2025-06-17 21:23:02,618 - INFO - Finished
+
+2025-06-17 21:24:09,477 - INFO - =====================================
+2025-06-17 21:24:09,480 - INFO - infer_result/big_161224.csv threshold settings: 
+use_threshold=True, long_threshold=0.9, short_threshold=0.9
+2025-06-17 21:24:09,816 - INFO - Data processing completed, 279550 rows processed
+2025-06-17 21:24:12,939 - INFO - Overall accuracy: 0.7383
+2025-06-17 21:24:12,958 - INFO - Confusion matrix:
+[[    10  34805    493]
+ [    18 205727   1625]
+ [     7  36214    651]]
+2025-06-17 21:24:13,149 - INFO - Classification report:
+              precision    recall  f1-score   support
+
+           0       0.29      0.00      0.00     35308
+           1       0.74      0.99      0.85    207370
+           2       0.24      0.02      0.03     36872
+
+    accuracy                           0.74    279550
+   macro avg       0.42      0.34      0.29    279550
+weighted avg       0.62      0.74      0.63    279550
+
+2025-06-17 21:24:13,408 - INFO - Confusion matrix saved to: backtest/images\confusion_matrix_20250617_212413.png
+2025-06-17 21:24:18,340 - INFO - Total minutes:279540, total trade: 2804
+2025-06-17 21:24:18,340 - INFO - Total pnl:2707.9031, average pnl:0.9657
+2025-06-17 21:24:18,340 - INFO - Finished
+
+2025-06-17 21:24:41,736 - INFO - =====================================
+2025-06-17 21:24:41,736 - INFO - infer_result/big_161224.csv threshold settings: 
+use_threshold=True, long_threshold=0.92, short_threshold=0.85
+2025-06-17 21:24:42,086 - INFO - Data processing completed, 279550 rows processed
+2025-06-17 21:24:45,108 - INFO - Overall accuracy: 0.7391
+2025-06-17 21:24:45,129 - INFO - Confusion matrix:
+[[   115  34935    258]
+ [   342 206150    878]
+ [    99  36423    350]]
+2025-06-17 21:24:45,343 - INFO - Classification report:
+              precision    recall  f1-score   support
+
+           0       0.21      0.00      0.01     35308
+           1       0.74      0.99      0.85    207370
+           2       0.24      0.01      0.02     36872
+
+    accuracy                           0.74    279550
+   macro avg       0.40      0.34      0.29    279550
+weighted avg       0.61      0.74      0.63    279550
+
+2025-06-17 21:24:45,606 - INFO - Confusion matrix saved to: backtest/images\confusion_matrix_20250617_212445.png
+2025-06-17 21:24:51,666 - INFO - Total minutes:279540, total trade: 2042
+2025-06-17 21:24:51,666 - INFO - Total pnl:-2427.7537, average pnl:-1.1889
+2025-06-17 21:24:51,666 - INFO - Finished
+
+2025-06-17 21:25:14,941 - INFO - =====================================
+2025-06-17 21:25:14,941 - INFO - infer_result/big_161224.csv threshold settings: 
+use_threshold=True, long_threshold=0.95, short_threshold=0.85
+2025-06-17 21:25:15,241 - INFO - Data processing completed, 279550 rows processed
+2025-06-17 21:25:18,636 - INFO - Overall accuracy: 0.7407
+2025-06-17 21:25:18,661 - INFO - Confusion matrix:
+[[   115  35147     46]
+ [   342 206900    128]
+ [    99  36723     50]]
+2025-06-17 21:25:18,881 - INFO - Classification report:
+              precision    recall  f1-score   support
+
+           0       0.21      0.00      0.01     35308
+           1       0.74      1.00      0.85    207370
+           2       0.22      0.00      0.00     36872
+
+    accuracy                           0.74    279550
+   macro avg       0.39      0.33      0.29    279550
+weighted avg       0.61      0.74      0.63    279550
+
+2025-06-17 21:25:19,172 - INFO - Confusion matrix saved to: backtest/images\confusion_matrix_20250617_212518.png
+2025-06-17 21:25:23,613 - INFO - Total minutes:279540, total trade: 780
+2025-06-17 21:25:23,629 - INFO - Total pnl:-2851.9016, average pnl:-3.6563
+2025-06-17 21:25:23,629 - INFO - Finished
+

@@ -11,6 +11,7 @@
 - big_1-02_105510是将02归为一类，1作为另外一类，在大测试集上的结果
 - big_230741和example1对应的是同一个checkpoint，只不过更换了更大的测试集
 - big_230741和example对应的是同一个checkpoint，只不过更换了更大的测试集
+- big_161224是使用了新的FocusAcc之后的checkpoint
 
 ## 单独回测结果
 

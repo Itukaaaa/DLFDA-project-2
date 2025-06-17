@@ -194,7 +194,7 @@ if __name__ == "__main__":
     logger.info("=====================================")
     logger.info("Starting multi-model backtest")
     
-    df2,pred_labels2 = multi_test(file1='infer_result/big_230741.csv',file2='infer_result/big_204822.csv',long_threshold=0.56, short_threshold=0.53)
+    df2,pred_labels2 = multi_test(file1='infer_result/big_230741.csv',file2='infer_result/big_161224.csv',long_threshold=0.52, short_threshold=0.51)
     # df2,pred_labels2 = multi_test_bin(file1='infer_result/big_230741.csv',file2='infer_result/big_1-02_105510.csv',long_threshold=0.6, short_threshold=0.56)
     return_df = test.calculate_10min_returns(df2['close'])
     
