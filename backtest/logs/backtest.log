@@ -689,4 +689,171 @@ weighted avg       0.61      0.74      0.63    279550
 2025-06-17 21:25:23,613 - INFO - Total minutes:279540, total trade: 780
 2025-06-17 21:25:23,629 - INFO - Total pnl:-2851.9016, average pnl:-3.6563
 2025-06-17 21:25:23,629 - INFO - Finished
-
+2025-06-17 23:17:41,630 - INFO - infer_result/example.csv threshold settings: 
+use_threshold=True, long_threshold=0.45, short_threshold=0.45
+2025-06-17 23:17:41,672 - INFO - Data processing completed, 55814 rows processed
+2025-06-17 23:17:42,470 - INFO - infer_result/example.csv threshold settings: 
+use_threshold=True, long_threshold=0.47000000000000003, short_threshold=0.47000000000000003
+2025-06-17 23:17:42,523 - INFO - Data processing completed, 55814 rows processed
+2025-06-17 23:17:43,269 - INFO - infer_result/example.csv threshold settings: 
+use_threshold=True, long_threshold=0.49000000000000005, short_threshold=0.49000000000000005
+2025-06-17 23:17:43,335 - INFO - Data processing completed, 55814 rows processed
+2025-06-17 23:17:44,053 - INFO - infer_result/example.csv threshold settings: 
+use_threshold=True, long_threshold=0.51, short_threshold=0.51
+2025-06-17 23:17:44,120 - INFO - Data processing completed, 55814 rows processed
+2025-06-17 23:17:44,820 - INFO - infer_result/example.csv threshold settings: 
+use_threshold=True, long_threshold=0.53, short_threshold=0.53
+2025-06-17 23:17:44,885 - INFO - Data processing completed, 55814 rows processed
+2025-06-17 23:17:45,557 - INFO - infer_result/example.csv threshold settings: 
+use_threshold=True, long_threshold=0.55, short_threshold=0.55
+2025-06-17 23:17:45,600 - INFO - Data processing completed, 55814 rows processed
+2025-06-17 23:17:46,298 - INFO - infer_result/example.csv threshold settings: 
+use_threshold=True, long_threshold=0.5700000000000001, short_threshold=0.5700000000000001
+2025-06-17 23:17:46,362 - INFO - Data processing completed, 55814 rows processed
+2025-06-17 23:17:47,041 - INFO - infer_result/example.csv threshold settings: 
+use_threshold=True, long_threshold=0.5900000000000001, short_threshold=0.5900000000000001
+2025-06-17 23:17:47,113 - INFO - Data processing completed, 55814 rows processed
+2025-06-17 23:17:47,859 - INFO - infer_result/example.csv threshold settings: 
+use_threshold=True, long_threshold=0.6100000000000001, short_threshold=0.6100000000000001
+2025-06-17 23:17:47,940 - INFO - Data processing completed, 55814 rows processed
+2025-06-17 23:17:48,688 - INFO - infer_result/example.csv threshold settings: 
+use_threshold=True, long_threshold=0.6300000000000001, short_threshold=0.6300000000000001
+2025-06-17 23:17:48,743 - INFO - Data processing completed, 55814 rows processed
+2025-06-17 23:17:49,455 - INFO - infer_result/example.csv threshold settings: 
+use_threshold=True, long_threshold=0.6500000000000001, short_threshold=0.6500000000000001
+2025-06-17 23:17:49,525 - INFO - Data processing completed, 55814 rows processed
+2025-06-17 23:17:50,387 - INFO - infer_result/example.csv threshold settings: 
+use_threshold=True, long_threshold=0.6700000000000002, short_threshold=0.6700000000000002
+2025-06-17 23:17:50,440 - INFO - Data processing completed, 55814 rows processed
+2025-06-17 23:17:51,171 - INFO - infer_result/example.csv threshold settings: 
+use_threshold=True, long_threshold=0.6900000000000002, short_threshold=0.6900000000000002
+2025-06-17 23:17:51,223 - INFO - Data processing completed, 55814 rows processed
+2025-06-17 23:17:51,939 - INFO - infer_result/example.csv threshold settings: 
+use_threshold=True, long_threshold=0.7100000000000002, short_threshold=0.7100000000000002
+2025-06-17 23:17:52,005 - INFO - Data processing completed, 55814 rows processed
+2025-06-17 23:19:10,736 - INFO - infer_result/example.csv threshold settings: 
+use_threshold=True, long_threshold=0.45, short_threshold=0.45
+2025-06-17 23:19:10,786 - INFO - Data processing completed, 55814 rows processed
+2025-06-17 23:19:11,453 - INFO - infer_result/example.csv threshold settings: 
+use_threshold=True, long_threshold=0.47000000000000003, short_threshold=0.47000000000000003
+2025-06-17 23:19:11,519 - INFO - Data processing completed, 55814 rows processed
+2025-06-17 23:19:12,171 - INFO - infer_result/example.csv threshold settings: 
+use_threshold=True, long_threshold=0.49000000000000005, short_threshold=0.49000000000000005
+2025-06-17 23:19:12,225 - INFO - Data processing completed, 55814 rows processed
+2025-06-17 23:19:12,900 - INFO - infer_result/example.csv threshold settings: 
+use_threshold=True, long_threshold=0.51, short_threshold=0.51
+2025-06-17 23:19:12,966 - INFO - Data processing completed, 55814 rows processed
+2025-06-17 23:19:13,650 - INFO - infer_result/example.csv threshold settings: 
+use_threshold=True, long_threshold=0.53, short_threshold=0.53
+2025-06-17 23:19:13,702 - INFO - Data processing completed, 55814 rows processed
+2025-06-17 23:19:14,400 - INFO - infer_result/example.csv threshold settings: 
+use_threshold=True, long_threshold=0.55, short_threshold=0.55
+2025-06-17 23:19:14,468 - INFO - Data processing completed, 55814 rows processed
+2025-06-17 23:19:15,545 - INFO - infer_result/example.csv threshold settings: 
+use_threshold=True, long_threshold=0.5700000000000001, short_threshold=0.5700000000000001
+2025-06-17 23:19:15,680 - INFO - Data processing completed, 55814 rows processed
+2025-06-17 23:19:18,375 - INFO - infer_result/example.csv threshold settings: 
+use_threshold=True, long_threshold=0.5900000000000001, short_threshold=0.5900000000000001
+2025-06-17 23:19:18,496 - INFO - Data processing completed, 55814 rows processed
+2025-06-17 23:19:21,047 - INFO - infer_result/example.csv threshold settings: 
+use_threshold=True, long_threshold=0.6100000000000001, short_threshold=0.6100000000000001
+2025-06-17 23:19:21,171 - INFO - Data processing completed, 55814 rows processed
+2025-06-17 23:19:23,727 - INFO - infer_result/example.csv threshold settings: 
+use_threshold=True, long_threshold=0.6300000000000001, short_threshold=0.6300000000000001
+2025-06-17 23:19:23,922 - INFO - Data processing completed, 55814 rows processed
+2025-06-17 23:19:27,072 - INFO - infer_result/example.csv threshold settings: 
+use_threshold=True, long_threshold=0.6500000000000001, short_threshold=0.6500000000000001
+2025-06-17 23:19:27,225 - INFO - Data processing completed, 55814 rows processed
+2025-06-17 23:19:30,491 - INFO - infer_result/example.csv threshold settings: 
+use_threshold=True, long_threshold=0.6700000000000002, short_threshold=0.6700000000000002
+2025-06-17 23:19:30,663 - INFO - Data processing completed, 55814 rows processed
+2025-06-17 23:19:33,459 - INFO - infer_result/example.csv threshold settings: 
+use_threshold=True, long_threshold=0.6900000000000002, short_threshold=0.6900000000000002
+2025-06-17 23:19:33,634 - INFO - Data processing completed, 55814 rows processed
+2025-06-17 23:19:36,447 - INFO - infer_result/example.csv threshold settings: 
+use_threshold=True, long_threshold=0.7100000000000002, short_threshold=0.7100000000000002
+2025-06-17 23:19:36,546 - INFO - Data processing completed, 55814 rows processed
+2025-06-17 23:20:27,324 - INFO - infer_result/example.csv threshold settings: 
+use_threshold=True, long_threshold=0.45, short_threshold=0.45
+2025-06-17 23:20:27,383 - INFO - Data processing completed, 55814 rows processed
+2025-06-17 23:20:28,064 - INFO - infer_result/example.csv threshold settings: 
+use_threshold=True, long_threshold=0.47000000000000003, short_threshold=0.47000000000000003
+2025-06-17 23:20:28,117 - INFO - Data processing completed, 55814 rows processed
+2025-06-17 23:20:28,779 - INFO - infer_result/example.csv threshold settings: 
+use_threshold=True, long_threshold=0.49000000000000005, short_threshold=0.49000000000000005
+2025-06-17 23:20:28,834 - INFO - Data processing completed, 55814 rows processed
+2025-06-17 23:20:29,495 - INFO - infer_result/example.csv threshold settings: 
+use_threshold=True, long_threshold=0.51, short_threshold=0.51
+2025-06-17 23:20:29,549 - INFO - Data processing completed, 55814 rows processed
+2025-06-17 23:20:30,196 - INFO - infer_result/example.csv threshold settings: 
+use_threshold=True, long_threshold=0.53, short_threshold=0.53
+2025-06-17 23:20:30,252 - INFO - Data processing completed, 55814 rows processed
+2025-06-17 23:20:30,912 - INFO - infer_result/example.csv threshold settings: 
+use_threshold=True, long_threshold=0.55, short_threshold=0.55
+2025-06-17 23:20:30,981 - INFO - Data processing completed, 55814 rows processed
+2025-06-17 23:20:31,661 - INFO - infer_result/example.csv threshold settings: 
+use_threshold=True, long_threshold=0.5700000000000001, short_threshold=0.5700000000000001
+2025-06-17 23:20:31,730 - INFO - Data processing completed, 55814 rows processed
+2025-06-17 23:20:32,410 - INFO - infer_result/example.csv threshold settings: 
+use_threshold=True, long_threshold=0.5900000000000001, short_threshold=0.5900000000000001
+2025-06-17 23:20:32,464 - INFO - Data processing completed, 55814 rows processed
+2025-06-17 23:20:33,192 - INFO - infer_result/example.csv threshold settings: 
+use_threshold=True, long_threshold=0.6100000000000001, short_threshold=0.6100000000000001
+2025-06-17 23:20:33,245 - INFO - Data processing completed, 55814 rows processed
+2025-06-17 23:20:33,973 - INFO - infer_result/example.csv threshold settings: 
+use_threshold=True, long_threshold=0.6300000000000001, short_threshold=0.6300000000000001
+2025-06-17 23:20:34,030 - INFO - Data processing completed, 55814 rows processed
+2025-06-17 23:20:34,741 - INFO - infer_result/example.csv threshold settings: 
+use_threshold=True, long_threshold=0.6500000000000001, short_threshold=0.6500000000000001
+2025-06-17 23:20:34,803 - INFO - Data processing completed, 55814 rows processed
+2025-06-17 23:20:35,475 - INFO - infer_result/example.csv threshold settings: 
+use_threshold=True, long_threshold=0.6700000000000002, short_threshold=0.6700000000000002
+2025-06-17 23:20:35,544 - INFO - Data processing completed, 55814 rows processed
+2025-06-17 23:20:36,278 - INFO - infer_result/example.csv threshold settings: 
+use_threshold=True, long_threshold=0.6900000000000002, short_threshold=0.6900000000000002
+2025-06-17 23:20:36,343 - INFO - Data processing completed, 55814 rows processed
+2025-06-17 23:20:37,049 - INFO - infer_result/example.csv threshold settings: 
+use_threshold=True, long_threshold=0.7100000000000002, short_threshold=0.7100000000000002
+2025-06-17 23:20:37,098 - INFO - Data processing completed, 55814 rows processed
+2025-06-17 23:23:54,502 - INFO - infer_result/example.csv threshold settings: 
+use_threshold=True, long_threshold=0.45, short_threshold=0.45
+2025-06-17 23:23:54,557 - INFO - Data processing completed, 55814 rows processed
+2025-06-17 23:23:55,254 - INFO - infer_result/example.csv threshold settings: 
+use_threshold=True, long_threshold=0.47000000000000003, short_threshold=0.47000000000000003
+2025-06-17 23:23:55,312 - INFO - Data processing completed, 55814 rows processed
+2025-06-17 23:23:55,986 - INFO - infer_result/example.csv threshold settings: 
+use_threshold=True, long_threshold=0.49000000000000005, short_threshold=0.49000000000000005
+2025-06-17 23:23:56,052 - INFO - Data processing completed, 55814 rows processed
+2025-06-17 23:23:56,729 - INFO - infer_result/example.csv threshold settings: 
+use_threshold=True, long_threshold=0.51, short_threshold=0.51
+2025-06-17 23:23:56,792 - INFO - Data processing completed, 55814 rows processed
+2025-06-17 23:23:57,453 - INFO - infer_result/example.csv threshold settings: 
+use_threshold=True, long_threshold=0.53, short_threshold=0.53
+2025-06-17 23:23:57,502 - INFO - Data processing completed, 55814 rows processed
+2025-06-17 23:23:58,134 - INFO - infer_result/example.csv threshold settings: 
+use_threshold=True, long_threshold=0.55, short_threshold=0.55
+2025-06-17 23:23:58,188 - INFO - Data processing completed, 55814 rows processed
+2025-06-17 23:23:58,851 - INFO - infer_result/example.csv threshold settings: 
+use_threshold=True, long_threshold=0.5700000000000001, short_threshold=0.5700000000000001
+2025-06-17 23:23:58,904 - INFO - Data processing completed, 55814 rows processed
+2025-06-17 23:23:59,571 - INFO - infer_result/example.csv threshold settings: 
+use_threshold=True, long_threshold=0.5900000000000001, short_threshold=0.5900000000000001
+2025-06-17 23:23:59,637 - INFO - Data processing completed, 55814 rows processed
+2025-06-17 23:24:00,298 - INFO - infer_result/example.csv threshold settings: 
+use_threshold=True, long_threshold=0.6100000000000001, short_threshold=0.6100000000000001
+2025-06-17 23:24:00,366 - INFO - Data processing completed, 55814 rows processed
+2025-06-17 23:24:01,027 - INFO - infer_result/example.csv threshold settings: 
+use_threshold=True, long_threshold=0.6300000000000001, short_threshold=0.6300000000000001
+2025-06-17 23:24:01,093 - INFO - Data processing completed, 55814 rows processed
+2025-06-17 23:24:01,754 - INFO - infer_result/example.csv threshold settings: 
+use_threshold=True, long_threshold=0.6500000000000001, short_threshold=0.6500000000000001
+2025-06-17 23:24:01,810 - INFO - Data processing completed, 55814 rows processed
+2025-06-17 23:24:02,436 - INFO - infer_result/example.csv threshold settings: 
+use_threshold=True, long_threshold=0.6700000000000002, short_threshold=0.6700000000000002
+2025-06-17 23:24:02,516 - INFO - Data processing completed, 55814 rows processed
+2025-06-17 23:24:03,179 - INFO - infer_result/example.csv threshold settings: 
+use_threshold=True, long_threshold=0.6900000000000002, short_threshold=0.6900000000000002
+2025-06-17 23:24:03,228 - INFO - Data processing completed, 55814 rows processed
+2025-06-17 23:24:03,918 - INFO - infer_result/example.csv threshold settings: 
+use_threshold=True, long_threshold=0.7100000000000002, short_threshold=0.7100000000000002
+2025-06-17 23:24:03,972 - INFO - Data processing completed, 55814 rows processed
