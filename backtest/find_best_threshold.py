@@ -64,7 +64,7 @@ def analyze_thresholds(filename="infer_result/example.csv",
     
     while current_threshold <= end_threshold:
         logger.info(f"Testing threshold: {current_threshold}")
-        print(f"Testing threshold: {current_threshold:.2f}")
+        print(f"Testing threshold: {current_threshold:.3f}")  # 增加到3位小数
         
         # 使用相同的阈值进行long和short
         df = process_data(filename=filename, 
@@ -107,14 +107,14 @@ def analyze_thresholds(filename="infer_result/example.csv",
             'daily_avg_trades': daily_avg_trades
         })
         
-        # 修改日志输出，显示每日平均PNL
-        logger.info(f"Threshold {current_threshold:.2f}: trades={total_trades}, total PNL={total_pnl:.2f}, avg PNL={avg_return:.2f}, daily avg trades={daily_avg_trades:.2f}, daily avg PNL={total_pnl/trading_days:.2f}, accuracy={accuracy:.4f}")
-        print(f"Threshold {current_threshold:.2f}: trades={total_trades}, total PNL={total_pnl:.2f}, avg PNL={avg_return:.2f}, daily avg trades={daily_avg_trades:.2f}, daily avg PNL={total_pnl/trading_days:.2f}, accuracy={accuracy:.4f}")
+        # 修改日志输出，显示每日平均PNL, 增加精度到3位小数
+        logger.info(f"Threshold {current_threshold:.3f}: trades={total_trades}, total PNL={total_pnl:.2f}, avg PNL={avg_return:.2f}, daily avg trades={daily_avg_trades:.2f}, daily avg PNL={total_pnl/trading_days:.2f}, accuracy={accuracy:.4f}")
+        print(f"Threshold {current_threshold:.3f}: trades={total_trades}, total PNL={total_pnl:.2f}, avg PNL={avg_return:.2f}, daily avg trades={daily_avg_trades:.2f}, daily avg PNL={total_pnl/trading_days:.2f}, accuracy={accuracy:.4f}")
         
-        # 修改提前结束的条件为每日平均交易次数
+        # 修改提前结束的条件输出
         if daily_avg_trades < min_daily_trades and current_threshold > 0.7:
-            logger.info(f"Daily average trades {daily_avg_trades:.2f} is below minimum requirement {min_daily_trades}, and threshold already reached {current_threshold:.2f}, stopping early")
-            print(f"Daily average trades {daily_avg_trades:.2f} is below minimum requirement {min_daily_trades}, and threshold already reached {current_threshold:.2f}, stopping early")
+            logger.info(f"Daily average trades {daily_avg_trades:.2f} is below minimum requirement {min_daily_trades}, and threshold already reached {current_threshold:.3f}, stopping early")
+            print(f"Daily average trades {daily_avg_trades:.2f} is below minimum requirement {min_daily_trades}, and threshold already reached {current_threshold:.3f}, stopping early")
             break
             
         current_threshold += step
@@ -122,7 +122,7 @@ def analyze_thresholds(filename="infer_result/example.csv",
     # 创建DataFrame
     results_df = pd.DataFrame(results)
     
-    # 寻找最佳阈值
+    # 寻找最佳阈值, 增加精度显示
     if not results_df.empty:
         # 根据平均PNL寻找最佳阈值
         best_avg_pnl_idx = results_df['avg_pnl'].argmax()
@@ -143,14 +143,14 @@ def analyze_thresholds(filename="infer_result/example.csv",
         best_daily_pnl_trades = results_df.iloc[best_daily_pnl_idx]['total_trades']
         
         logger.info("=" * 50)
-        logger.info(f"Best avg PNL threshold: {best_avg_pnl_threshold:.2f}, avg PNL: {best_avg_pnl:.2f}, trades: {best_avg_pnl_trades}, daily avg trades: {best_avg_pnl_trades/trading_days:.2f}")
-        logger.info(f"Best total PNL threshold: {best_total_pnl_threshold:.2f}, total PNL: {best_total_pnl:.2f}, trades: {best_total_pnl_trades}, daily avg trades: {best_total_pnl_trades/trading_days:.2f}")
-        logger.info(f"Best daily PNL threshold: {best_daily_pnl_threshold:.2f}, daily avg PNL: {best_daily_pnl:.2f}, trades: {best_daily_pnl_trades}, daily avg trades: {best_daily_pnl_trades/trading_days:.2f}")
+        logger.info(f"Best avg PNL threshold: {best_avg_pnl_threshold:.3f}, avg PNL: {best_avg_pnl:.2f}, trades: {best_avg_pnl_trades}, daily avg trades: {best_avg_pnl_trades/trading_days:.2f}")
+        logger.info(f"Best total PNL threshold: {best_total_pnl_threshold:.3f}, total PNL: {best_total_pnl:.2f}, trades: {best_total_pnl_trades}, daily avg trades: {best_total_pnl_trades/trading_days:.2f}")
+        logger.info(f"Best daily PNL threshold: {best_daily_pnl_threshold:.3f}, daily avg PNL: {best_daily_pnl:.2f}, trades: {best_daily_pnl_trades}, daily avg trades: {best_daily_pnl_trades/trading_days:.2f}")
         
         print("=" * 50)
-        print(f"Best avg PNL threshold: {best_avg_pnl_threshold:.2f}, avg PNL: {best_avg_pnl:.2f}, trades: {best_avg_pnl_trades}, daily avg trades: {best_avg_pnl_trades/trading_days:.2f}")
-        print(f"Best total PNL threshold: {best_total_pnl_threshold:.2f}, total PNL: {best_total_pnl:.2f}, trades: {best_total_pnl_trades}, daily avg trades: {best_total_pnl_trades/trading_days:.2f}")
-        print(f"Best daily PNL threshold: {best_daily_pnl_threshold:.2f}, daily avg PNL: {best_daily_pnl:.2f}, trades: {best_daily_pnl_trades}, daily avg trades: {best_daily_pnl_trades/trading_days:.2f}")
+        print(f"Best avg PNL threshold: {best_avg_pnl_threshold:.3f}, avg PNL: {best_avg_pnl:.2f}, trades: {best_avg_pnl_trades}, daily avg trades: {best_avg_pnl_trades/trading_days:.2f}")
+        print(f"Best total PNL threshold: {best_total_pnl_threshold:.3f}, total PNL: {best_total_pnl:.2f}, trades: {best_total_pnl_trades}, daily avg trades: {best_total_pnl_trades/trading_days:.2f}")
+        print(f"Best daily PNL threshold: {best_daily_pnl_threshold:.3f}, daily avg PNL: {best_daily_pnl:.2f}, trades: {best_daily_pnl_trades}, daily avg trades: {best_daily_pnl_trades/trading_days:.2f}")
         
     return results_df
 
@@ -239,12 +239,12 @@ if __name__ == "__main__":
     logger.info("Starting threshold optimization analysis")
     
     # 获取输入文件名，如果命令行参数提供则使用，否则使用默认值
-    input_file = "infer_result/big_214403.csv"
+    input_file = "infer_result/bigbal_134843.csv"
     if len(sys.argv) > 1:
         input_file = sys.argv[1]
         
     # 设置阈值范围
-    start_threshold = 0.9
+    start_threshold = 0.85
     end_threshold = 0.995
     step_size = 0.005
     min_daily_trades_required = 3  # 每日最小交易次数
