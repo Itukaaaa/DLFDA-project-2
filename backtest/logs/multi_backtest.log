@@ -1649,3 +1649,120 @@ weighted avg       0.59      0.72      0.63    279550
 2025-06-17 21:32:31,109 - INFO - Total pnl:20225.4267, avergae pnl:1.8197
 2025-06-17 21:32:31,109 - INFO - Multi-model backtest finished
 
+2025-06-17 23:37:26,075 - INFO - =====================================
+2025-06-17 23:37:26,075 - INFO - Starting multi-model backtest
+2025-06-17 23:37:26,075 - INFO - Multi test started with files: infer_result/big_230741.csv and infer_result/big_214403.csv
+2025-06-17 23:37:26,075 - INFO - Threshold settings: long_threshold=0.52, short_threshold=0.51
+2025-06-17 23:37:26,076 - INFO - infer_result/big_230741.csv threshold settings: 
+use_threshold=True, long_threshold=0.52, short_threshold=0.51
+2025-06-17 23:37:26,364 - INFO - Data processing completed, 279550 rows processed
+2025-06-17 23:37:26,364 - INFO - infer_result/big_214403.csv threshold settings: 
+use_threshold=True, long_threshold=0.52, short_threshold=0.51
+2025-06-17 23:37:26,623 - INFO - Data processing completed, 279550 rows processed
+2025-06-17 23:37:26,650 - INFO - File 1 Confusion matrix:
+[[  1050  32656   1602]
+ [  5567 194505   7298]
+ [   948  34045   1879]]
+2025-06-17 23:37:26,685 - INFO - File 2 Confusion matrix:
+[[  9295  19326   6687]
+ [ 44248 134516  28606]
+ [  8644  20142   8086]]
+2025-06-17 23:37:28,420 - INFO - Combined Confusion matrix:
+[[   859  33499    950]
+ [  4494 199118   3758]
+ [   792  34996   1084]]
+2025-06-17 23:37:28,434 - INFO - Combined accuracy: 0.7192
+2025-06-17 23:37:28,582 - INFO - Combined classification report:
+              precision    recall  f1-score   support
+
+           0       0.14      0.02      0.04     35308
+           1       0.74      0.96      0.84    207370
+           2       0.19      0.03      0.05     36872
+
+    accuracy                           0.72    279550
+   macro avg       0.36      0.34      0.31    279550
+weighted avg       0.59      0.72      0.63    279550
+
+2025-06-17 23:37:28,766 - INFO - Combined confusion matrix saved to: backtest/multi_images\combined_confusion_matrix_20250617_233728.png
+2025-06-17 23:37:31,813 - INFO - Total minutes:279540, Total trade: 11937
+2025-06-17 23:37:31,813 - INFO - Total pnl:22419.5314, avergae pnl:1.8782
+2025-06-17 23:37:31,813 - INFO - Multi-model backtest finished
+
+2025-06-17 23:38:18,468 - INFO - =====================================
+2025-06-17 23:38:18,468 - INFO - Starting multi-model backtest
+2025-06-17 23:38:18,468 - INFO - Multi test started with files: infer_result/big_230741.csv and infer_result/big_214403.csv
+2025-06-17 23:38:18,468 - INFO - Threshold settings: long_threshold=0.55, short_threshold=0.54
+2025-06-17 23:38:18,468 - INFO - infer_result/big_230741.csv threshold settings: 
+use_threshold=True, long_threshold=0.55, short_threshold=0.54
+2025-06-17 23:38:18,720 - INFO - Data processing completed, 279550 rows processed
+2025-06-17 23:38:18,720 - INFO - infer_result/big_214403.csv threshold settings: 
+use_threshold=True, long_threshold=0.55, short_threshold=0.54
+2025-06-17 23:38:18,961 - INFO - Data processing completed, 279550 rows processed
+2025-06-17 23:38:18,979 - INFO - File 1 Confusion matrix:
+[[   368  34123    817]
+ [  1942 201729   3699]
+ [   348  35531    993]]
+2025-06-17 23:38:19,013 - INFO - File 2 Confusion matrix:
+[[  8588  20516   6204]
+ [ 40065 141303  26002]
+ [  7942  21440   7490]]
+2025-06-17 23:38:20,643 - INFO - Combined Confusion matrix:
+[[   297  34566    445]
+ [  1636 203985   1749]
+ [   300  36056    516]]
+2025-06-17 23:38:20,665 - INFO - Combined accuracy: 0.7326
+2025-06-17 23:38:20,827 - INFO - Combined classification report:
+              precision    recall  f1-score   support
+
+           0       0.13      0.01      0.02     35308
+           1       0.74      0.98      0.85    207370
+           2       0.19      0.01      0.03     36872
+
+    accuracy                           0.73    279550
+   macro avg       0.36      0.34      0.30    279550
+weighted avg       0.59      0.73      0.63    279550
+
+2025-06-17 23:38:21,178 - INFO - Combined confusion matrix saved to: backtest/multi_images\combined_confusion_matrix_20250617_233820.png
+2025-06-17 23:38:24,085 - INFO - Total minutes:279540, Total trade: 4943
+2025-06-17 23:38:24,085 - INFO - Total pnl:6281.7878, avergae pnl:1.2708
+2025-06-17 23:38:24,085 - INFO - Multi-model backtest finished
+
+2025-06-17 23:39:39,654 - INFO - =====================================
+2025-06-17 23:39:39,654 - INFO - Starting multi-model backtest
+2025-06-17 23:39:39,654 - INFO - Multi test started with files: infer_result/big_204822.csv and infer_result/big_214403.csv
+2025-06-17 23:39:39,654 - INFO - Threshold settings: long_threshold=0.55, short_threshold=0.54
+2025-06-17 23:39:39,654 - INFO - infer_result/big_204822.csv threshold settings: 
+use_threshold=True, long_threshold=0.55, short_threshold=0.54
+2025-06-17 23:39:39,891 - INFO - Data processing completed, 279550 rows processed
+2025-06-17 23:39:39,891 - INFO - infer_result/big_214403.csv threshold settings: 
+use_threshold=True, long_threshold=0.55, short_threshold=0.54
+2025-06-17 23:39:40,156 - INFO - Data processing completed, 279550 rows processed
+2025-06-17 23:39:40,172 - INFO - File 1 Confusion matrix:
+[[   180  34720    408]
+ [   794 204841   1735]
+ [   156  36230    486]]
+2025-06-17 23:39:40,210 - INFO - File 2 Confusion matrix:
+[[  8588  20516   6204]
+ [ 40065 141303  26002]
+ [  7942  21440   7490]]
+2025-06-17 23:39:41,671 - INFO - Combined Confusion matrix:
+[[    59  35070    179]
+ [   185 206604    581]
+ [    46  36632    194]]
+2025-06-17 23:39:41,693 - INFO - Combined accuracy: 0.7400
+2025-06-17 23:39:41,840 - INFO - Combined classification report:
+              precision    recall  f1-score   support
+
+           0       0.20      0.00      0.00     35308
+           1       0.74      1.00      0.85    207370
+           2       0.20      0.01      0.01     36872
+
+    accuracy                           0.74    279550
+   macro avg       0.38      0.33      0.29    279550
+weighted avg       0.60      0.74      0.63    279550
+
+2025-06-17 23:39:42,175 - INFO - Combined confusion matrix saved to: backtest/multi_images\combined_confusion_matrix_20250617_233941.png
+2025-06-17 23:39:45,069 - INFO - Total minutes:279540, Total trade: 1244
+2025-06-17 23:39:45,069 - INFO - Total pnl:3331.0935, avergae pnl:2.6777
+2025-06-17 23:39:45,069 - INFO - Multi-model backtest finished
+

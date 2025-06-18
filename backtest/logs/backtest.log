@@ -857,3 +857,396 @@ use_threshold=True, long_threshold=0.6900000000000002, short_threshold=0.6900000
 2025-06-17 23:24:03,918 - INFO - infer_result/example.csv threshold settings: 
 use_threshold=True, long_threshold=0.7100000000000002, short_threshold=0.7100000000000002
 2025-06-17 23:24:03,972 - INFO - Data processing completed, 55814 rows processed
+2025-06-17 23:32:16,021 - INFO - infer_result/big_214403.csv threshold settings: 
+use_threshold=True, long_threshold=0.45, short_threshold=0.45
+2025-06-17 23:32:16,271 - INFO - Data processing completed, 279550 rows processed
+2025-06-17 23:32:19,635 - INFO - infer_result/big_214403.csv threshold settings: 
+use_threshold=True, long_threshold=0.47000000000000003, short_threshold=0.47000000000000003
+2025-06-17 23:32:19,891 - INFO - Data processing completed, 279550 rows processed
+2025-06-17 23:32:23,253 - INFO - infer_result/big_214403.csv threshold settings: 
+use_threshold=True, long_threshold=0.49000000000000005, short_threshold=0.49000000000000005
+2025-06-17 23:32:23,492 - INFO - Data processing completed, 279550 rows processed
+2025-06-17 23:32:26,857 - INFO - infer_result/big_214403.csv threshold settings: 
+use_threshold=True, long_threshold=0.51, short_threshold=0.51
+2025-06-17 23:32:27,104 - INFO - Data processing completed, 279550 rows processed
+2025-06-17 23:32:30,577 - INFO - infer_result/big_214403.csv threshold settings: 
+use_threshold=True, long_threshold=0.53, short_threshold=0.53
+2025-06-17 23:32:30,837 - INFO - Data processing completed, 279550 rows processed
+2025-06-17 23:32:34,584 - INFO - infer_result/big_214403.csv threshold settings: 
+use_threshold=True, long_threshold=0.55, short_threshold=0.55
+2025-06-17 23:32:34,863 - INFO - Data processing completed, 279550 rows processed
+2025-06-17 23:32:38,323 - INFO - infer_result/big_214403.csv threshold settings: 
+use_threshold=True, long_threshold=0.5700000000000001, short_threshold=0.5700000000000001
+2025-06-17 23:32:38,580 - INFO - Data processing completed, 279550 rows processed
+2025-06-17 23:32:41,965 - INFO - infer_result/big_214403.csv threshold settings: 
+use_threshold=True, long_threshold=0.5900000000000001, short_threshold=0.5900000000000001
+2025-06-17 23:32:42,224 - INFO - Data processing completed, 279550 rows processed
+2025-06-17 23:32:45,715 - INFO - infer_result/big_214403.csv threshold settings: 
+use_threshold=True, long_threshold=0.6100000000000001, short_threshold=0.6100000000000001
+2025-06-17 23:32:45,983 - INFO - Data processing completed, 279550 rows processed
+2025-06-17 23:32:49,548 - INFO - infer_result/big_214403.csv threshold settings: 
+use_threshold=True, long_threshold=0.6300000000000001, short_threshold=0.6300000000000001
+2025-06-17 23:32:49,813 - INFO - Data processing completed, 279550 rows processed
+2025-06-17 23:32:53,340 - INFO - infer_result/big_214403.csv threshold settings: 
+use_threshold=True, long_threshold=0.6500000000000001, short_threshold=0.6500000000000001
+2025-06-17 23:32:53,600 - INFO - Data processing completed, 279550 rows processed
+2025-06-17 23:32:57,237 - INFO - infer_result/big_214403.csv threshold settings: 
+use_threshold=True, long_threshold=0.6700000000000002, short_threshold=0.6700000000000002
+2025-06-17 23:32:57,493 - INFO - Data processing completed, 279550 rows processed
+2025-06-17 23:33:01,138 - INFO - infer_result/big_214403.csv threshold settings: 
+use_threshold=True, long_threshold=0.6900000000000002, short_threshold=0.6900000000000002
+2025-06-17 23:33:01,395 - INFO - Data processing completed, 279550 rows processed
+2025-06-17 23:33:05,029 - INFO - infer_result/big_214403.csv threshold settings: 
+use_threshold=True, long_threshold=0.7100000000000002, short_threshold=0.7100000000000002
+2025-06-17 23:33:05,270 - INFO - Data processing completed, 279550 rows processed
+2025-06-17 23:33:08,733 - INFO - infer_result/big_214403.csv threshold settings: 
+use_threshold=True, long_threshold=0.7300000000000002, short_threshold=0.7300000000000002
+2025-06-17 23:33:08,976 - INFO - Data processing completed, 279550 rows processed
+2025-06-17 23:33:12,420 - INFO - infer_result/big_214403.csv threshold settings: 
+use_threshold=True, long_threshold=0.7500000000000002, short_threshold=0.7500000000000002
+2025-06-17 23:33:12,664 - INFO - Data processing completed, 279550 rows processed
+2025-06-17 23:33:16,012 - INFO - infer_result/big_214403.csv threshold settings: 
+use_threshold=True, long_threshold=0.7700000000000002, short_threshold=0.7700000000000002
+2025-06-17 23:33:16,258 - INFO - Data processing completed, 279550 rows processed
+2025-06-17 23:33:19,774 - INFO - infer_result/big_214403.csv threshold settings: 
+use_threshold=True, long_threshold=0.7900000000000003, short_threshold=0.7900000000000003
+2025-06-17 23:33:20,044 - INFO - Data processing completed, 279550 rows processed
+2025-06-17 23:33:23,480 - INFO - infer_result/big_214403.csv threshold settings: 
+use_threshold=True, long_threshold=0.8100000000000003, short_threshold=0.8100000000000003
+2025-06-17 23:33:23,728 - INFO - Data processing completed, 279550 rows processed
+2025-06-17 23:33:27,070 - INFO - infer_result/big_214403.csv threshold settings: 
+use_threshold=True, long_threshold=0.8300000000000003, short_threshold=0.8300000000000003
+2025-06-17 23:33:27,321 - INFO - Data processing completed, 279550 rows processed
+2025-06-17 23:33:30,761 - INFO - infer_result/big_214403.csv threshold settings: 
+use_threshold=True, long_threshold=0.8500000000000003, short_threshold=0.8500000000000003
+2025-06-17 23:33:31,000 - INFO - Data processing completed, 279550 rows processed
+2025-06-17 23:33:34,382 - INFO - infer_result/big_214403.csv threshold settings: 
+use_threshold=True, long_threshold=0.8700000000000003, short_threshold=0.8700000000000003
+2025-06-17 23:33:34,623 - INFO - Data processing completed, 279550 rows processed
+2025-06-17 23:33:38,012 - INFO - infer_result/big_214403.csv threshold settings: 
+use_threshold=True, long_threshold=0.8900000000000003, short_threshold=0.8900000000000003
+2025-06-17 23:33:38,238 - INFO - Data processing completed, 279550 rows processed
+2025-06-17 23:33:41,569 - INFO - infer_result/big_214403.csv threshold settings: 
+use_threshold=True, long_threshold=0.9100000000000004, short_threshold=0.9100000000000004
+2025-06-17 23:33:41,815 - INFO - Data processing completed, 279550 rows processed
+2025-06-17 23:33:45,125 - INFO - infer_result/big_214403.csv threshold settings: 
+use_threshold=True, long_threshold=0.9300000000000004, short_threshold=0.9300000000000004
+2025-06-17 23:33:45,363 - INFO - Data processing completed, 279550 rows processed
+2025-06-17 23:33:48,709 - INFO - infer_result/big_214403.csv threshold settings: 
+use_threshold=True, long_threshold=0.9500000000000004, short_threshold=0.9500000000000004
+2025-06-17 23:33:48,939 - INFO - Data processing completed, 279550 rows processed
+2025-06-18 10:41:36,636 - INFO - infer_result/big_214403.csv threshold settings: 
+use_threshold=True, long_threshold=0.45, short_threshold=0.45
+2025-06-18 10:41:36,867 - INFO - Data processing completed, 279550 rows processed
+2025-06-18 10:41:40,179 - INFO - infer_result/big_214403.csv threshold settings: 
+use_threshold=True, long_threshold=0.47000000000000003, short_threshold=0.47000000000000003
+2025-06-18 10:41:40,411 - INFO - Data processing completed, 279550 rows processed
+2025-06-18 10:41:43,677 - INFO - infer_result/big_214403.csv threshold settings: 
+use_threshold=True, long_threshold=0.49000000000000005, short_threshold=0.49000000000000005
+2025-06-18 10:41:43,905 - INFO - Data processing completed, 279550 rows processed
+2025-06-18 10:41:47,225 - INFO - infer_result/big_214403.csv threshold settings: 
+use_threshold=True, long_threshold=0.51, short_threshold=0.51
+2025-06-18 10:41:47,449 - INFO - Data processing completed, 279550 rows processed
+2025-06-18 10:41:50,733 - INFO - infer_result/big_214403.csv threshold settings: 
+use_threshold=True, long_threshold=0.53, short_threshold=0.53
+2025-06-18 10:41:50,955 - INFO - Data processing completed, 279550 rows processed
+2025-06-18 10:41:54,178 - INFO - infer_result/big_214403.csv threshold settings: 
+use_threshold=True, long_threshold=0.55, short_threshold=0.55
+2025-06-18 10:41:54,410 - INFO - Data processing completed, 279550 rows processed
+2025-06-18 10:42:03,992 - INFO - infer_result/big_214403.csv threshold settings: 
+use_threshold=True, long_threshold=0.5700000000000001, short_threshold=0.5700000000000001
+2025-06-18 10:42:04,441 - INFO - Data processing completed, 279550 rows processed
+2025-06-18 10:42:10,956 - INFO - infer_result/big_214403.csv threshold settings: 
+use_threshold=True, long_threshold=0.5900000000000001, short_threshold=0.5900000000000001
+2025-06-18 10:42:11,193 - INFO - Data processing completed, 279550 rows processed
+2025-06-18 10:42:14,656 - INFO - infer_result/big_214403.csv threshold settings: 
+use_threshold=True, long_threshold=0.6100000000000001, short_threshold=0.6100000000000001
+2025-06-18 10:42:14,892 - INFO - Data processing completed, 279550 rows processed
+2025-06-18 10:42:18,610 - INFO - infer_result/big_214403.csv threshold settings: 
+use_threshold=True, long_threshold=0.6300000000000001, short_threshold=0.6300000000000001
+2025-06-18 10:42:18,869 - INFO - Data processing completed, 279550 rows processed
+2025-06-18 10:42:22,484 - INFO - infer_result/big_214403.csv threshold settings: 
+use_threshold=True, long_threshold=0.6500000000000001, short_threshold=0.6500000000000001
+2025-06-18 10:42:22,739 - INFO - Data processing completed, 279550 rows processed
+2025-06-18 10:42:26,167 - INFO - infer_result/big_214403.csv threshold settings: 
+use_threshold=True, long_threshold=0.6700000000000002, short_threshold=0.6700000000000002
+2025-06-18 10:42:26,424 - INFO - Data processing completed, 279550 rows processed
+2025-06-18 10:42:29,820 - INFO - infer_result/big_214403.csv threshold settings: 
+use_threshold=True, long_threshold=0.6900000000000002, short_threshold=0.6900000000000002
+2025-06-18 10:42:30,067 - INFO - Data processing completed, 279550 rows processed
+2025-06-18 10:42:33,438 - INFO - infer_result/big_214403.csv threshold settings: 
+use_threshold=True, long_threshold=0.7100000000000002, short_threshold=0.7100000000000002
+2025-06-18 10:42:33,705 - INFO - Data processing completed, 279550 rows processed
+2025-06-18 10:42:37,281 - INFO - infer_result/big_214403.csv threshold settings: 
+use_threshold=True, long_threshold=0.7300000000000002, short_threshold=0.7300000000000002
+2025-06-18 10:42:37,528 - INFO - Data processing completed, 279550 rows processed
+2025-06-18 10:42:40,929 - INFO - infer_result/big_214403.csv threshold settings: 
+use_threshold=True, long_threshold=0.7500000000000002, short_threshold=0.7500000000000002
+2025-06-18 10:42:41,171 - INFO - Data processing completed, 279550 rows processed
+2025-06-18 10:42:44,607 - INFO - infer_result/big_214403.csv threshold settings: 
+use_threshold=True, long_threshold=0.7700000000000002, short_threshold=0.7700000000000002
+2025-06-18 10:42:44,863 - INFO - Data processing completed, 279550 rows processed
+2025-06-18 10:42:48,144 - INFO - infer_result/big_214403.csv threshold settings: 
+use_threshold=True, long_threshold=0.7900000000000003, short_threshold=0.7900000000000003
+2025-06-18 10:42:48,432 - INFO - Data processing completed, 279550 rows processed
+2025-06-18 10:42:51,802 - INFO - infer_result/big_214403.csv threshold settings: 
+use_threshold=True, long_threshold=0.8100000000000003, short_threshold=0.8100000000000003
+2025-06-18 10:42:52,079 - INFO - Data processing completed, 279550 rows processed
+2025-06-18 10:42:56,131 - INFO - infer_result/big_214403.csv threshold settings: 
+use_threshold=True, long_threshold=0.8300000000000003, short_threshold=0.8300000000000003
+2025-06-18 10:42:56,668 - INFO - Data processing completed, 279550 rows processed
+2025-06-18 10:43:08,743 - INFO - infer_result/big_214403.csv threshold settings: 
+use_threshold=True, long_threshold=0.8500000000000003, short_threshold=0.8500000000000003
+2025-06-18 10:43:09,259 - INFO - Data processing completed, 279550 rows processed
+2025-06-18 10:43:22,504 - INFO - infer_result/big_214403.csv threshold settings: 
+use_threshold=True, long_threshold=0.8700000000000003, short_threshold=0.8700000000000003
+2025-06-18 10:43:23,155 - INFO - Data processing completed, 279550 rows processed
+2025-06-18 10:43:36,351 - INFO - infer_result/big_214403.csv threshold settings: 
+use_threshold=True, long_threshold=0.8900000000000003, short_threshold=0.8900000000000003
+2025-06-18 10:43:37,043 - INFO - Data processing completed, 279550 rows processed
+2025-06-18 10:43:43,474 - INFO - infer_result/big_214403.csv threshold settings: 
+use_threshold=True, long_threshold=0.9100000000000004, short_threshold=0.9100000000000004
+2025-06-18 10:43:43,717 - INFO - Data processing completed, 279550 rows processed
+2025-06-18 10:43:46,974 - INFO - infer_result/big_214403.csv threshold settings: 
+use_threshold=True, long_threshold=0.9300000000000004, short_threshold=0.9300000000000004
+2025-06-18 10:43:47,212 - INFO - Data processing completed, 279550 rows processed
+2025-06-18 10:43:50,412 - INFO - infer_result/big_214403.csv threshold settings: 
+use_threshold=True, long_threshold=0.9500000000000004, short_threshold=0.9500000000000004
+2025-06-18 10:43:50,648 - INFO - Data processing completed, 279550 rows processed
+2025-06-18 10:44:37,056 - INFO - infer_result/big_161224.csv threshold settings: 
+use_threshold=True, long_threshold=0.45, short_threshold=0.45
+2025-06-18 10:44:37,302 - INFO - Data processing completed, 279550 rows processed
+2025-06-18 10:44:40,559 - INFO - infer_result/big_161224.csv threshold settings: 
+use_threshold=True, long_threshold=0.47000000000000003, short_threshold=0.47000000000000003
+2025-06-18 10:44:40,795 - INFO - Data processing completed, 279550 rows processed
+2025-06-18 10:44:51,036 - INFO - infer_result/big_161224.csv threshold settings: 
+use_threshold=True, long_threshold=0.49000000000000005, short_threshold=0.49000000000000005
+2025-06-18 10:44:51,656 - INFO - Data processing completed, 279550 rows processed
+2025-06-18 10:44:57,231 - INFO - infer_result/big_161224.csv threshold settings: 
+use_threshold=True, long_threshold=0.51, short_threshold=0.51
+2025-06-18 10:44:57,469 - INFO - Data processing completed, 279550 rows processed
+2025-06-18 10:45:01,795 - INFO - infer_result/big_161224.csv threshold settings: 
+use_threshold=True, long_threshold=0.53, short_threshold=0.53
+2025-06-18 10:45:02,297 - INFO - Data processing completed, 279550 rows processed
+2025-06-18 10:45:13,607 - INFO - infer_result/big_161224.csv threshold settings: 
+use_threshold=True, long_threshold=0.55, short_threshold=0.55
+2025-06-18 10:45:14,264 - INFO - Data processing completed, 279550 rows processed
+2025-06-18 10:45:20,129 - INFO - infer_result/big_161224.csv threshold settings: 
+use_threshold=True, long_threshold=0.5700000000000001, short_threshold=0.5700000000000001
+2025-06-18 10:45:20,359 - INFO - Data processing completed, 279550 rows processed
+2025-06-18 10:45:23,634 - INFO - infer_result/big_161224.csv threshold settings: 
+use_threshold=True, long_threshold=0.5900000000000001, short_threshold=0.5900000000000001
+2025-06-18 10:45:23,869 - INFO - Data processing completed, 279550 rows processed
+2025-06-18 10:45:27,152 - INFO - infer_result/big_161224.csv threshold settings: 
+use_threshold=True, long_threshold=0.6100000000000001, short_threshold=0.6100000000000001
+2025-06-18 10:45:27,389 - INFO - Data processing completed, 279550 rows processed
+2025-06-18 10:45:30,657 - INFO - infer_result/big_161224.csv threshold settings: 
+use_threshold=True, long_threshold=0.6300000000000001, short_threshold=0.6300000000000001
+2025-06-18 10:45:30,890 - INFO - Data processing completed, 279550 rows processed
+2025-06-18 10:45:34,223 - INFO - infer_result/big_161224.csv threshold settings: 
+use_threshold=True, long_threshold=0.6500000000000001, short_threshold=0.6500000000000001
+2025-06-18 10:45:34,470 - INFO - Data processing completed, 279550 rows processed
+2025-06-18 10:45:37,770 - INFO - infer_result/big_161224.csv threshold settings: 
+use_threshold=True, long_threshold=0.6700000000000002, short_threshold=0.6700000000000002
+2025-06-18 10:45:38,025 - INFO - Data processing completed, 279550 rows processed
+2025-06-18 10:45:41,270 - INFO - infer_result/big_161224.csv threshold settings: 
+use_threshold=True, long_threshold=0.6900000000000002, short_threshold=0.6900000000000002
+2025-06-18 10:45:41,501 - INFO - Data processing completed, 279550 rows processed
+2025-06-18 10:45:44,825 - INFO - infer_result/big_161224.csv threshold settings: 
+use_threshold=True, long_threshold=0.7100000000000002, short_threshold=0.7100000000000002
+2025-06-18 10:45:45,056 - INFO - Data processing completed, 279550 rows processed
+2025-06-18 10:45:48,376 - INFO - infer_result/big_161224.csv threshold settings: 
+use_threshold=True, long_threshold=0.7300000000000002, short_threshold=0.7300000000000002
+2025-06-18 10:45:48,610 - INFO - Data processing completed, 279550 rows processed
+2025-06-18 10:45:51,784 - INFO - infer_result/big_161224.csv threshold settings: 
+use_threshold=True, long_threshold=0.7500000000000002, short_threshold=0.7500000000000002
+2025-06-18 10:45:52,019 - INFO - Data processing completed, 279550 rows processed
+2025-06-18 10:45:55,321 - INFO - infer_result/big_161224.csv threshold settings: 
+use_threshold=True, long_threshold=0.7700000000000002, short_threshold=0.7700000000000002
+2025-06-18 10:45:55,557 - INFO - Data processing completed, 279550 rows processed
+2025-06-18 10:45:58,830 - INFO - infer_result/big_161224.csv threshold settings: 
+use_threshold=True, long_threshold=0.7900000000000003, short_threshold=0.7900000000000003
+2025-06-18 10:45:59,074 - INFO - Data processing completed, 279550 rows processed
+2025-06-18 10:46:02,276 - INFO - infer_result/big_161224.csv threshold settings: 
+use_threshold=True, long_threshold=0.8100000000000003, short_threshold=0.8100000000000003
+2025-06-18 10:46:02,517 - INFO - Data processing completed, 279550 rows processed
+2025-06-18 10:46:05,742 - INFO - infer_result/big_161224.csv threshold settings: 
+use_threshold=True, long_threshold=0.8300000000000003, short_threshold=0.8300000000000003
+2025-06-18 10:46:05,978 - INFO - Data processing completed, 279550 rows processed
+2025-06-18 10:46:09,230 - INFO - infer_result/big_161224.csv threshold settings: 
+use_threshold=True, long_threshold=0.8500000000000003, short_threshold=0.8500000000000003
+2025-06-18 10:46:09,460 - INFO - Data processing completed, 279550 rows processed
+2025-06-18 10:46:12,711 - INFO - infer_result/big_161224.csv threshold settings: 
+use_threshold=True, long_threshold=0.8700000000000003, short_threshold=0.8700000000000003
+2025-06-18 10:46:12,950 - INFO - Data processing completed, 279550 rows processed
+2025-06-18 10:46:16,120 - INFO - infer_result/big_161224.csv threshold settings: 
+use_threshold=True, long_threshold=0.8900000000000003, short_threshold=0.8900000000000003
+2025-06-18 10:46:16,352 - INFO - Data processing completed, 279550 rows processed
+2025-06-18 10:46:19,599 - INFO - infer_result/big_161224.csv threshold settings: 
+use_threshold=True, long_threshold=0.9100000000000004, short_threshold=0.9100000000000004
+2025-06-18 10:46:19,861 - INFO - Data processing completed, 279550 rows processed
+2025-06-18 10:46:23,161 - INFO - infer_result/big_161224.csv threshold settings: 
+use_threshold=True, long_threshold=0.9300000000000004, short_threshold=0.9300000000000004
+2025-06-18 10:46:23,389 - INFO - Data processing completed, 279550 rows processed
+2025-06-18 10:47:59,370 - INFO - infer_result/big_161224.csv threshold settings: 
+use_threshold=True, long_threshold=0.8, short_threshold=0.8
+2025-06-18 10:47:59,603 - INFO - Data processing completed, 279550 rows processed
+2025-06-18 10:48:02,736 - INFO - infer_result/big_161224.csv threshold settings: 
+use_threshold=True, long_threshold=0.81, short_threshold=0.81
+2025-06-18 10:48:02,963 - INFO - Data processing completed, 279550 rows processed
+2025-06-18 10:48:13,625 - INFO - infer_result/big_161224.csv threshold settings: 
+use_threshold=True, long_threshold=0.8200000000000001, short_threshold=0.8200000000000001
+2025-06-18 10:48:14,137 - INFO - Data processing completed, 279550 rows processed
+2025-06-18 10:48:17,684 - INFO - infer_result/big_161224.csv threshold settings: 
+use_threshold=True, long_threshold=0.8300000000000001, short_threshold=0.8300000000000001
+2025-06-18 10:48:17,941 - INFO - Data processing completed, 279550 rows processed
+2025-06-18 10:48:21,263 - INFO - infer_result/big_161224.csv threshold settings: 
+use_threshold=True, long_threshold=0.8400000000000001, short_threshold=0.8400000000000001
+2025-06-18 10:48:21,503 - INFO - Data processing completed, 279550 rows processed
+2025-06-18 10:48:29,522 - INFO - infer_result/big_161224.csv threshold settings: 
+use_threshold=True, long_threshold=0.8500000000000001, short_threshold=0.8500000000000001
+2025-06-18 10:48:30,001 - INFO - Data processing completed, 279550 rows processed
+2025-06-18 10:48:40,989 - INFO - infer_result/big_161224.csv threshold settings: 
+use_threshold=True, long_threshold=0.8600000000000001, short_threshold=0.8600000000000001
+2025-06-18 10:48:41,601 - INFO - Data processing completed, 279550 rows processed
+2025-06-18 10:48:52,722 - INFO - infer_result/big_161224.csv threshold settings: 
+use_threshold=True, long_threshold=0.8700000000000001, short_threshold=0.8700000000000001
+2025-06-18 10:48:53,287 - INFO - Data processing completed, 279550 rows processed
+2025-06-18 10:49:04,221 - INFO - infer_result/big_161224.csv threshold settings: 
+use_threshold=True, long_threshold=0.8800000000000001, short_threshold=0.8800000000000001
+2025-06-18 10:49:04,744 - INFO - Data processing completed, 279550 rows processed
+2025-06-18 10:49:17,807 - INFO - infer_result/big_161224.csv threshold settings: 
+use_threshold=True, long_threshold=0.8900000000000001, short_threshold=0.8900000000000001
+2025-06-18 10:49:18,310 - INFO - Data processing completed, 279550 rows processed
+2025-06-18 10:49:32,158 - INFO - infer_result/big_161224.csv threshold settings: 
+use_threshold=True, long_threshold=0.9000000000000001, short_threshold=0.9000000000000001
+2025-06-18 10:49:32,817 - INFO - Data processing completed, 279550 rows processed
+2025-06-18 10:49:46,642 - INFO - infer_result/big_161224.csv threshold settings: 
+use_threshold=True, long_threshold=0.9100000000000001, short_threshold=0.9100000000000001
+2025-06-18 10:49:47,305 - INFO - Data processing completed, 279550 rows processed
+2025-06-18 10:49:51,306 - INFO - infer_result/big_161224.csv threshold settings: 
+use_threshold=True, long_threshold=0.9200000000000002, short_threshold=0.9200000000000002
+2025-06-18 10:49:51,555 - INFO - Data processing completed, 279550 rows processed
+2025-06-18 10:49:54,792 - INFO - infer_result/big_161224.csv threshold settings: 
+use_threshold=True, long_threshold=0.9300000000000002, short_threshold=0.9300000000000002
+2025-06-18 10:49:55,044 - INFO - Data processing completed, 279550 rows processed
+2025-06-18 10:49:58,255 - INFO - infer_result/big_161224.csv threshold settings: 
+use_threshold=True, long_threshold=0.9400000000000002, short_threshold=0.9400000000000002
+2025-06-18 10:49:58,498 - INFO - Data processing completed, 279550 rows processed
+2025-06-18 10:51:13,950 - INFO - infer_result/big_214403.csv threshold settings: 
+use_threshold=True, long_threshold=0.8, short_threshold=0.8
+2025-06-18 10:51:14,233 - INFO - Data processing completed, 279550 rows processed
+2025-06-18 10:51:17,368 - INFO - infer_result/big_214403.csv threshold settings: 
+use_threshold=True, long_threshold=0.81, short_threshold=0.81
+2025-06-18 10:51:17,604 - INFO - Data processing completed, 279550 rows processed
+2025-06-18 10:51:28,893 - INFO - infer_result/big_214403.csv threshold settings: 
+use_threshold=True, long_threshold=0.8200000000000001, short_threshold=0.8200000000000001
+2025-06-18 10:51:29,625 - INFO - Data processing completed, 279550 rows processed
+2025-06-18 10:51:42,982 - INFO - infer_result/big_214403.csv threshold settings: 
+use_threshold=True, long_threshold=0.8300000000000001, short_threshold=0.8300000000000001
+2025-06-18 10:51:43,567 - INFO - Data processing completed, 279550 rows processed
+2025-06-18 10:51:55,525 - INFO - infer_result/big_214403.csv threshold settings: 
+use_threshold=True, long_threshold=0.8400000000000001, short_threshold=0.8400000000000001
+2025-06-18 10:51:56,202 - INFO - Data processing completed, 279550 rows processed
+2025-06-18 10:52:08,809 - INFO - infer_result/big_214403.csv threshold settings: 
+use_threshold=True, long_threshold=0.8500000000000001, short_threshold=0.8500000000000001
+2025-06-18 10:52:09,075 - INFO - Data processing completed, 279550 rows processed
+2025-06-18 10:52:12,307 - INFO - infer_result/big_214403.csv threshold settings: 
+use_threshold=True, long_threshold=0.8600000000000001, short_threshold=0.8600000000000001
+2025-06-18 10:52:12,541 - INFO - Data processing completed, 279550 rows processed
+2025-06-18 10:52:15,705 - INFO - infer_result/big_214403.csv threshold settings: 
+use_threshold=True, long_threshold=0.8700000000000001, short_threshold=0.8700000000000001
+2025-06-18 10:52:15,943 - INFO - Data processing completed, 279550 rows processed
+2025-06-18 10:52:19,146 - INFO - infer_result/big_214403.csv threshold settings: 
+use_threshold=True, long_threshold=0.8800000000000001, short_threshold=0.8800000000000001
+2025-06-18 10:52:19,388 - INFO - Data processing completed, 279550 rows processed
+2025-06-18 10:52:22,616 - INFO - infer_result/big_214403.csv threshold settings: 
+use_threshold=True, long_threshold=0.8900000000000001, short_threshold=0.8900000000000001
+2025-06-18 10:52:22,850 - INFO - Data processing completed, 279550 rows processed
+2025-06-18 10:52:32,477 - INFO - infer_result/big_214403.csv threshold settings: 
+use_threshold=True, long_threshold=0.9000000000000001, short_threshold=0.9000000000000001
+2025-06-18 10:52:33,111 - INFO - Data processing completed, 279550 rows processed
+2025-06-18 10:52:43,937 - INFO - infer_result/big_214403.csv threshold settings: 
+use_threshold=True, long_threshold=0.9100000000000001, short_threshold=0.9100000000000001
+2025-06-18 10:52:44,420 - INFO - Data processing completed, 279550 rows processed
+2025-06-18 10:52:54,769 - INFO - infer_result/big_214403.csv threshold settings: 
+use_threshold=True, long_threshold=0.9200000000000002, short_threshold=0.9200000000000002
+2025-06-18 10:52:55,287 - INFO - Data processing completed, 279550 rows processed
+2025-06-18 10:53:04,249 - INFO - infer_result/big_214403.csv threshold settings: 
+use_threshold=True, long_threshold=0.9300000000000002, short_threshold=0.9300000000000002
+2025-06-18 10:53:04,509 - INFO - Data processing completed, 279550 rows processed
+2025-06-18 10:53:07,811 - INFO - infer_result/big_214403.csv threshold settings: 
+use_threshold=True, long_threshold=0.9400000000000002, short_threshold=0.9400000000000002
+2025-06-18 10:53:08,052 - INFO - Data processing completed, 279550 rows processed
+2025-06-18 10:53:11,380 - INFO - infer_result/big_214403.csv threshold settings: 
+use_threshold=True, long_threshold=0.9500000000000002, short_threshold=0.9500000000000002
+2025-06-18 10:53:11,618 - INFO - Data processing completed, 279550 rows processed
+2025-06-18 10:53:14,886 - INFO - infer_result/big_214403.csv threshold settings: 
+use_threshold=True, long_threshold=0.9600000000000002, short_threshold=0.9600000000000002
+2025-06-18 10:53:15,129 - INFO - Data processing completed, 279550 rows processed
+2025-06-18 10:58:29,895 - INFO - infer_result/big_161224.csv threshold settings: 
+use_threshold=True, long_threshold=0.9, short_threshold=0.9
+2025-06-18 10:58:30,154 - INFO - Data processing completed, 279550 rows processed
+2025-06-18 10:58:33,272 - INFO - infer_result/big_161224.csv threshold settings: 
+use_threshold=True, long_threshold=0.905, short_threshold=0.905
+2025-06-18 10:58:33,521 - INFO - Data processing completed, 279550 rows processed
+2025-06-18 10:58:43,301 - INFO - infer_result/big_161224.csv threshold settings: 
+use_threshold=True, long_threshold=0.91, short_threshold=0.91
+2025-06-18 10:58:43,865 - INFO - Data processing completed, 279550 rows processed
+2025-06-18 10:58:54,790 - INFO - infer_result/big_161224.csv threshold settings: 
+use_threshold=True, long_threshold=0.915, short_threshold=0.915
+2025-06-18 10:58:55,280 - INFO - Data processing completed, 279550 rows processed
+2025-06-18 10:59:06,000 - INFO - infer_result/big_161224.csv threshold settings: 
+use_threshold=True, long_threshold=0.92, short_threshold=0.92
+2025-06-18 10:59:06,627 - INFO - Data processing completed, 279550 rows processed
+2025-06-18 10:59:19,059 - INFO - infer_result/big_161224.csv threshold settings: 
+use_threshold=True, long_threshold=0.925, short_threshold=0.925
+2025-06-18 10:59:19,738 - INFO - Data processing completed, 279550 rows processed
+2025-06-18 10:59:26,628 - INFO - infer_result/big_161224.csv threshold settings: 
+use_threshold=True, long_threshold=0.93, short_threshold=0.93
+2025-06-18 10:59:26,872 - INFO - Data processing completed, 279550 rows processed
+2025-06-18 10:59:30,044 - INFO - infer_result/big_161224.csv threshold settings: 
+use_threshold=True, long_threshold=0.935, short_threshold=0.935
+2025-06-18 10:59:30,295 - INFO - Data processing completed, 279550 rows processed
+2025-06-18 10:59:33,413 - INFO - infer_result/big_161224.csv threshold settings: 
+use_threshold=True, long_threshold=0.9400000000000001, short_threshold=0.9400000000000001
+2025-06-18 10:59:33,671 - INFO - Data processing completed, 279550 rows processed
+2025-06-18 11:00:49,596 - INFO - infer_result/big_214403.csv threshold settings: 
+use_threshold=True, long_threshold=0.9, short_threshold=0.9
+2025-06-18 11:00:49,838 - INFO - Data processing completed, 279550 rows processed
+2025-06-18 11:00:53,136 - INFO - infer_result/big_214403.csv threshold settings: 
+use_threshold=True, long_threshold=0.905, short_threshold=0.905
+2025-06-18 11:00:53,366 - INFO - Data processing completed, 279550 rows processed
+2025-06-18 11:00:56,597 - INFO - infer_result/big_214403.csv threshold settings: 
+use_threshold=True, long_threshold=0.91, short_threshold=0.91
+2025-06-18 11:00:56,833 - INFO - Data processing completed, 279550 rows processed
+2025-06-18 11:01:00,088 - INFO - infer_result/big_214403.csv threshold settings: 
+use_threshold=True, long_threshold=0.915, short_threshold=0.915
+2025-06-18 11:01:00,324 - INFO - Data processing completed, 279550 rows processed
+2025-06-18 11:01:03,587 - INFO - infer_result/big_214403.csv threshold settings: 
+use_threshold=True, long_threshold=0.92, short_threshold=0.92
+2025-06-18 11:01:03,831 - INFO - Data processing completed, 279550 rows processed
+2025-06-18 11:01:07,082 - INFO - infer_result/big_214403.csv threshold settings: 
+use_threshold=True, long_threshold=0.925, short_threshold=0.925
+2025-06-18 11:01:07,316 - INFO - Data processing completed, 279550 rows processed
+2025-06-18 11:01:10,600 - INFO - infer_result/big_214403.csv threshold settings: 
+use_threshold=True, long_threshold=0.93, short_threshold=0.93
+2025-06-18 11:01:10,851 - INFO - Data processing completed, 279550 rows processed
+2025-06-18 11:01:14,011 - INFO - infer_result/big_214403.csv threshold settings: 
+use_threshold=True, long_threshold=0.935, short_threshold=0.935
+2025-06-18 11:01:14,259 - INFO - Data processing completed, 279550 rows processed
+2025-06-18 11:01:17,484 - INFO - infer_result/big_214403.csv threshold settings: 
+use_threshold=True, long_threshold=0.9400000000000001, short_threshold=0.9400000000000001
+2025-06-18 11:01:17,713 - INFO - Data processing completed, 279550 rows processed
+2025-06-18 11:01:20,995 - INFO - infer_result/big_214403.csv threshold settings: 
+use_threshold=True, long_threshold=0.9450000000000001, short_threshold=0.9450000000000001
+2025-06-18 11:01:21,247 - INFO - Data processing completed, 279550 rows processed
+2025-06-18 11:01:24,515 - INFO - infer_result/big_214403.csv threshold settings: 
+use_threshold=True, long_threshold=0.9500000000000001, short_threshold=0.9500000000000001
+2025-06-18 11:01:24,751 - INFO - Data processing completed, 279550 rows processed
+2025-06-18 11:01:27,947 - INFO - infer_result/big_214403.csv threshold settings: 
+use_threshold=True, long_threshold=0.9550000000000001, short_threshold=0.9550000000000001
+2025-06-18 11:01:28,195 - INFO - Data processing completed, 279550 rows processed
+2025-06-18 11:01:31,540 - INFO - infer_result/big_214403.csv threshold settings: 
+use_threshold=True, long_threshold=0.9600000000000001, short_threshold=0.9600000000000001
+2025-06-18 11:01:31,782 - INFO - Data processing completed, 279550 rows processed
