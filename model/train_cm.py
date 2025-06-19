@@ -17,7 +17,7 @@ class SoftCM_Acc02Loss(torch.nn.Module):
         p = F.softmax(logits, dim=1)                # [B,3]
         y = F.one_hot(target, 3).float()            # [B,3]
         cm = p.T @ y                                # [3,3] soft CM
-        _ = cm[0,0] + cm[2,2] - cm[2,0] - cm[0,2]
+        _ = cm[0,0] + cm[2,2] - cm[2,0] * 1.1 - cm[0,2] * 1.1 - cm[0,1] * 0.1 - cm[2,1] * 0.1
         P0 = cm[0,1] + cm[0,2] + cm[0,0]
         P2 = cm[2,0] + cm[2,1] + cm[2,2]
         acc02 = _ / (P0 + P2 + self.eps)
