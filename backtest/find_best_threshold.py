@@ -88,7 +88,7 @@ def analyze_thresholds(filename="infer_result/example.csv",
         
         # 计算平均收益
         avg_return = total_return * 10000 / total_trades if total_trades > 0 else 0
-        total_pnl = total_return * 10000
+        total_pnl = total_return * 10000 - total_trades
         
         # 计算准确率
         accuracy = np.mean(df['label'].values == df['predicted_label'].values)
@@ -112,7 +112,7 @@ def analyze_thresholds(filename="infer_result/example.csv",
         print(f"Threshold {current_threshold:.3f}: trades={total_trades}, total PNL={total_pnl:.2f}, avg PNL={avg_return:.2f}, daily avg trades={daily_avg_trades:.2f}, daily avg PNL={total_pnl/trading_days:.2f}, accuracy={accuracy:.4f}")
         
         # 修改提前结束的条件输出
-        if daily_avg_trades < min_daily_trades and current_threshold > 0.7:
+        if daily_avg_trades < min_daily_trades :
             logger.info(f"Daily average trades {daily_avg_trades:.2f} is below minimum requirement {min_daily_trades}, and threshold already reached {current_threshold:.3f}, stopping early")
             print(f"Daily average trades {daily_avg_trades:.2f} is below minimum requirement {min_daily_trades}, and threshold already reached {current_threshold:.3f}, stopping early")
             break
@@ -239,14 +239,14 @@ if __name__ == "__main__":
     logger.info("Starting threshold optimization analysis")
     
     # 获取输入文件名，如果命令行参数提供则使用，否则使用默认值
-    input_file = "infer_result/bigbal_134843.csv"
+    input_file = "infer_result/follow_162953.csv"
     if len(sys.argv) > 1:
         input_file = sys.argv[1]
         
     # 设置阈值范围
-    start_threshold = 0.85
-    end_threshold = 0.995
-    step_size = 0.005
+    start_threshold = 0.92
+    end_threshold = 0.98
+    step_size = 0.002
     min_daily_trades_required = 3  # 每日最小交易次数
     
     # 设置交易天数计算参数

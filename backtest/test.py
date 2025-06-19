@@ -94,8 +94,8 @@ if __name__ == "__main__":
     logging.info("=====================================")
     
     # 调用测试函数
-    df = process_data(filename = "infer_result/big_161224.csv",use_threshold=True,
-                        long_threshold=0.95, short_threshold=0.85)
+    df = process_data(filename = "infer_result/follow_162953.csv",use_threshold=True,
+                        long_threshold=0.95, short_threshold=0.95)
     return_df = calculate_10min_returns(df['close'])
     
     true_labels = df['label'].values
