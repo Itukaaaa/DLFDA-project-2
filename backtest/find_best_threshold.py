@@ -88,7 +88,7 @@ def analyze_thresholds(filename="infer_result/example.csv",
         
         # 计算平均收益
         avg_return = total_return * 10000 / total_trades if total_trades > 0 else 0
-        total_pnl = total_return * 10000 - total_trades
+        total_pnl = total_return * 10000 - total_trades * 4
         
         # 计算准确率
         accuracy = np.mean(df['label'].values == df['predicted_label'].values)
@@ -244,10 +244,10 @@ if __name__ == "__main__":
         input_file = sys.argv[1]
         
     # 设置阈值范围
-    start_threshold = 0.92
-    end_threshold = 0.98
-    step_size = 0.002
-    min_daily_trades_required = 3  # 每日最小交易次数
+    start_threshold = 0.95
+    end_threshold = 0.998
+    step_size = 0.0015
+    min_daily_trades_required = 1  # 每日最小交易次数
     
     # 设置交易天数计算参数
     minutes_per_day = 1440  # 默认每天1440分钟 (24小时)
