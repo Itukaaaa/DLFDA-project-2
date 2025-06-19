@@ -3,11 +3,11 @@ from config import CFG
 from utils import set_seed, init_logger
 from data import chronological_split, make_loaders
 from model import build_model
-from train import train_model
+from train_cm import train_model
 
 def parse_args():
     p = argparse.ArgumentParser()
-    p.add_argument('--csv', required=True)
+    p.add_argument('--csv', default="")
     p.add_argument('--labelcol', default=CFG.label_col)
     p.add_argument('--model', choices=['lstm', 'transformer'], default=CFG.model)
     p.add_argument('--seq', type=int, default=CFG.seq_len)
@@ -27,7 +27,8 @@ if __name__ == '__main__':
 
     set_seed(cfg.seed)
     log = init_logger()
-    # paths = chronological_split(cfg, log)
+    paths = chronological_split(cfg, log)
+    # paths = {'train': 'splits/train.csv', 'val': 'splits/val.csv', 'test': 'splits/test.csv'}
     loaders = make_loaders(cfg, paths, log)
     model = build_model(cfg, in_dim=next(iter(loaders[0]))[0].shape[-1], n_class=loaders[3]).to(cfg.device)
     train_model(cfg, model, loaders, log)

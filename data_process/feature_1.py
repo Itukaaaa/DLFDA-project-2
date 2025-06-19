@@ -126,7 +126,7 @@ def evaluate_features(df, features, label_column='label', method='spearman', top
 # 使用示例
 if __name__ == "__main__":    
     # 生成特征
-    df = pd.read_csv('data/BTCUSDT_feature_derived.csv')
+    df = pd.read_csv('data/BTCUSDT_feature_new.csv')
     print("数据读取完成")
     
     feature_df = generate_features(df)
@@ -149,5 +149,5 @@ if __name__ == "__main__":
     training_data = feature_df[['open','close','high','low','volume','label'] + top_features]
     
     # 保存用于训练的数据
-    training_data.to_csv('data/BTCUSDT-feature-label.csv', index=False)
+    training_data.to_csv('data/BTCUSDT-feature-label-balanced.csv', index=False)
     print("已保存前20个高相关性因子到CSV文件，可用于模型训练")
