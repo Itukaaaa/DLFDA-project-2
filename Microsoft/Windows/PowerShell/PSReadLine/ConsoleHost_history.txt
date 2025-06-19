@@ -1,8 +1,0 @@
-git add .
-git commit -m 从服务器更新代码
-conda activate base
-git add .
-git commit -m 从服务器更新代码
-git config --global user.email "729676653@qq.com"
-bash
-wsl
