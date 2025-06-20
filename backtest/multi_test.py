@@ -72,12 +72,14 @@ def process_data_bin(filename="infer_result/example.csv"):
     logging.info(f"Data processing completed, {len(df)} rows processed")
     return df
 
-def multi_test(file1='infer_result/example.csv',file2='infer_result/example1.csv',long_threshold=0.5, short_threshold=0.5):
+def multi_test(file1='infer_result/example.csv',file2='infer_result/example1.csv',long_threshold_1=0.5, short_threshold_1=0.5,long_threshold_2=0.5, short_threshold_2=0.5):
     logger.info(f"Multi test started with files: {file1} and {file2}")
-    logger.info(f"Threshold settings: long_threshold={long_threshold}, short_threshold={short_threshold}")
+    logger.info(f"Threshold settings: long_threshold_1={long_threshold_1}, short_threshold_1={short_threshold_1}")
+    logger.info(f"Threshold settings: long_threshold_2={long_threshold_2}, short_threshold_2={short_threshold_2}")
     
-    df1 = process_data(file1,use_threshold=True,long_threshold=long_threshold, short_threshold=short_threshold)
-    df2 = process_data(file2,use_threshold=True,long_threshold=long_threshold, short_threshold=short_threshold)
+    
+    df1 = process_data(file1,use_threshold=True,long_threshold=long_threshold_1, short_threshold=short_threshold_1)
+    df2 = process_data(file2,use_threshold=True,long_threshold=long_threshold_2, short_threshold=short_threshold_2)
     true_labels1 = df1['label'].copy()
     pred_labels1 = df1['predicted_label'].copy()
     true_labels2 = df2['label'].copy()
@@ -194,7 +196,8 @@ if __name__ == "__main__":
     logger.info("=====================================")
     logger.info("Starting multi-model backtest")
     
-    df2,pred_labels2 = multi_test(file1='infer_result/big_204822.csv',file2='infer_result/big_214403.csv',long_threshold=0.55, short_threshold=0.54)
+    df2,pred_labels2 = multi_test(file1='infer_result/follow_141202.csv',file2='infer_result/follow_214403.csv',
+                                  long_threshold_1=0.33, short_threshold_1=0.33,long_threshold_2=0.33, short_threshold_2=0.33)
     # df2,pred_labels2 = multi_test_bin(file1='infer_result/big_230741.csv',file2='infer_result/big_1-02_105510.csv',long_threshold=0.6, short_threshold=0.56)
     return_df = test.calculate_10min_returns(df2['close'])
     

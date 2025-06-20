@@ -1766,3 +1766,1402 @@ weighted avg       0.60      0.74      0.63    279550
 2025-06-17 23:39:45,069 - INFO - Total pnl:3331.0935, avergae pnl:2.6777
 2025-06-17 23:39:45,069 - INFO - Multi-model backtest finished
 
+2025-06-20 00:28:35,755 - INFO - =====================================
+2025-06-20 00:28:35,757 - INFO - Starting multi-model backtest
+2025-06-20 00:28:35,757 - INFO - Multi test started with files: infer_result/follow_141202.csv and infer_result/follow_144455.csv
+2025-06-20 00:28:35,757 - INFO - Threshold settings: long_threshold=0.5, short_threshold=0.5
+2025-06-20 00:28:35,757 - INFO - infer_result/follow_141202.csv threshold settings: 
+use_threshold=True, long_threshold=0.5, short_threshold=0.5
+2025-06-20 00:28:35,929 - INFO - Data processing completed, 199880 rows processed
+2025-06-20 00:28:35,930 - INFO - infer_result/follow_144455.csv threshold settings: 
+use_threshold=True, long_threshold=0.5, short_threshold=0.5
+2025-06-20 00:28:36,100 - INFO - Data processing completed, 199880 rows processed
+2025-06-20 00:28:36,112 - INFO - File 1 Confusion matrix:
+[[    0 65405     4]
+ [    0 68044     5]
+ [    0 66409    13]]
+2025-06-20 00:28:36,132 - INFO - File 2 Confusion matrix:
+[[    44  16666    296]
+ [   248 163364   1274]
+ [    39  17424    525]]
+2025-06-20 00:28:37,334 - INFO - Combined Confusion matrix:
+[[     0  17002      4]
+ [     0 164879      7]
+ [     0  17981      7]]
+2025-06-20 00:28:37,343 - INFO - Combined accuracy: 0.8249
+2025-06-20 00:28:37,446 - INFO - Combined classification report:
+              precision    recall  f1-score   support
+
+           0       0.00      0.00      0.00     17006
+           1       0.82      1.00      0.90    164886
+           2       0.39      0.00      0.00     17988
+
+    accuracy                           0.82    199880
+   macro avg       0.40      0.33      0.30    199880
+weighted avg       0.72      0.82      0.75    199880
+
+2025-06-20 00:28:37,673 - INFO - Combined confusion matrix saved to: backtest/multi_images\combined_confusion_matrix_20250620_002837.png
+2025-06-20 00:28:39,788 - INFO - Total minutes:199870, Total trade: 18
+2025-06-20 00:28:39,788 - INFO - Total pnl:104.9518, avergae pnl:5.8307
+2025-06-20 00:28:39,788 - INFO - Multi-model backtest finished
+
+2025-06-20 00:29:03,082 - INFO - =====================================
+2025-06-20 00:29:03,082 - INFO - Starting multi-model backtest
+2025-06-20 00:29:03,082 - INFO - Multi test started with files: infer_result/follow_141202.csv and infer_result/follow_144455.csv
+2025-06-20 00:29:03,082 - INFO - Threshold settings: long_threshold=0.4, short_threshold=0.4
+2025-06-20 00:29:03,082 - INFO - infer_result/follow_141202.csv threshold settings: 
+use_threshold=True, long_threshold=0.4, short_threshold=0.4
+2025-06-20 00:29:03,272 - INFO - Data processing completed, 199880 rows processed
+2025-06-20 00:29:03,272 - INFO - infer_result/follow_144455.csv threshold settings: 
+use_threshold=True, long_threshold=0.4, short_threshold=0.4
+2025-06-20 00:29:03,442 - INFO - Data processing completed, 199880 rows processed
+2025-06-20 00:29:03,456 - INFO - File 1 Confusion matrix:
+[[ 4890 56534  3985]
+ [ 3408 59907  4734]
+ [ 3056 57558  5808]]
+2025-06-20 00:29:03,486 - INFO - File 2 Confusion matrix:
+[[  2816  11660   2530]
+ [ 17764 134646  12476]
+ [  2642  12141   3205]]
+2025-06-20 00:29:04,701 - INFO - Combined Confusion matrix:
+[[   232  15988    786]
+ [  1419 160231   3236]
+ [   130  16780   1078]]
+2025-06-20 00:29:04,711 - INFO - Combined accuracy: 0.8082
+2025-06-20 00:29:04,823 - INFO - Combined classification report:
+              precision    recall  f1-score   support
+
+           0       0.13      0.01      0.02     17006
+           1       0.83      0.97      0.90    164886
+           2       0.21      0.06      0.09     17988
+
+    accuracy                           0.81    199880
+   macro avg       0.39      0.35      0.34    199880
+weighted avg       0.71      0.81      0.75    199880
+
+2025-06-20 00:29:05,023 - INFO - Combined confusion matrix saved to: backtest/multi_images\combined_confusion_matrix_20250620_002904.png
+2025-06-20 00:29:07,104 - INFO - Total minutes:199870, Total trade: 6881
+2025-06-20 00:29:07,104 - INFO - Total pnl:8460.1736, avergae pnl:1.2295
+2025-06-20 00:29:07,104 - INFO - Multi-model backtest finished
+
+2025-06-20 00:29:35,104 - INFO - =====================================
+2025-06-20 00:29:35,104 - INFO - Starting multi-model backtest
+2025-06-20 00:29:35,104 - INFO - Multi test started with files: infer_result/follow_141202.csv and infer_result/follow_144455.csv
+2025-06-20 00:29:35,104 - INFO - Threshold settings: long_threshold=0.45, short_threshold=0.45
+2025-06-20 00:29:35,104 - INFO - infer_result/follow_141202.csv threshold settings: 
+use_threshold=True, long_threshold=0.45, short_threshold=0.45
+2025-06-20 00:29:35,308 - INFO - Data processing completed, 199880 rows processed
+2025-06-20 00:29:35,311 - INFO - infer_result/follow_144455.csv threshold settings: 
+use_threshold=True, long_threshold=0.45, short_threshold=0.45
+2025-06-20 00:29:35,519 - INFO - Data processing completed, 199880 rows processed
+2025-06-20 00:29:35,532 - INFO - File 1 Confusion matrix:
+[[  246 65013   150]
+ [  132 67730   187]
+ [  138 66090   194]]
+2025-06-20 00:29:35,552 - INFO - File 2 Confusion matrix:
+[[   562  15470    974]
+ [  3248 157533   4105]
+ [   574  16030   1384]]
+2025-06-20 00:29:36,710 - INFO - Combined Confusion matrix:
+[[     0  16931     75]
+ [     6 164671    209]
+ [     0  17879    109]]
+2025-06-20 00:29:36,719 - INFO - Combined accuracy: 0.8244
+2025-06-20 00:29:36,831 - INFO - Combined classification report:
+              precision    recall  f1-score   support
+
+           0       0.00      0.00      0.00     17006
+           1       0.83      1.00      0.90    164886
+           2       0.28      0.01      0.01     17988
+
+    accuracy                           0.82    199880
+   macro avg       0.37      0.33      0.31    199880
+weighted avg       0.71      0.82      0.75    199880
+
+2025-06-20 00:29:37,036 - INFO - Combined confusion matrix saved to: backtest/multi_images\combined_confusion_matrix_20250620_002936.png
+2025-06-20 00:29:39,117 - INFO - Total minutes:199870, Total trade: 399
+2025-06-20 00:29:39,117 - INFO - Total pnl:1824.2522, avergae pnl:4.5721
+2025-06-20 00:29:39,117 - INFO - Multi-model backtest finished
+
+2025-06-20 00:31:43,888 - INFO - =====================================
+2025-06-20 00:31:43,888 - INFO - Starting multi-model backtest
+2025-06-20 00:31:43,888 - INFO - Multi test started with files: infer_result/follow_134843.csv and infer_result/follow_214403.csv
+2025-06-20 00:31:43,888 - INFO - Threshold settings: long_threshold=0.9, short_threshold=0.9
+2025-06-20 00:31:43,888 - INFO - infer_result/follow_134843.csv threshold settings: 
+use_threshold=True, long_threshold=0.9, short_threshold=0.9
+2025-06-20 00:31:44,074 - INFO - Data processing completed, 199880 rows processed
+2025-06-20 00:31:44,074 - INFO - infer_result/follow_214403.csv threshold settings: 
+use_threshold=True, long_threshold=0.9, short_threshold=0.9
+2025-06-20 00:31:44,265 - INFO - Data processing completed, 199880 rows processed
+2025-06-20 00:31:44,277 - INFO - File 1 Confusion matrix:
+[[ 3766 60662   981]
+ [ 2942 63384  1723]
+ [ 2155 62602  1665]]
+2025-06-20 00:31:44,301 - INFO - File 2 Confusion matrix:
+[[   105  16518    383]
+ [   405 162893   1588]
+ [    90  17269    629]]
+2025-06-20 00:31:45,660 - INFO - Combined Confusion matrix:
+[[    43  16702    261]
+ [    82 163738   1066]
+ [    31  17505    452]]
+2025-06-20 00:31:45,672 - INFO - Combined accuracy: 0.8217
+2025-06-20 00:31:45,799 - INFO - Combined classification report:
+              precision    recall  f1-score   support
+
+           0       0.28      0.00      0.01     17006
+           1       0.83      0.99      0.90    164886
+           2       0.25      0.03      0.05     17988
+
+    accuracy                           0.82    199880
+   macro avg       0.45      0.34      0.32    199880
+weighted avg       0.73      0.82      0.75    199880
+
+2025-06-20 00:31:46,060 - INFO - Combined confusion matrix saved to: backtest/multi_images\combined_confusion_matrix_20250620_003145.png
+2025-06-20 00:31:48,687 - INFO - Total minutes:199870, Total trade: 1935
+2025-06-20 00:31:48,687 - INFO - Total pnl:3924.6193, avergae pnl:2.0282
+2025-06-20 00:31:48,687 - INFO - Multi-model backtest finished
+
+2025-06-20 00:33:56,593 - INFO - =====================================
+2025-06-20 00:33:56,593 - INFO - Starting multi-model backtest
+2025-06-20 00:33:56,593 - INFO - Multi test started with files: infer_result/follow_134843.csv and infer_result/follow_214403.csv
+2025-06-20 00:34:54,018 - INFO - =====================================
+2025-06-20 00:34:54,018 - INFO - Starting multi-model backtest
+2025-06-20 00:34:54,018 - INFO - Multi test started with files: infer_result/follow_134843.csv and infer_result/follow_214403.csv
+2025-06-20 00:34:54,018 - INFO - Threshold settings: long_threshold_1=0.9, short_threshold_1=0.9
+2025-06-20 00:34:54,018 - INFO - Threshold settings: long_threshold_2=0.94, short_threshold_2=0.94
+2025-06-20 00:34:54,018 - INFO - infer_result/follow_134843.csv threshold settings: 
+use_threshold=True, long_threshold=0.9, short_threshold=0.9
+2025-06-20 00:34:54,194 - INFO - Data processing completed, 199880 rows processed
+2025-06-20 00:34:54,197 - INFO - infer_result/follow_214403.csv threshold settings: 
+use_threshold=True, long_threshold=0.94, short_threshold=0.94
+2025-06-20 00:34:54,421 - INFO - Data processing completed, 199880 rows processed
+2025-06-20 00:34:54,439 - INFO - File 1 Confusion matrix:
+[[ 3766 60662   981]
+ [ 2942 63384  1723]
+ [ 2155 62602  1665]]
+2025-06-20 00:34:54,465 - INFO - File 2 Confusion matrix:
+[[     8  16856    142]
+ [    15 164285    586]
+ [     3  17752    233]]
+2025-06-20 00:34:55,761 - INFO - Combined Confusion matrix:
+[[     0  16907     99]
+ [     0 164404    482]
+ [     0  17793    195]]
+2025-06-20 00:34:55,772 - INFO - Combined accuracy: 0.8235
+2025-06-20 00:34:55,893 - INFO - Combined classification report:
+              precision    recall  f1-score   support
+
+           0       0.00      0.00      0.00     17006
+           1       0.83      1.00      0.90    164886
+           2       0.25      0.01      0.02     17988
+
+    accuracy                           0.82    199880
+   macro avg       0.36      0.34      0.31    199880
+weighted avg       0.70      0.82      0.75    199880
+
+2025-06-20 00:34:56,131 - INFO - Combined confusion matrix saved to: backtest/multi_images\combined_confusion_matrix_20250620_003455.png
+2025-06-20 00:34:58,239 - INFO - Total minutes:199870, Total trade: 776
+2025-06-20 00:34:58,239 - INFO - Total pnl:2037.1548, avergae pnl:2.6252
+2025-06-20 00:34:58,239 - INFO - Multi-model backtest finished
+
+2025-06-20 00:35:29,909 - INFO - =====================================
+2025-06-20 00:35:29,910 - INFO - Starting multi-model backtest
+2025-06-20 00:35:29,910 - INFO - Multi test started with files: infer_result/follow_134843.csv and infer_result/follow_214403.csv
+2025-06-20 00:35:29,910 - INFO - Threshold settings: long_threshold_1=0.9, short_threshold_1=0.88
+2025-06-20 00:35:29,910 - INFO - Threshold settings: long_threshold_2=0.94, short_threshold_2=0.92
+2025-06-20 00:35:29,910 - INFO - infer_result/follow_134843.csv threshold settings: 
+use_threshold=True, long_threshold=0.9, short_threshold=0.88
+2025-06-20 00:35:30,113 - INFO - Data processing completed, 199880 rows processed
+2025-06-20 00:35:30,113 - INFO - infer_result/follow_214403.csv threshold settings: 
+use_threshold=True, long_threshold=0.94, short_threshold=0.92
+2025-06-20 00:35:30,317 - INFO - Data processing completed, 199880 rows processed
+2025-06-20 00:35:30,331 - INFO - File 1 Confusion matrix:
+[[ 4346 60082   981]
+ [ 3447 62879  1723]
+ [ 2520 62237  1665]]
+2025-06-20 00:35:30,352 - INFO - File 2 Confusion matrix:
+[[    29  16835    142]
+ [   112 164188    586]
+ [    26  17729    233]]
+2025-06-20 00:35:31,603 - INFO - Combined Confusion matrix:
+[[    14  16893     99]
+ [    25 164379    482]
+ [     8  17785    195]]
+2025-06-20 00:35:31,612 - INFO - Combined accuracy: 0.8234
+2025-06-20 00:35:31,744 - INFO - Combined classification report:
+              precision    recall  f1-score   support
+
+           0       0.30      0.00      0.00     17006
+           1       0.83      1.00      0.90    164886
+           2       0.25      0.01      0.02     17988
+
+    accuracy                           0.82    199880
+   macro avg       0.46      0.34      0.31    199880
+weighted avg       0.73      0.82      0.75    199880
+
+2025-06-20 00:35:31,951 - INFO - Combined confusion matrix saved to: backtest/multi_images\combined_confusion_matrix_20250620_003531.png
+2025-06-20 00:35:34,138 - INFO - Total minutes:199870, Total trade: 823
+2025-06-20 00:35:34,138 - INFO - Total pnl:2212.8015, avergae pnl:2.6887
+2025-06-20 00:35:34,138 - INFO - Multi-model backtest finished
+
+2025-06-20 00:36:07,068 - INFO - =====================================
+2025-06-20 00:36:07,068 - INFO - Starting multi-model backtest
+2025-06-20 00:36:07,068 - INFO - Multi test started with files: infer_result/follow_134843.csv and infer_result/follow_214403.csv
+2025-06-20 00:36:07,068 - INFO - Threshold settings: long_threshold_1=0.9, short_threshold_1=0.89
+2025-06-20 00:36:07,068 - INFO - Threshold settings: long_threshold_2=0.94, short_threshold_2=0.91
+2025-06-20 00:36:07,068 - INFO - infer_result/follow_134843.csv threshold settings: 
+use_threshold=True, long_threshold=0.9, short_threshold=0.89
+2025-06-20 00:36:07,280 - INFO - Data processing completed, 199880 rows processed
+2025-06-20 00:36:07,281 - INFO - infer_result/follow_214403.csv threshold settings: 
+use_threshold=True, long_threshold=0.94, short_threshold=0.91
+2025-06-20 00:36:07,468 - INFO - Data processing completed, 199880 rows processed
+2025-06-20 00:36:07,481 - INFO - File 1 Confusion matrix:
+[[ 4071 60357   981]
+ [ 3212 63114  1723]
+ [ 2355 62402  1665]]
+2025-06-20 00:36:07,502 - INFO - File 2 Confusion matrix:
+[[    60  16804    142]
+ [   218 164082    586]
+ [    49  17706    233]]
+2025-06-20 00:36:08,778 - INFO - Combined Confusion matrix:
+[[    30  16877     99]
+ [    52 164352    482]
+ [    20  17773    195]]
+2025-06-20 00:36:08,789 - INFO - Combined accuracy: 0.8234
+2025-06-20 00:36:08,898 - INFO - Combined classification report:
+              precision    recall  f1-score   support
+
+           0       0.29      0.00      0.00     17006
+           1       0.83      1.00      0.90    164886
+           2       0.25      0.01      0.02     17988
+
+    accuracy                           0.82    199880
+   macro avg       0.46      0.34      0.31    199880
+weighted avg       0.73      0.82      0.75    199880
+
+2025-06-20 00:36:09,128 - INFO - Combined confusion matrix saved to: backtest/multi_images\combined_confusion_matrix_20250620_003608.png
+2025-06-20 00:36:11,368 - INFO - Total minutes:199870, Total trade: 878
+2025-06-20 00:36:11,368 - INFO - Total pnl:2596.7355, avergae pnl:2.9576
+2025-06-20 00:36:11,368 - INFO - Multi-model backtest finished
+
+2025-06-20 00:36:36,209 - INFO - =====================================
+2025-06-20 00:36:36,209 - INFO - Starting multi-model backtest
+2025-06-20 00:36:36,209 - INFO - Multi test started with files: infer_result/follow_134843.csv and infer_result/follow_214403.csv
+2025-06-20 00:36:36,209 - INFO - Threshold settings: long_threshold_1=0.9, short_threshold_1=0.91
+2025-06-20 00:36:36,209 - INFO - Threshold settings: long_threshold_2=0.95, short_threshold_2=0.91
+2025-06-20 00:36:36,209 - INFO - infer_result/follow_134843.csv threshold settings: 
+use_threshold=True, long_threshold=0.9, short_threshold=0.91
+2025-06-20 00:36:36,420 - INFO - Data processing completed, 199880 rows processed
+2025-06-20 00:36:36,420 - INFO - infer_result/follow_214403.csv threshold settings: 
+use_threshold=True, long_threshold=0.95, short_threshold=0.91
+2025-06-20 00:36:36,617 - INFO - Data processing completed, 199880 rows processed
+2025-06-20 00:36:36,630 - INFO - File 1 Confusion matrix:
+[[ 3431 60997   981]
+ [ 2655 63671  1723]
+ [ 1949 62808  1665]]
+2025-06-20 00:36:36,655 - INFO - File 2 Confusion matrix:
+[[    60  16860     86]
+ [   218 164284    384]
+ [    49  17800    139]]
+2025-06-20 00:36:37,920 - INFO - Combined Confusion matrix:
+[[    27  16919     60]
+ [    40 164515    331]
+ [    19  17847    122]]
+2025-06-20 00:36:37,933 - INFO - Combined accuracy: 0.8238
+2025-06-20 00:36:38,065 - INFO - Combined classification report:
+              precision    recall  f1-score   support
+
+           0       0.31      0.00      0.00     17006
+           1       0.83      1.00      0.90    164886
+           2       0.24      0.01      0.01     17988
+
+    accuracy                           0.82    199880
+   macro avg       0.46      0.34      0.31    199880
+weighted avg       0.73      0.82      0.75    199880
+
+2025-06-20 00:36:38,291 - INFO - Combined confusion matrix saved to: backtest/multi_images\combined_confusion_matrix_20250620_003638.png
+2025-06-20 00:36:40,648 - INFO - Total minutes:199870, Total trade: 599
+2025-06-20 00:36:40,648 - INFO - Total pnl:1666.9479, avergae pnl:2.7829
+2025-06-20 00:36:40,648 - INFO - Multi-model backtest finished
+
+2025-06-20 00:37:11,805 - INFO - =====================================
+2025-06-20 00:37:11,806 - INFO - Starting multi-model backtest
+2025-06-20 00:37:11,806 - INFO - Multi test started with files: infer_result/follow_134843.csv and infer_result/follow_214403.csv
+2025-06-20 00:37:11,806 - INFO - Threshold settings: long_threshold_1=0.9, short_threshold_1=0.92
+2025-06-20 00:37:11,806 - INFO - Threshold settings: long_threshold_2=0.96, short_threshold_2=0.91
+2025-06-20 00:37:11,806 - INFO - infer_result/follow_134843.csv threshold settings: 
+use_threshold=True, long_threshold=0.9, short_threshold=0.92
+2025-06-20 00:37:12,006 - INFO - Data processing completed, 199880 rows processed
+2025-06-20 00:37:12,006 - INFO - infer_result/follow_214403.csv threshold settings: 
+use_threshold=True, long_threshold=0.96, short_threshold=0.91
+2025-06-20 00:37:12,205 - INFO - Data processing completed, 199880 rows processed
+2025-06-20 00:37:12,218 - INFO - File 1 Confusion matrix:
+[[ 3072 61356   981]
+ [ 2369 63957  1723]
+ [ 1721 63036  1665]]
+2025-06-20 00:37:12,241 - INFO - File 2 Confusion matrix:
+[[    60  16900     46]
+ [   218 164472    196]
+ [    49  17870     69]]
+2025-06-20 00:37:13,587 - INFO - Combined Confusion matrix:
+[[    23  16956     27]
+ [    38 164675    173]
+ [    17  17911     60]]
+2025-06-20 00:37:13,599 - INFO - Combined accuracy: 0.8243
+2025-06-20 00:37:13,723 - INFO - Combined classification report:
+              precision    recall  f1-score   support
+
+           0       0.29      0.00      0.00     17006
+           1       0.83      1.00      0.90    164886
+           2       0.23      0.00      0.01     17988
+
+    accuracy                           0.82    199880
+   macro avg       0.45      0.33      0.30    199880
+weighted avg       0.73      0.82      0.75    199880
+
+2025-06-20 00:37:13,943 - INFO - Combined confusion matrix saved to: backtest/multi_images\combined_confusion_matrix_20250620_003713.png
+2025-06-20 00:37:16,208 - INFO - Total minutes:199870, Total trade: 338
+2025-06-20 00:37:16,208 - INFO - Total pnl:1367.2672, avergae pnl:4.0452
+2025-06-20 00:37:16,208 - INFO - Multi-model backtest finished
+
+2025-06-20 00:37:47,074 - INFO - =====================================
+2025-06-20 00:37:47,074 - INFO - Starting multi-model backtest
+2025-06-20 00:37:47,074 - INFO - Multi test started with files: infer_result/follow_134843.csv and infer_result/follow_214403.csv
+2025-06-20 00:37:47,074 - INFO - Threshold settings: long_threshold_1=0.9, short_threshold_1=0.9
+2025-06-20 00:37:47,074 - INFO - Threshold settings: long_threshold_2=0.96, short_threshold_2=0.91
+2025-06-20 00:37:47,074 - INFO - infer_result/follow_134843.csv threshold settings: 
+use_threshold=True, long_threshold=0.9, short_threshold=0.9
+2025-06-20 00:37:47,280 - INFO - Data processing completed, 199880 rows processed
+2025-06-20 00:37:47,280 - INFO - infer_result/follow_214403.csv threshold settings: 
+use_threshold=True, long_threshold=0.96, short_threshold=0.91
+2025-06-20 00:37:47,475 - INFO - Data processing completed, 199880 rows processed
+2025-06-20 00:37:47,494 - INFO - File 1 Confusion matrix:
+[[ 3766 60662   981]
+ [ 2942 63384  1723]
+ [ 2155 62602  1665]]
+2025-06-20 00:37:47,533 - INFO - File 2 Confusion matrix:
+[[    60  16900     46]
+ [   218 164472    196]
+ [    49  17870     69]]
+2025-06-20 00:37:48,813 - INFO - Combined Confusion matrix:
+[[    28  16951     27]
+ [    45 164668    173]
+ [    19  17909     60]]
+2025-06-20 00:37:48,826 - INFO - Combined accuracy: 0.8243
+2025-06-20 00:37:48,943 - INFO - Combined classification report:
+              precision    recall  f1-score   support
+
+           0       0.30      0.00      0.00     17006
+           1       0.83      1.00      0.90    164886
+           2       0.23      0.00      0.01     17988
+
+    accuracy                           0.82    199880
+   macro avg       0.45      0.33      0.30    199880
+weighted avg       0.73      0.82      0.75    199880
+
+2025-06-20 00:37:49,158 - INFO - Combined confusion matrix saved to: backtest/multi_images\combined_confusion_matrix_20250620_003748.png
+2025-06-20 00:37:51,419 - INFO - Total minutes:199870, Total trade: 352
+2025-06-20 00:37:51,419 - INFO - Total pnl:1389.9119, avergae pnl:3.9486
+2025-06-20 00:37:51,419 - INFO - Multi-model backtest finished
+
+2025-06-20 00:38:07,732 - INFO - =====================================
+2025-06-20 00:38:07,734 - INFO - Starting multi-model backtest
+2025-06-20 00:38:07,734 - INFO - Multi test started with files: infer_result/follow_134843.csv and infer_result/follow_214403.csv
+2025-06-20 00:38:07,734 - INFO - Threshold settings: long_threshold_1=0.91, short_threshold_1=0.94
+2025-06-20 00:38:07,734 - INFO - Threshold settings: long_threshold_2=0.96, short_threshold_2=0.91
+2025-06-20 00:38:07,734 - INFO - infer_result/follow_134843.csv threshold settings: 
+use_threshold=True, long_threshold=0.91, short_threshold=0.94
+2025-06-20 00:38:07,942 - INFO - Data processing completed, 199880 rows processed
+2025-06-20 00:38:07,942 - INFO - infer_result/follow_214403.csv threshold settings: 
+use_threshold=True, long_threshold=0.96, short_threshold=0.91
+2025-06-20 00:38:08,145 - INFO - Data processing completed, 199880 rows processed
+2025-06-20 00:38:08,157 - INFO - File 1 Confusion matrix:
+[[ 2321 62218   870]
+ [ 1738 64738  1573]
+ [ 1256 63720  1446]]
+2025-06-20 00:38:08,179 - INFO - File 2 Confusion matrix:
+[[    60  16900     46]
+ [   218 164472    196]
+ [    49  17870     69]]
+2025-06-20 00:38:09,453 - INFO - Combined Confusion matrix:
+[[     9  16971     26]
+ [    24 164690    172]
+ [    15  17913     60]]
+2025-06-20 00:38:09,463 - INFO - Combined accuracy: 0.8243
+2025-06-20 00:38:09,582 - INFO - Combined classification report:
+              precision    recall  f1-score   support
+
+           0       0.19      0.00      0.00     17006
+           1       0.83      1.00      0.90    164886
+           2       0.23      0.00      0.01     17988
+
+    accuracy                           0.82    199880
+   macro avg       0.42      0.33      0.30    199880
+weighted avg       0.72      0.82      0.75    199880
+
+2025-06-20 00:38:09,823 - INFO - Combined confusion matrix saved to: backtest/multi_images\combined_confusion_matrix_20250620_003809.png
+2025-06-20 00:38:12,069 - INFO - Total minutes:199870, Total trade: 306
+2025-06-20 00:38:12,069 - INFO - Total pnl:1019.2247, avergae pnl:3.3308
+2025-06-20 00:38:12,069 - INFO - Multi-model backtest finished
+
+2025-06-20 00:38:21,512 - INFO - =====================================
+2025-06-20 00:38:21,512 - INFO - Starting multi-model backtest
+2025-06-20 00:38:21,513 - INFO - Multi test started with files: infer_result/follow_134843.csv and infer_result/follow_214403.csv
+2025-06-20 00:38:21,513 - INFO - Threshold settings: long_threshold_1=0.9, short_threshold_1=0.93
+2025-06-20 00:38:21,513 - INFO - Threshold settings: long_threshold_2=0.96, short_threshold_2=0.91
+2025-06-20 00:38:21,513 - INFO - infer_result/follow_134843.csv threshold settings: 
+use_threshold=True, long_threshold=0.9, short_threshold=0.93
+2025-06-20 00:38:21,731 - INFO - Data processing completed, 199880 rows processed
+2025-06-20 00:38:21,732 - INFO - infer_result/follow_214403.csv threshold settings: 
+use_threshold=True, long_threshold=0.96, short_threshold=0.91
+2025-06-20 00:38:21,932 - INFO - Data processing completed, 199880 rows processed
+2025-06-20 00:38:21,949 - INFO - File 1 Confusion matrix:
+[[ 2698 61730   981]
+ [ 2043 64283  1723]
+ [ 1491 63266  1665]]
+2025-06-20 00:38:21,973 - INFO - File 2 Confusion matrix:
+[[    60  16900     46]
+ [   218 164472    196]
+ [    49  17870     69]]
+2025-06-20 00:38:23,356 - INFO - Combined Confusion matrix:
+[[    15  16964     27]
+ [    29 164684    173]
+ [    16  17912     60]]
+2025-06-20 00:38:23,367 - INFO - Combined accuracy: 0.8243
+2025-06-20 00:38:23,485 - INFO - Combined classification report:
+              precision    recall  f1-score   support
+
+           0       0.25      0.00      0.00     17006
+           1       0.83      1.00      0.90    164886
+           2       0.23      0.00      0.01     17988
+
+    accuracy                           0.82    199880
+   macro avg       0.44      0.33      0.30    199880
+weighted avg       0.72      0.82      0.75    199880
+
+2025-06-20 00:38:23,714 - INFO - Combined confusion matrix saved to: backtest/multi_images\combined_confusion_matrix_20250620_003823.png
+2025-06-20 00:38:26,285 - INFO - Total minutes:199870, Total trade: 320
+2025-06-20 00:38:26,285 - INFO - Total pnl:1307.6619, avergae pnl:4.0864
+2025-06-20 00:38:26,286 - INFO - Multi-model backtest finished
+
+2025-06-20 00:38:49,926 - INFO - =====================================
+2025-06-20 00:38:49,926 - INFO - Starting multi-model backtest
+2025-06-20 00:38:49,926 - INFO - Multi test started with files: infer_result/follow_134843.csv and infer_result/follow_214403.csv
+2025-06-20 00:38:49,926 - INFO - Threshold settings: long_threshold_1=0.9, short_threshold_1=0.93
+2025-06-20 00:38:49,926 - INFO - Threshold settings: long_threshold_2=0.96, short_threshold_2=0.9
+2025-06-20 00:38:49,926 - INFO - infer_result/follow_134843.csv threshold settings: 
+use_threshold=True, long_threshold=0.9, short_threshold=0.93
+2025-06-20 00:38:50,138 - INFO - Data processing completed, 199880 rows processed
+2025-06-20 00:38:50,138 - INFO - infer_result/follow_214403.csv threshold settings: 
+use_threshold=True, long_threshold=0.96, short_threshold=0.9
+2025-06-20 00:38:50,333 - INFO - Data processing completed, 199880 rows processed
+2025-06-20 00:38:50,350 - INFO - File 1 Confusion matrix:
+[[ 2698 61730   981]
+ [ 2043 64283  1723]
+ [ 1491 63266  1665]]
+2025-06-20 00:38:50,373 - INFO - File 2 Confusion matrix:
+[[   105  16855     46]
+ [   405 164285    196]
+ [    90  17829     69]]
+2025-06-20 00:38:51,625 - INFO - Combined Confusion matrix:
+[[    23  16956     27]
+ [    51 164662    173]
+ [    21  17907     60]]
+2025-06-20 00:38:51,636 - INFO - Combined accuracy: 0.8242
+2025-06-20 00:38:51,758 - INFO - Combined classification report:
+              precision    recall  f1-score   support
+
+           0       0.24      0.00      0.00     17006
+           1       0.83      1.00      0.90    164886
+           2       0.23      0.00      0.01     17988
+
+    accuracy                           0.82    199880
+   macro avg       0.43      0.33      0.30    199880
+weighted avg       0.72      0.82      0.75    199880
+
+2025-06-20 00:38:52,124 - INFO - Combined confusion matrix saved to: backtest/multi_images\combined_confusion_matrix_20250620_003851.png
+2025-06-20 00:38:54,365 - INFO - Total minutes:199870, Total trade: 355
+2025-06-20 00:38:54,365 - INFO - Total pnl:1025.8914, avergae pnl:2.8898
+2025-06-20 00:38:54,366 - INFO - Multi-model backtest finished
+
+2025-06-20 00:39:04,023 - INFO - =====================================
+2025-06-20 00:39:04,023 - INFO - Starting multi-model backtest
+2025-06-20 00:39:04,023 - INFO - Multi test started with files: infer_result/follow_134843.csv and infer_result/follow_214403.csv
+2025-06-20 00:39:04,023 - INFO - Threshold settings: long_threshold_1=0.9, short_threshold_1=0.93
+2025-06-20 00:39:04,023 - INFO - Threshold settings: long_threshold_2=0.96, short_threshold_2=0.95
+2025-06-20 00:39:04,023 - INFO - infer_result/follow_134843.csv threshold settings: 
+use_threshold=True, long_threshold=0.9, short_threshold=0.93
+2025-06-20 00:39:04,240 - INFO - Data processing completed, 199880 rows processed
+2025-06-20 00:39:04,240 - INFO - infer_result/follow_214403.csv threshold settings: 
+use_threshold=True, long_threshold=0.96, short_threshold=0.95
+2025-06-20 00:39:04,444 - INFO - Data processing completed, 199880 rows processed
+2025-06-20 00:39:04,459 - INFO - File 1 Confusion matrix:
+[[ 2698 61730   981]
+ [ 2043 64283  1723]
+ [ 1491 63266  1665]]
+2025-06-20 00:39:04,486 - INFO - File 2 Confusion matrix:
+[[     4  16956     46]
+ [     4 164686    196]
+ [     1  17918     69]]
+2025-06-20 00:39:05,832 - INFO - Combined Confusion matrix:
+[[     0  16979     27]
+ [     0 164713    173]
+ [     0  17928     60]]
+2025-06-20 00:39:05,843 - INFO - Combined accuracy: 0.8244
+2025-06-20 00:39:05,978 - INFO - Combined classification report:
+              precision    recall  f1-score   support
+
+           0       0.00      0.00      0.00     17006
+           1       0.83      1.00      0.90    164886
+           2       0.23      0.00      0.01     17988
+
+    accuracy                           0.82    199880
+   macro avg       0.35      0.33      0.30    199880
+weighted avg       0.70      0.82      0.75    199880
+
+2025-06-20 00:39:06,190 - INFO - Combined confusion matrix saved to: backtest/multi_images\combined_confusion_matrix_20250620_003905.png
+2025-06-20 00:39:08,427 - INFO - Total minutes:199870, Total trade: 260
+2025-06-20 00:39:08,427 - INFO - Total pnl:665.6307, avergae pnl:2.5601
+2025-06-20 00:39:08,427 - INFO - Multi-model backtest finished
+
+2025-06-20 00:41:22,643 - INFO - =====================================
+2025-06-20 00:41:22,643 - INFO - Starting multi-model backtest
+2025-06-20 00:41:22,643 - INFO - Multi test started with files: infer_result/follow_134843.csv and infer_result/follow_214403.csv
+2025-06-20 00:41:22,643 - INFO - Threshold settings: long_threshold_1=0.9, short_threshold_1=0.93
+2025-06-20 00:41:22,643 - INFO - Threshold settings: long_threshold_2=0.96, short_threshold_2=0.91
+2025-06-20 00:41:22,643 - INFO - infer_result/follow_134843.csv threshold settings: 
+use_threshold=True, long_threshold=0.9, short_threshold=0.93
+2025-06-20 00:41:22,850 - INFO - Data processing completed, 199880 rows processed
+2025-06-20 00:41:22,850 - INFO - infer_result/follow_214403.csv threshold settings: 
+use_threshold=True, long_threshold=0.96, short_threshold=0.91
+2025-06-20 00:41:23,030 - INFO - Data processing completed, 199880 rows processed
+2025-06-20 00:41:23,041 - INFO - File 1 Confusion matrix:
+[[ 2698 61730   981]
+ [ 2043 64283  1723]
+ [ 1491 63266  1665]]
+2025-06-20 00:41:23,067 - INFO - File 2 Confusion matrix:
+[[    60  16900     46]
+ [   218 164472    196]
+ [    49  17870     69]]
+2025-06-20 00:41:24,508 - INFO - Combined Confusion matrix:
+[[    15  16964     27]
+ [    29 164684    173]
+ [    16  17912     60]]
+2025-06-20 00:41:24,521 - INFO - Combined accuracy: 0.8243
+2025-06-20 00:41:24,655 - INFO - Combined classification report:
+              precision    recall  f1-score   support
+
+           0       0.25      0.00      0.00     17006
+           1       0.83      1.00      0.90    164886
+           2       0.23      0.00      0.01     17988
+
+    accuracy                           0.82    199880
+   macro avg       0.44      0.33      0.30    199880
+weighted avg       0.72      0.82      0.75    199880
+
+2025-06-20 00:41:24,890 - INFO - Combined confusion matrix saved to: backtest/multi_images\combined_confusion_matrix_20250620_004124.png
+2025-06-20 00:41:27,122 - INFO - Total minutes:199870, Total trade: 320
+2025-06-20 00:41:27,122 - INFO - Total pnl:1307.6619, avergae pnl:4.0864
+2025-06-20 00:41:27,122 - INFO - Multi-model backtest finished
+
+2025-06-20 00:41:49,767 - INFO - =====================================
+2025-06-20 00:41:49,767 - INFO - Starting multi-model backtest
+2025-06-20 00:41:49,767 - INFO - Multi test started with files: infer_result/follow_134843.csv and infer_result/follow_214403.csv
+2025-06-20 00:41:49,767 - INFO - Threshold settings: long_threshold_1=0.9, short_threshold_1=0.92
+2025-06-20 00:41:49,767 - INFO - Threshold settings: long_threshold_2=0.96, short_threshold_2=0.91
+2025-06-20 00:41:49,767 - INFO - infer_result/follow_134843.csv threshold settings: 
+use_threshold=True, long_threshold=0.9, short_threshold=0.92
+2025-06-20 00:41:49,972 - INFO - Data processing completed, 199880 rows processed
+2025-06-20 00:41:49,972 - INFO - infer_result/follow_214403.csv threshold settings: 
+use_threshold=True, long_threshold=0.96, short_threshold=0.91
+2025-06-20 00:41:50,174 - INFO - Data processing completed, 199880 rows processed
+2025-06-20 00:41:50,186 - INFO - File 1 Confusion matrix:
+[[ 3072 61356   981]
+ [ 2369 63957  1723]
+ [ 1721 63036  1665]]
+2025-06-20 00:41:50,213 - INFO - File 2 Confusion matrix:
+[[    60  16900     46]
+ [   218 164472    196]
+ [    49  17870     69]]
+2025-06-20 00:41:51,504 - INFO - Combined Confusion matrix:
+[[    23  16956     27]
+ [    38 164675    173]
+ [    17  17911     60]]
+2025-06-20 00:41:51,517 - INFO - Combined accuracy: 0.8243
+2025-06-20 00:41:51,630 - INFO - Combined classification report:
+              precision    recall  f1-score   support
+
+           0       0.29      0.00      0.00     17006
+           1       0.83      1.00      0.90    164886
+           2       0.23      0.00      0.01     17988
+
+    accuracy                           0.82    199880
+   macro avg       0.45      0.33      0.30    199880
+weighted avg       0.73      0.82      0.75    199880
+
+2025-06-20 00:41:51,901 - INFO - Combined confusion matrix saved to: backtest/multi_images\combined_confusion_matrix_20250620_004151.png
+2025-06-20 00:41:54,165 - INFO - Total minutes:199870, Total trade: 338
+2025-06-20 00:41:54,165 - INFO - Total pnl:1367.2672, avergae pnl:4.0452
+2025-06-20 00:41:54,165 - INFO - Multi-model backtest finished
+
+2025-06-20 00:44:39,901 - INFO - =====================================
+2025-06-20 00:44:39,901 - INFO - Starting multi-model backtest
+2025-06-20 00:44:39,901 - INFO - Multi test started with files: infer_result/follow_141202.csv and infer_result/follow_214403.csv
+2025-06-20 00:44:39,901 - INFO - Threshold settings: long_threshold_1=0.45, short_threshold_1=0.45
+2025-06-20 00:44:39,901 - INFO - Threshold settings: long_threshold_2=0.96, short_threshold_2=0.91
+2025-06-20 00:44:39,901 - INFO - infer_result/follow_141202.csv threshold settings: 
+use_threshold=True, long_threshold=0.45, short_threshold=0.45
+2025-06-20 00:44:40,091 - INFO - Data processing completed, 199880 rows processed
+2025-06-20 00:44:40,091 - INFO - infer_result/follow_214403.csv threshold settings: 
+use_threshold=True, long_threshold=0.96, short_threshold=0.91
+2025-06-20 00:44:40,297 - INFO - Data processing completed, 199880 rows processed
+2025-06-20 00:44:40,311 - INFO - File 1 Confusion matrix:
+[[  246 65013   150]
+ [  132 67730   187]
+ [  138 66090   194]]
+2025-06-20 00:44:40,333 - INFO - File 2 Confusion matrix:
+[[    60  16900     46]
+ [   218 164472    196]
+ [    49  17870     69]]
+2025-06-20 00:44:41,627 - INFO - Combined Confusion matrix:
+[[     0  16994     12]
+ [     0 164832     54]
+ [     0  17976     12]]
+2025-06-20 00:44:41,638 - INFO - Combined accuracy: 0.8247
+2025-06-20 00:44:41,758 - INFO - Combined classification report:
+              precision    recall  f1-score   support
+
+           0       0.00      0.00      0.00     17006
+           1       0.82      1.00      0.90    164886
+           2       0.15      0.00      0.00     17988
+
+    accuracy                           0.82    199880
+   macro avg       0.33      0.33      0.30    199880
+weighted avg       0.69      0.82      0.75    199880
+
+2025-06-20 00:44:41,969 - INFO - Combined confusion matrix saved to: backtest/multi_images\combined_confusion_matrix_20250620_004441.png
+2025-06-20 00:44:44,224 - INFO - Total minutes:199870, Total trade: 78
+2025-06-20 00:44:44,224 - INFO - Total pnl:211.7997, avergae pnl:2.7154
+2025-06-20 00:44:44,224 - INFO - Multi-model backtest finished
+
+2025-06-20 00:45:02,711 - INFO - =====================================
+2025-06-20 00:45:02,711 - INFO - Starting multi-model backtest
+2025-06-20 00:45:02,711 - INFO - Multi test started with files: infer_result/follow_141202.csv and infer_result/follow_214403.csv
+2025-06-20 00:45:02,711 - INFO - Threshold settings: long_threshold_1=0.44, short_threshold_1=0.44
+2025-06-20 00:45:02,711 - INFO - Threshold settings: long_threshold_2=0.96, short_threshold_2=0.91
+2025-06-20 00:45:02,711 - INFO - infer_result/follow_141202.csv threshold settings: 
+use_threshold=True, long_threshold=0.44, short_threshold=0.44
+2025-06-20 00:45:02,925 - INFO - Data processing completed, 199880 rows processed
+2025-06-20 00:45:02,926 - INFO - infer_result/follow_214403.csv threshold settings: 
+use_threshold=True, long_threshold=0.96, short_threshold=0.91
+2025-06-20 00:45:03,134 - INFO - Data processing completed, 199880 rows processed
+2025-06-20 00:45:03,145 - INFO - File 1 Confusion matrix:
+[[  543 64609   257]
+ [  322 67334   393]
+ [  304 65724   394]]
+2025-06-20 00:45:03,173 - INFO - File 2 Confusion matrix:
+[[    60  16900     46]
+ [   218 164472    196]
+ [    49  17870     69]]
+2025-06-20 00:45:04,476 - INFO - Combined Confusion matrix:
+[[     0  16994     12]
+ [     0 164817     69]
+ [     0  17968     20]]
+2025-06-20 00:45:04,490 - INFO - Combined accuracy: 0.8247
+2025-06-20 00:45:04,608 - INFO - Combined classification report:
+              precision    recall  f1-score   support
+
+           0       0.00      0.00      0.00     17006
+           1       0.82      1.00      0.90    164886
+           2       0.20      0.00      0.00     17988
+
+    accuracy                           0.82    199880
+   macro avg       0.34      0.33      0.30    199880
+weighted avg       0.70      0.82      0.75    199880
+
+2025-06-20 00:45:04,844 - INFO - Combined confusion matrix saved to: backtest/multi_images\combined_confusion_matrix_20250620_004504.png
+2025-06-20 00:45:07,096 - INFO - Total minutes:199870, Total trade: 101
+2025-06-20 00:45:07,100 - INFO - Total pnl:114.5493, avergae pnl:1.1342
+2025-06-20 00:45:07,100 - INFO - Multi-model backtest finished
+
+2025-06-20 00:46:03,647 - INFO - =====================================
+2025-06-20 00:46:03,647 - INFO - Starting multi-model backtest
+2025-06-20 00:46:03,647 - INFO - Multi test started with files: infer_result/follow_141202.csv and infer_result/follow_214403.csv
+2025-06-20 00:46:03,647 - INFO - Threshold settings: long_threshold_1=0.4, short_threshold_1=0.4
+2025-06-20 00:46:03,647 - INFO - Threshold settings: long_threshold_2=0.96, short_threshold_2=0.91
+2025-06-20 00:46:03,647 - INFO - infer_result/follow_141202.csv threshold settings: 
+use_threshold=True, long_threshold=0.4, short_threshold=0.4
+2025-06-20 00:46:03,896 - INFO - Data processing completed, 199880 rows processed
+2025-06-20 00:46:03,896 - INFO - infer_result/follow_214403.csv threshold settings: 
+use_threshold=True, long_threshold=0.96, short_threshold=0.91
+2025-06-20 00:46:04,130 - INFO - Data processing completed, 199880 rows processed
+2025-06-20 00:46:04,146 - INFO - File 1 Confusion matrix:
+[[ 4890 56534  3985]
+ [ 3408 59907  4734]
+ [ 3056 57558  5808]]
+2025-06-20 00:46:04,173 - INFO - File 2 Confusion matrix:
+[[    60  16900     46]
+ [   218 164472    196]
+ [    49  17870     69]]
+2025-06-20 00:46:05,499 - INFO - Combined Confusion matrix:
+[[    17  16965     24]
+ [    25 164713    148]
+ [     3  17935     50]]
+2025-06-20 00:46:05,509 - INFO - Combined accuracy: 0.8244
+2025-06-20 00:46:05,616 - INFO - Combined classification report:
+              precision    recall  f1-score   support
+
+           0       0.38      0.00      0.00     17006
+           1       0.83      1.00      0.90    164886
+           2       0.23      0.00      0.01     17988
+
+    accuracy                           0.82    199880
+   macro avg       0.48      0.33      0.30    199880
+weighted avg       0.73      0.82      0.75    199880
+
+2025-06-20 00:46:05,831 - INFO - Combined confusion matrix saved to: backtest/multi_images\combined_confusion_matrix_20250620_004605.png
+2025-06-20 00:46:08,017 - INFO - Total minutes:199870, Total trade: 267
+2025-06-20 00:46:08,017 - INFO - Total pnl:1899.6325, avergae pnl:7.1147
+2025-06-20 00:46:08,017 - INFO - Multi-model backtest finished
+
+2025-06-20 00:49:05,670 - INFO - =====================================
+2025-06-20 00:49:05,670 - INFO - Starting multi-model backtest
+2025-06-20 00:49:05,670 - INFO - Multi test started with files: infer_result/follow_141202.csv and infer_result/follow_214403.csv
+2025-06-20 00:49:05,670 - INFO - Threshold settings: long_threshold_1=0.4, short_threshold_1=0.4
+2025-06-20 00:49:05,670 - INFO - Threshold settings: long_threshold_2=0.955, short_threshold_2=0.905
+2025-06-20 00:49:05,670 - INFO - infer_result/follow_141202.csv threshold settings: 
+use_threshold=True, long_threshold=0.4, short_threshold=0.4
+2025-06-20 00:49:05,881 - INFO - Data processing completed, 199880 rows processed
+2025-06-20 00:49:05,881 - INFO - infer_result/follow_214403.csv threshold settings: 
+use_threshold=True, long_threshold=0.955, short_threshold=0.905
+2025-06-20 00:49:06,088 - INFO - Data processing completed, 199880 rows processed
+2025-06-20 00:49:06,102 - INFO - File 1 Confusion matrix:
+[[ 4890 56534  3985]
+ [ 3408 59907  4734]
+ [ 3056 57558  5808]]
+2025-06-20 00:49:06,125 - INFO - File 2 Confusion matrix:
+[[    82  16863     61]
+ [   305 164294    287]
+ [    73  17812    103]]
+2025-06-20 00:49:07,424 - INFO - Combined Confusion matrix:
+[[    18  16951     37]
+ [    32 164648    206]
+ [     5  17905     78]]
+2025-06-20 00:49:07,434 - INFO - Combined accuracy: 0.8242
+2025-06-20 00:49:07,570 - INFO - Combined classification report:
+              precision    recall  f1-score   support
+
+           0       0.33      0.00      0.00     17006
+           1       0.83      1.00      0.90    164886
+           2       0.24      0.00      0.01     17988
+
+    accuracy                           0.82    199880
+   macro avg       0.47      0.33      0.30    199880
+weighted avg       0.73      0.82      0.75    199880
+
+2025-06-20 00:49:07,812 - INFO - Combined confusion matrix saved to: backtest/multi_images\combined_confusion_matrix_20250620_004907.png
+2025-06-20 00:49:10,174 - INFO - Total minutes:199870, Total trade: 376
+2025-06-20 00:49:10,174 - INFO - Total pnl:1669.9212, avergae pnl:4.4413
+2025-06-20 00:49:10,174 - INFO - Multi-model backtest finished
+
+2025-06-20 00:50:33,549 - INFO - =====================================
+2025-06-20 00:50:33,549 - INFO - Starting multi-model backtest
+2025-06-20 00:50:33,549 - INFO - Multi test started with files: infer_result/follow_141202.csv and infer_result/follow_214403.csv
+2025-06-20 00:50:33,549 - INFO - Threshold settings: long_threshold_1=0.4, short_threshold_1=0.4
+2025-06-20 00:50:33,549 - INFO - Threshold settings: long_threshold_2=0.957, short_threshold_2=0.907
+2025-06-20 00:50:33,549 - INFO - infer_result/follow_141202.csv threshold settings: 
+use_threshold=True, long_threshold=0.4, short_threshold=0.4
+2025-06-20 00:50:33,759 - INFO - Data processing completed, 199880 rows processed
+2025-06-20 00:50:33,759 - INFO - infer_result/follow_214403.csv threshold settings: 
+use_threshold=True, long_threshold=0.957, short_threshold=0.907
+2025-06-20 00:50:33,961 - INFO - Data processing completed, 199880 rows processed
+2025-06-20 00:50:33,973 - INFO - File 1 Confusion matrix:
+[[ 4890 56534  3985]
+ [ 3408 59907  4734]
+ [ 3056 57558  5808]]
+2025-06-20 00:50:33,999 - INFO - File 2 Confusion matrix:
+[[    69  16882     55]
+ [   266 164376    244]
+ [    60  17844     84]]
+2025-06-20 00:50:35,329 - INFO - Combined Confusion matrix:
+[[    18  16957     31]
+ [    29 164675    182]
+ [     4  17921     63]]
+2025-06-20 00:50:35,340 - INFO - Combined accuracy: 0.8243
+2025-06-20 00:50:35,459 - INFO - Combined classification report:
+              precision    recall  f1-score   support
+
+           0       0.35      0.00      0.00     17006
+           1       0.83      1.00      0.90    164886
+           2       0.23      0.00      0.01     17988
+
+    accuracy                           0.82    199880
+   macro avg       0.47      0.33      0.30    199880
+weighted avg       0.73      0.82      0.75    199880
+
+2025-06-20 00:50:35,708 - INFO - Combined confusion matrix saved to: backtest/multi_images\combined_confusion_matrix_20250620_005035.png
+2025-06-20 00:50:38,000 - INFO - Total minutes:199870, Total trade: 327
+2025-06-20 00:50:38,000 - INFO - Total pnl:1646.1666, avergae pnl:5.0341
+2025-06-20 00:50:38,000 - INFO - Multi-model backtest finished
+
+2025-06-20 00:51:43,259 - INFO - =====================================
+2025-06-20 00:51:43,259 - INFO - Starting multi-model backtest
+2025-06-20 00:51:43,259 - INFO - Multi test started with files: infer_result/follow_141202.csv and infer_result/follow_214403.csv
+2025-06-20 00:51:43,259 - INFO - Threshold settings: long_threshold_1=0.4, short_threshold_1=0.4
+2025-06-20 00:51:43,259 - INFO - Threshold settings: long_threshold_2=0.958, short_threshold_2=0.908
+2025-06-20 00:51:43,259 - INFO - infer_result/follow_141202.csv threshold settings: 
+use_threshold=True, long_threshold=0.4, short_threshold=0.4
+2025-06-20 00:51:43,461 - INFO - Data processing completed, 199880 rows processed
+2025-06-20 00:51:43,461 - INFO - infer_result/follow_214403.csv threshold settings: 
+use_threshold=True, long_threshold=0.958, short_threshold=0.908
+2025-06-20 00:51:43,642 - INFO - Data processing completed, 199880 rows processed
+2025-06-20 00:51:43,655 - INFO - File 1 Confusion matrix:
+[[ 4890 56534  3985]
+ [ 3408 59907  4734]
+ [ 3056 57558  5808]]
+2025-06-20 00:51:43,677 - INFO - File 2 Confusion matrix:
+[[    66  16888     52]
+ [   252 164409    225]
+ [    55  17855     78]]
+2025-06-20 00:51:44,948 - INFO - Combined Confusion matrix:
+[[    17  16960     29]
+ [    27 164688    171]
+ [     3  17927     58]]
+2025-06-20 00:51:44,957 - INFO - Combined accuracy: 0.8243
+2025-06-20 00:51:45,073 - INFO - Combined classification report:
+              precision    recall  f1-score   support
+
+           0       0.36      0.00      0.00     17006
+           1       0.83      1.00      0.90    164886
+           2       0.22      0.00      0.01     17988
+
+    accuracy                           0.82    199880
+   macro avg       0.47      0.33      0.30    199880
+weighted avg       0.73      0.82      0.75    199880
+
+2025-06-20 00:51:45,289 - INFO - Combined confusion matrix saved to: backtest/multi_images\combined_confusion_matrix_20250620_005145.png
+2025-06-20 00:51:47,373 - INFO - Total minutes:199870, Total trade: 305
+2025-06-20 00:51:47,373 - INFO - Total pnl:1548.2701, avergae pnl:5.0763
+2025-06-20 00:51:47,373 - INFO - Multi-model backtest finished
+
+2025-06-20 00:52:47,322 - INFO - =====================================
+2025-06-20 00:52:47,322 - INFO - Starting multi-model backtest
+2025-06-20 00:52:47,322 - INFO - Multi test started with files: infer_result/follow_141202.csv and infer_result/follow_214403.csv
+2025-06-20 00:52:47,322 - INFO - Threshold settings: long_threshold_1=0.41, short_threshold_1=0.41
+2025-06-20 00:52:47,322 - INFO - Threshold settings: long_threshold_2=0.958, short_threshold_2=0.908
+2025-06-20 00:52:47,322 - INFO - infer_result/follow_141202.csv threshold settings: 
+use_threshold=True, long_threshold=0.41, short_threshold=0.41
+2025-06-20 00:52:47,521 - INFO - Data processing completed, 199880 rows processed
+2025-06-20 00:52:47,521 - INFO - infer_result/follow_214403.csv threshold settings: 
+use_threshold=True, long_threshold=0.958, short_threshold=0.908
+2025-06-20 00:52:47,724 - INFO - Data processing completed, 199880 rows processed
+2025-06-20 00:52:47,740 - INFO - File 1 Confusion matrix:
+[[ 3094 60088  2227]
+ [ 2043 63254  2752]
+ [ 1852 61133  3437]]
+2025-06-20 00:52:47,766 - INFO - File 2 Confusion matrix:
+[[    66  16888     52]
+ [   252 164409    225]
+ [    55  17855     78]]
+2025-06-20 00:52:49,052 - INFO - Combined Confusion matrix:
+[[    10  16972     24]
+ [    14 164725    147]
+ [     1  17933     54]]
+2025-06-20 00:52:49,064 - INFO - Combined accuracy: 0.8244
+2025-06-20 00:52:49,177 - INFO - Combined classification report:
+              precision    recall  f1-score   support
+
+           0       0.40      0.00      0.00     17006
+           1       0.83      1.00      0.90    164886
+           2       0.24      0.00      0.01     17988
+
+    accuracy                           0.82    199880
+   macro avg       0.49      0.33      0.30    199880
+weighted avg       0.74      0.82      0.75    199880
+
+2025-06-20 00:52:49,410 - INFO - Combined confusion matrix saved to: backtest/multi_images\combined_confusion_matrix_20250620_005249.png
+2025-06-20 00:52:51,634 - INFO - Total minutes:199870, Total trade: 250
+2025-06-20 00:52:51,634 - INFO - Total pnl:1336.6367, avergae pnl:5.3465
+2025-06-20 00:52:51,634 - INFO - Multi-model backtest finished
+
+2025-06-20 00:53:43,991 - INFO - =====================================
+2025-06-20 00:53:43,991 - INFO - Starting multi-model backtest
+2025-06-20 00:53:43,991 - INFO - Multi test started with files: infer_result/follow_141202.csv and infer_result/follow_214403.csv
+2025-06-20 00:53:43,991 - INFO - Threshold settings: long_threshold_1=0.4, short_threshold_1=0.4
+2025-06-20 00:53:43,991 - INFO - Threshold settings: long_threshold_2=0.9585, short_threshold_2=0.9085
+2025-06-20 00:53:43,991 - INFO - infer_result/follow_141202.csv threshold settings: 
+use_threshold=True, long_threshold=0.4, short_threshold=0.4
+2025-06-20 00:53:44,206 - INFO - Data processing completed, 199880 rows processed
+2025-06-20 00:53:44,206 - INFO - infer_result/follow_214403.csv threshold settings: 
+use_threshold=True, long_threshold=0.9585, short_threshold=0.9085
+2025-06-20 00:53:44,409 - INFO - Data processing completed, 199880 rows processed
+2025-06-20 00:53:44,421 - INFO - File 1 Confusion matrix:
+[[ 4890 56534  3985]
+ [ 3408 59907  4734]
+ [ 3056 57558  5808]]
+2025-06-20 00:53:44,448 - INFO - File 2 Confusion matrix:
+[[    64  16891     51]
+ [   242 164424    220]
+ [    53  17862     73]]
+2025-06-20 00:53:45,717 - INFO - Combined Confusion matrix:
+[[    17  16961     28]
+ [    27 164692    167]
+ [     3  17932     53]]
+2025-06-20 00:53:45,730 - INFO - Combined accuracy: 0.8243
+2025-06-20 00:53:45,853 - INFO - Combined classification report:
+              precision    recall  f1-score   support
+
+           0       0.36      0.00      0.00     17006
+           1       0.83      1.00      0.90    164886
+           2       0.21      0.00      0.01     17988
+
+    accuracy                           0.82    199880
+   macro avg       0.47      0.33      0.30    199880
+weighted avg       0.73      0.82      0.75    199880
+
+2025-06-20 00:53:46,086 - INFO - Combined confusion matrix saved to: backtest/multi_images\combined_confusion_matrix_20250620_005345.png
+2025-06-20 00:53:48,340 - INFO - Total minutes:199870, Total trade: 295
+2025-06-20 00:53:48,340 - INFO - Total pnl:1617.4629, avergae pnl:5.4829
+2025-06-20 00:53:48,340 - INFO - Multi-model backtest finished
+
+2025-06-20 00:56:46,256 - INFO - =====================================
+2025-06-20 00:56:46,256 - INFO - Starting multi-model backtest
+2025-06-20 00:56:46,256 - INFO - Multi test started with files: infer_result/follow_141202.csv and infer_result/follow_214403.csv
+2025-06-20 00:56:46,256 - INFO - Threshold settings: long_threshold_1=0.4, short_threshold_1=0.4
+2025-06-20 00:56:46,256 - INFO - Threshold settings: long_threshold_2=0.9605, short_threshold_2=0.9105
+2025-06-20 00:56:46,256 - INFO - infer_result/follow_141202.csv threshold settings: 
+use_threshold=True, long_threshold=0.4, short_threshold=0.4
+2025-06-20 00:56:46,454 - INFO - Data processing completed, 199880 rows processed
+2025-06-20 00:56:46,454 - INFO - infer_result/follow_214403.csv threshold settings: 
+use_threshold=True, long_threshold=0.9605, short_threshold=0.9105
+2025-06-20 00:56:46,640 - INFO - Data processing completed, 199880 rows processed
+2025-06-20 00:56:46,655 - INFO - File 1 Confusion matrix:
+[[ 4890 56534  3985]
+ [ 3408 59907  4734]
+ [ 3056 57558  5808]]
+2025-06-20 00:56:46,675 - INFO - File 2 Confusion matrix:
+[[    58  16902     46]
+ [   209 164486    191]
+ [    48  17874     66]]
+2025-06-20 00:56:47,905 - INFO - Combined Confusion matrix:
+[[    16  16966     24]
+ [    24 164718    144]
+ [     3  17938     47]]
+2025-06-20 00:56:47,920 - INFO - Combined accuracy: 0.8244
+2025-06-20 00:56:48,061 - INFO - Combined classification report:
+              precision    recall  f1-score   support
+
+           0       0.37      0.00      0.00     17006
+           1       0.83      1.00      0.90    164886
+           2       0.22      0.00      0.01     17988
+
+    accuracy                           0.82    199880
+   macro avg       0.47      0.33      0.30    199880
+weighted avg       0.73      0.82      0.75    199880
+
+2025-06-20 00:56:48,277 - INFO - Combined confusion matrix saved to: backtest/multi_images\combined_confusion_matrix_20250620_005648.png
+2025-06-20 00:56:50,382 - INFO - Total minutes:199870, Total trade: 258
+2025-06-20 00:56:50,382 - INFO - Total pnl:1831.3612, avergae pnl:7.0983
+2025-06-20 00:56:50,382 - INFO - Multi-model backtest finished
+
+2025-06-20 00:57:19,071 - INFO - =====================================
+2025-06-20 00:57:19,071 - INFO - Starting multi-model backtest
+2025-06-20 00:57:19,071 - INFO - Multi test started with files: infer_result/follow_141202.csv and infer_result/follow_214403.csv
+2025-06-20 00:57:19,071 - INFO - Threshold settings: long_threshold_1=0.4, short_threshold_1=0.4
+2025-06-20 00:57:19,071 - INFO - Threshold settings: long_threshold_2=0.961, short_threshold_2=0.911
+2025-06-20 00:57:19,071 - INFO - infer_result/follow_141202.csv threshold settings: 
+use_threshold=True, long_threshold=0.4, short_threshold=0.4
+2025-06-20 00:57:19,286 - INFO - Data processing completed, 199880 rows processed
+2025-06-20 00:57:19,286 - INFO - infer_result/follow_214403.csv threshold settings: 
+use_threshold=True, long_threshold=0.961, short_threshold=0.911
+2025-06-20 00:57:19,468 - INFO - Data processing completed, 199880 rows processed
+2025-06-20 00:57:19,478 - INFO - File 1 Confusion matrix:
+[[ 4890 56534  3985]
+ [ 3408 59907  4734]
+ [ 3056 57558  5808]]
+2025-06-20 00:57:19,500 - INFO - File 2 Confusion matrix:
+[[    55  16907     44]
+ [   204 164500    182]
+ [    46  17877     65]]
+2025-06-20 00:57:20,802 - INFO - Combined Confusion matrix:
+[[    16  16968     22]
+ [    23 164726    137]
+ [     3  17939     46]]
+2025-06-20 00:57:20,817 - INFO - Combined accuracy: 0.8244
+2025-06-20 00:57:20,935 - INFO - Combined classification report:
+              precision    recall  f1-score   support
+
+           0       0.38      0.00      0.00     17006
+           1       0.83      1.00      0.90    164886
+           2       0.22      0.00      0.01     17988
+
+    accuracy                           0.82    199880
+   macro avg       0.48      0.33      0.30    199880
+weighted avg       0.73      0.82      0.75    199880
+
+2025-06-20 00:57:21,135 - INFO - Combined confusion matrix saved to: backtest/multi_images\combined_confusion_matrix_20250620_005720.png
+2025-06-20 00:57:23,288 - INFO - Total minutes:199870, Total trade: 247
+2025-06-20 00:57:23,288 - INFO - Total pnl:1785.2560, avergae pnl:7.2278
+2025-06-20 00:57:23,288 - INFO - Multi-model backtest finished
+
+2025-06-20 01:00:04,118 - INFO - =====================================
+2025-06-20 01:00:04,118 - INFO - Starting multi-model backtest
+2025-06-20 01:00:04,118 - INFO - Multi test started with files: infer_result/follow_141202.csv and infer_result/follow_162953.csv
+2025-06-20 01:00:04,118 - INFO - Threshold settings: long_threshold_1=0.4, short_threshold_1=0.4
+2025-06-20 01:00:04,118 - INFO - Threshold settings: long_threshold_2=0.97, short_threshold_2=0.97
+2025-06-20 01:00:04,118 - INFO - infer_result/follow_141202.csv threshold settings: 
+use_threshold=True, long_threshold=0.4, short_threshold=0.4
+2025-06-20 01:00:04,349 - INFO - Data processing completed, 199880 rows processed
+2025-06-20 01:00:04,349 - INFO - infer_result/follow_162953.csv threshold settings: 
+use_threshold=True, long_threshold=0.97, short_threshold=0.97
+2025-06-20 01:00:04,576 - INFO - Data processing completed, 199880 rows processed
+2025-06-20 01:00:04,593 - INFO - File 1 Confusion matrix:
+[[ 4890 56534  3985]
+ [ 3408 59907  4734]
+ [ 3056 57558  5808]]
+2025-06-20 01:00:04,620 - INFO - File 2 Confusion matrix:
+[[    19  16894     93]
+ [    80 164474    332]
+ [     5  17853    130]]
+2025-06-20 01:00:06,031 - INFO - Combined Confusion matrix:
+[[     0  16966     40]
+ [     0 164761    125]
+ [     0  17927     61]]
+2025-06-20 01:00:06,045 - INFO - Combined accuracy: 0.8246
+2025-06-20 01:00:06,166 - INFO - Combined classification report:
+              precision    recall  f1-score   support
+
+           0       0.00      0.00      0.00     17006
+           1       0.83      1.00      0.90    164886
+           2       0.27      0.00      0.01     17988
+
+    accuracy                           0.82    199880
+   macro avg       0.37      0.33      0.30    199880
+weighted avg       0.71      0.82      0.75    199880
+
+2025-06-20 01:00:06,417 - INFO - Combined confusion matrix saved to: backtest/multi_images\combined_confusion_matrix_20250620_010006.png
+2025-06-20 01:00:08,672 - INFO - Total minutes:199870, Total trade: 226
+2025-06-20 01:00:08,672 - INFO - Total pnl:1652.7388, avergae pnl:7.3130
+2025-06-20 01:00:08,672 - INFO - Multi-model backtest finished
+
+2025-06-20 01:00:33,989 - INFO - =====================================
+2025-06-20 01:00:33,989 - INFO - Starting multi-model backtest
+2025-06-20 01:00:33,989 - INFO - Multi test started with files: infer_result/follow_141202.csv and infer_result/follow_162953.csv
+2025-06-20 01:00:33,989 - INFO - Threshold settings: long_threshold_1=0.4, short_threshold_1=0.4
+2025-06-20 01:00:33,989 - INFO - Threshold settings: long_threshold_2=0.97, short_threshold_2=0.96
+2025-06-20 01:00:33,989 - INFO - infer_result/follow_141202.csv threshold settings: 
+use_threshold=True, long_threshold=0.4, short_threshold=0.4
+2025-06-20 01:00:34,187 - INFO - Data processing completed, 199880 rows processed
+2025-06-20 01:00:34,187 - INFO - infer_result/follow_162953.csv threshold settings: 
+use_threshold=True, long_threshold=0.97, short_threshold=0.96
+2025-06-20 01:00:34,389 - INFO - Data processing completed, 199880 rows processed
+2025-06-20 01:00:34,402 - INFO - File 1 Confusion matrix:
+[[ 4890 56534  3985]
+ [ 3408 59907  4734]
+ [ 3056 57558  5808]]
+2025-06-20 01:00:34,429 - INFO - File 2 Confusion matrix:
+[[    41  16872     93]
+ [   256 164298    332]
+ [    20  17838    130]]
+2025-06-20 01:00:35,695 - INFO - Combined Confusion matrix:
+[[     1  16965     40]
+ [     3 164758    125]
+ [     0  17927     61]]
+2025-06-20 01:00:35,706 - INFO - Combined accuracy: 0.8246
+2025-06-20 01:00:35,823 - INFO - Combined classification report:
+              precision    recall  f1-score   support
+
+           0       0.25      0.00      0.00     17006
+           1       0.83      1.00      0.90    164886
+           2       0.27      0.00      0.01     17988
+
+    accuracy                           0.82    199880
+   macro avg       0.45      0.33      0.30    199880
+weighted avg       0.73      0.82      0.75    199880
+
+2025-06-20 01:00:36,042 - INFO - Combined confusion matrix saved to: backtest/multi_images\combined_confusion_matrix_20250620_010035.png
+2025-06-20 01:00:38,283 - INFO - Total minutes:199870, Total trade: 230
+2025-06-20 01:00:38,283 - INFO - Total pnl:1665.1359, avergae pnl:7.2397
+2025-06-20 01:00:38,283 - INFO - Multi-model backtest finished
+
+2025-06-20 01:00:58,365 - INFO - =====================================
+2025-06-20 01:00:58,365 - INFO - Starting multi-model backtest
+2025-06-20 01:00:58,365 - INFO - Multi test started with files: infer_result/follow_141202.csv and infer_result/follow_162953.csv
+2025-06-20 01:00:58,365 - INFO - Threshold settings: long_threshold_1=0.42, short_threshold_1=0.42
+2025-06-20 01:00:58,365 - INFO - Threshold settings: long_threshold_2=0.97, short_threshold_2=0.96
+2025-06-20 01:00:58,365 - INFO - infer_result/follow_141202.csv threshold settings: 
+use_threshold=True, long_threshold=0.42, short_threshold=0.42
+2025-06-20 01:00:58,562 - INFO - Data processing completed, 199880 rows processed
+2025-06-20 01:00:58,562 - INFO - infer_result/follow_162953.csv threshold settings: 
+use_threshold=True, long_threshold=0.97, short_threshold=0.96
+2025-06-20 01:00:58,769 - INFO - Data processing completed, 199880 rows processed
+2025-06-20 01:00:58,777 - INFO - File 1 Confusion matrix:
+[[ 1806 62521  1082]
+ [ 1161 65450  1438]
+ [ 1088 63528  1806]]
+2025-06-20 01:00:58,802 - INFO - File 2 Confusion matrix:
+[[    41  16872     93]
+ [   256 164298    332]
+ [    20  17838    130]]
+2025-06-20 01:01:00,104 - INFO - Combined Confusion matrix:
+[[     1  16990     15]
+ [     0 164825     61]
+ [     0  17958     30]]
+2025-06-20 01:01:00,115 - INFO - Combined accuracy: 0.8248
+2025-06-20 01:01:00,237 - INFO - Combined classification report:
+              precision    recall  f1-score   support
+
+           0       1.00      0.00      0.00     17006
+           1       0.83      1.00      0.90    164886
+           2       0.28      0.00      0.00     17988
+
+    accuracy                           0.82    199880
+   macro avg       0.70      0.33      0.30    199880
+weighted avg       0.79      0.82      0.75    199880
+
+2025-06-20 01:01:00,451 - INFO - Combined confusion matrix saved to: backtest/multi_images\combined_confusion_matrix_20250620_010100.png
+2025-06-20 01:01:02,644 - INFO - Total minutes:199870, Total trade: 107
+2025-06-20 01:01:02,644 - INFO - Total pnl:806.7160, avergae pnl:7.5394
+2025-06-20 01:01:02,644 - INFO - Multi-model backtest finished
+
+2025-06-20 01:01:17,739 - INFO - =====================================
+2025-06-20 01:01:17,739 - INFO - Starting multi-model backtest
+2025-06-20 01:01:17,739 - INFO - Multi test started with files: infer_result/follow_141202.csv and infer_result/follow_162953.csv
+2025-06-20 01:01:17,739 - INFO - Threshold settings: long_threshold_1=0.42, short_threshold_1=0.42
+2025-06-20 01:01:17,739 - INFO - Threshold settings: long_threshold_2=0.975, short_threshold_2=0.96
+2025-06-20 01:01:17,739 - INFO - infer_result/follow_141202.csv threshold settings: 
+use_threshold=True, long_threshold=0.42, short_threshold=0.42
+2025-06-20 01:01:17,968 - INFO - Data processing completed, 199880 rows processed
+2025-06-20 01:01:17,968 - INFO - infer_result/follow_162953.csv threshold settings: 
+use_threshold=True, long_threshold=0.975, short_threshold=0.96
+2025-06-20 01:01:18,169 - INFO - Data processing completed, 199880 rows processed
+2025-06-20 01:01:18,180 - INFO - File 1 Confusion matrix:
+[[ 1806 62521  1082]
+ [ 1161 65450  1438]
+ [ 1088 63528  1806]]
+2025-06-20 01:01:18,199 - INFO - File 2 Confusion matrix:
+[[    41  16923     42]
+ [   256 164462    168]
+ [    20  17903     65]]
+2025-06-20 01:01:19,466 - INFO - Combined Confusion matrix:
+[[     1  16999      6]
+ [     0 164852     34]
+ [     0  17969     19]]
+2025-06-20 01:01:19,478 - INFO - Combined accuracy: 0.8249
+2025-06-20 01:01:19,592 - INFO - Combined classification report:
+              precision    recall  f1-score   support
+
+           0       1.00      0.00      0.00     17006
+           1       0.83      1.00      0.90    164886
+           2       0.32      0.00      0.00     17988
+
+    accuracy                           0.82    199880
+   macro avg       0.72      0.33      0.30    199880
+weighted avg       0.79      0.82      0.75    199880
+
+2025-06-20 01:01:19,820 - INFO - Combined confusion matrix saved to: backtest/multi_images\combined_confusion_matrix_20250620_010119.png
+2025-06-20 01:01:22,034 - INFO - Total minutes:199870, Total trade: 60
+2025-06-20 01:01:22,034 - INFO - Total pnl:499.4738, avergae pnl:8.3246
+2025-06-20 01:01:22,034 - INFO - Multi-model backtest finished
+
+2025-06-20 01:02:43,016 - INFO - =====================================
+2025-06-20 01:02:43,016 - INFO - Starting multi-model backtest
+2025-06-20 01:02:43,016 - INFO - Multi test started with files: infer_result/follow_214403.csv and infer_result/follow_162953.csv
+2025-06-20 01:02:43,016 - INFO - Threshold settings: long_threshold_1=0.95, short_threshold_1=0.95
+2025-06-20 01:02:43,016 - INFO - Threshold settings: long_threshold_2=0.975, short_threshold_2=0.96
+2025-06-20 01:02:43,016 - INFO - infer_result/follow_214403.csv threshold settings: 
+use_threshold=True, long_threshold=0.95, short_threshold=0.95
+2025-06-20 01:02:43,205 - INFO - Data processing completed, 199880 rows processed
+2025-06-20 01:02:43,205 - INFO - infer_result/follow_162953.csv threshold settings: 
+use_threshold=True, long_threshold=0.975, short_threshold=0.96
+2025-06-20 01:02:43,401 - INFO - Data processing completed, 199880 rows processed
+2025-06-20 01:02:43,414 - INFO - File 1 Confusion matrix:
+[[     4  16916     86]
+ [     4 164498    384]
+ [     1  17848    139]]
+2025-06-20 01:02:43,435 - INFO - File 2 Confusion matrix:
+[[    41  16923     42]
+ [   256 164462    168]
+ [    20  17903     65]]
+2025-06-20 01:02:44,740 - INFO - Combined Confusion matrix:
+[[     1  16997      8]
+ [     0 164856     30]
+ [     0  17976     12]]
+2025-06-20 01:02:44,755 - INFO - Combined accuracy: 0.8248
+2025-06-20 01:02:44,875 - INFO - Combined classification report:
+              precision    recall  f1-score   support
+
+           0       1.00      0.00      0.00     17006
+           1       0.82      1.00      0.90    164886
+           2       0.24      0.00      0.00     17988
+
+    accuracy                           0.82    199880
+   macro avg       0.69      0.33      0.30    199880
+weighted avg       0.79      0.82      0.75    199880
+
+2025-06-20 01:02:45,110 - INFO - Combined confusion matrix saved to: backtest/multi_images\combined_confusion_matrix_20250620_010244.png
+2025-06-20 01:02:47,383 - INFO - Total minutes:199870, Total trade: 51
+2025-06-20 01:02:47,383 - INFO - Total pnl:2157.2160, avergae pnl:42.2984
+2025-06-20 01:02:47,383 - INFO - Multi-model backtest finished
+
+2025-06-20 01:03:31,931 - INFO - =====================================
+2025-06-20 01:03:31,931 - INFO - Starting multi-model backtest
+2025-06-20 01:03:31,931 - INFO - Multi test started with files: infer_result/follow_214403.csv and infer_result/follow_162953.csv
+2025-06-20 01:03:31,931 - INFO - Threshold settings: long_threshold_1=0.95, short_threshold_1=0.94
+2025-06-20 01:03:31,931 - INFO - Threshold settings: long_threshold_2=0.975, short_threshold_2=0.96
+2025-06-20 01:03:31,931 - INFO - infer_result/follow_214403.csv threshold settings: 
+use_threshold=True, long_threshold=0.95, short_threshold=0.94
+2025-06-20 01:03:32,142 - INFO - Data processing completed, 199880 rows processed
+2025-06-20 01:03:32,142 - INFO - infer_result/follow_162953.csv threshold settings: 
+use_threshold=True, long_threshold=0.975, short_threshold=0.96
+2025-06-20 01:03:32,344 - INFO - Data processing completed, 199880 rows processed
+2025-06-20 01:03:32,354 - INFO - File 1 Confusion matrix:
+[[     8  16912     86]
+ [    15 164487    384]
+ [     3  17846    139]]
+2025-06-20 01:03:32,377 - INFO - File 2 Confusion matrix:
+[[    41  16923     42]
+ [   256 164462    168]
+ [    20  17903     65]]
+2025-06-20 01:03:33,650 - INFO - Combined Confusion matrix:
+[[     1  16997      8]
+ [     0 164856     30]
+ [     0  17976     12]]
+2025-06-20 01:03:33,662 - INFO - Combined accuracy: 0.8248
+2025-06-20 01:03:33,792 - INFO - Combined classification report:
+              precision    recall  f1-score   support
+
+           0       1.00      0.00      0.00     17006
+           1       0.82      1.00      0.90    164886
+           2       0.24      0.00      0.00     17988
+
+    accuracy                           0.82    199880
+   macro avg       0.69      0.33      0.30    199880
+weighted avg       0.79      0.82      0.75    199880
+
+2025-06-20 01:03:34,016 - INFO - Combined confusion matrix saved to: backtest/multi_images\combined_confusion_matrix_20250620_010333.png
+2025-06-20 01:03:36,218 - INFO - Total minutes:199870, Total trade: 51
+2025-06-20 01:03:36,218 - INFO - Total pnl:2157.2160, avergae pnl:42.2984
+2025-06-20 01:03:36,218 - INFO - Multi-model backtest finished
+
+2025-06-20 01:04:26,926 - INFO - =====================================
+2025-06-20 01:04:26,926 - INFO - Starting multi-model backtest
+2025-06-20 01:04:26,926 - INFO - Multi test started with files: infer_result/follow_155307.csv and infer_result/follow_162953.csv
+2025-06-20 01:04:26,926 - INFO - Threshold settings: long_threshold_1=0.95, short_threshold_1=0.93
+2025-06-20 01:04:26,926 - INFO - Threshold settings: long_threshold_2=0.975, short_threshold_2=0.96
+2025-06-20 01:04:26,926 - INFO - infer_result/follow_155307.csv threshold settings: 
+use_threshold=True, long_threshold=0.95, short_threshold=0.93
+2025-06-20 01:04:27,111 - INFO - Data processing completed, 199880 rows processed
+2025-06-20 01:04:27,111 - INFO - infer_result/follow_162953.csv threshold settings: 
+use_threshold=True, long_threshold=0.975, short_threshold=0.96
+2025-06-20 01:04:27,308 - INFO - Data processing completed, 199880 rows processed
+2025-06-20 01:04:27,323 - INFO - File 1 Confusion matrix:
+[[  741 63890   778]
+ [  511 66245  1293]
+ [  473 64520  1429]]
+2025-06-20 01:04:27,345 - INFO - File 2 Confusion matrix:
+[[    41  16923     42]
+ [   256 164462    168]
+ [    20  17903     65]]
+2025-06-20 01:04:28,597 - INFO - Combined Confusion matrix:
+[[     1  16982     23]
+ [     7 164806     73]
+ [     0  17948     40]]
+2025-06-20 01:04:28,610 - INFO - Combined accuracy: 0.8247
+2025-06-20 01:04:28,723 - INFO - Combined classification report:
+              precision    recall  f1-score   support
+
+           0       0.12      0.00      0.00     17006
+           1       0.83      1.00      0.90    164886
+           2       0.29      0.00      0.00     17988
+
+    accuracy                           0.82    199880
+   macro avg       0.41      0.33      0.30    199880
+weighted avg       0.72      0.82      0.75    199880
+
+2025-06-20 01:04:29,095 - INFO - Combined confusion matrix saved to: backtest/multi_images\combined_confusion_matrix_20250620_010428.png
+2025-06-20 01:04:31,335 - INFO - Total minutes:199870, Total trade: 144
+2025-06-20 01:04:31,335 - INFO - Total pnl:153.6047, avergae pnl:1.0667
+2025-06-20 01:04:31,335 - INFO - Multi-model backtest finished
+
+2025-06-20 01:04:47,633 - INFO - =====================================
+2025-06-20 01:04:47,634 - INFO - Starting multi-model backtest
+2025-06-20 01:04:47,634 - INFO - Multi test started with files: infer_result/follow_155307.csv and infer_result/follow_162953.csv
+2025-06-20 01:04:47,634 - INFO - Threshold settings: long_threshold_1=0.94, short_threshold_1=0.94
+2025-06-20 01:04:47,634 - INFO - Threshold settings: long_threshold_2=0.975, short_threshold_2=0.96
+2025-06-20 01:04:47,634 - INFO - infer_result/follow_155307.csv threshold settings: 
+use_threshold=True, long_threshold=0.94, short_threshold=0.94
+2025-06-20 01:04:47,818 - INFO - Data processing completed, 199880 rows processed
+2025-06-20 01:04:47,818 - INFO - infer_result/follow_162953.csv threshold settings: 
+use_threshold=True, long_threshold=0.975, short_threshold=0.96
+2025-06-20 01:04:48,009 - INFO - Data processing completed, 199880 rows processed
+2025-06-20 01:04:48,026 - INFO - File 1 Confusion matrix:
+[[  711 63899   799]
+ [  494 66222  1333]
+ [  451 64491  1480]]
+2025-06-20 01:04:48,045 - INFO - File 2 Confusion matrix:
+[[    41  16923     42]
+ [   256 164462    168]
+ [    20  17903     65]]
+2025-06-20 01:04:49,306 - INFO - Combined Confusion matrix:
+[[     1  16982     23]
+ [     6 164806     74]
+ [     0  17947     41]]
+2025-06-20 01:04:49,315 - INFO - Combined accuracy: 0.8247
+2025-06-20 01:04:49,429 - INFO - Combined classification report:
+              precision    recall  f1-score   support
+
+           0       0.14      0.00      0.00     17006
+           1       0.83      1.00      0.90    164886
+           2       0.30      0.00      0.00     17988
+
+    accuracy                           0.82    199880
+   macro avg       0.42      0.33      0.30    199880
+weighted avg       0.72      0.82      0.75    199880
+
+2025-06-20 01:04:49,812 - INFO - Combined confusion matrix saved to: backtest/multi_images\combined_confusion_matrix_20250620_010449.png
+2025-06-20 01:04:52,172 - INFO - Total minutes:199870, Total trade: 145
+2025-06-20 01:04:52,172 - INFO - Total pnl:139.3577, avergae pnl:0.9611
+2025-06-20 01:04:52,172 - INFO - Multi-model backtest finished
+
+2025-06-20 16:38:15,627 - INFO - =====================================
+2025-06-20 16:38:15,627 - INFO - Starting multi-model backtest
+2025-06-20 16:38:15,627 - INFO - Multi test started with files: infer_result/follow_141202.csv and infer_result/follow_214403.csv
+2025-06-20 16:38:15,627 - INFO - Threshold settings: long_threshold_1=0.33, short_threshold_1=0.33
+2025-06-20 16:38:15,627 - INFO - Threshold settings: long_threshold_2=0.33, short_threshold_2=0.33
+2025-06-20 16:38:15,627 - INFO - infer_result/follow_141202.csv threshold settings: 
+use_threshold=True, long_threshold=0.33, short_threshold=0.33
+2025-06-20 16:38:15,830 - INFO - Data processing completed, 199880 rows processed
+2025-06-20 16:38:15,830 - INFO - infer_result/follow_214403.csv threshold settings: 
+use_threshold=True, long_threshold=0.33, short_threshold=0.33
+2025-06-20 16:38:16,031 - INFO - Data processing completed, 199880 rows processed
+2025-06-20 16:38:16,048 - INFO - File 1 Confusion matrix:
+[[22730 18790 23889]
+ [18587 23878 25584]
+ [17687 19027 29708]]
+2025-06-20 16:38:16,066 - INFO - File 2 Confusion matrix:
+[[  5179   8171   3656]
+ [ 33518 111117  20251]
+ [  4726   8715   4547]]
+2025-06-20 16:38:17,408 - INFO - Combined Confusion matrix:
+[[  1960  12746   2300]
+ [ 15722 135825  13339]
+ [  1705  13313   2970]]
+2025-06-20 16:38:17,431 - INFO - Combined accuracy: 0.7042
+2025-06-20 16:38:17,564 - INFO - Combined classification report:
+              precision    recall  f1-score   support
+
+           0       0.10      0.12      0.11     17006
+           1       0.84      0.82      0.83    164886
+           2       0.16      0.17      0.16     17988
+
+    accuracy                           0.70    199880
+   macro avg       0.37      0.37      0.37    199880
+weighted avg       0.72      0.70      0.71    199880
+
+2025-06-20 16:38:17,937 - INFO - Combined confusion matrix saved to: backtest/multi_images\combined_confusion_matrix_20250620_163817.png
+2025-06-20 16:38:20,160 - INFO - Total minutes:199870, Total trade: 37996
+2025-06-20 16:38:20,160 - INFO - Total pnl:-4194.9470, avergae pnl:-0.1104
+2025-06-20 16:38:20,160 - INFO - Multi-model backtest finished
+

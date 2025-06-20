@@ -239,15 +239,15 @@ if __name__ == "__main__":
     logger.info("Starting threshold optimization analysis")
     
     # 获取输入文件名，如果命令行参数提供则使用，否则使用默认值
-    input_file = "infer_result/follow_162953.csv"
+    input_file = "infer_result/follow_214403.csv"
     if len(sys.argv) > 1:
         input_file = sys.argv[1]
         
     # 设置阈值范围
-    start_threshold = 0.95
+    start_threshold = 0.91
     end_threshold = 0.998
-    step_size = 0.0015
-    min_daily_trades_required = 1  # 每日最小交易次数
+    step_size = 0.002
+    min_daily_trades_required = 0.5  # 每日最小交易次数
     
     # 设置交易天数计算参数
     minutes_per_day = 1440  # 默认每天1440分钟 (24小时)
