@@ -99,11 +99,17 @@ def main():
     # input("press enter to continue")
     dl = DataLoader(ds, batch_size=CFG.batch, shuffle=False, num_workers=4, pin_memory=True)
 
+    print("Dataset accomplished!")
+
     # 3) 构建并载入模型
     model = build_model(args.model, n_feat, num_classes, ckpt_path, args.device)
 
+    print("Model loaded!")
+
     # 4) 推断
     predictions = infer(model, dl, args.device)
+
+    print("Predictions accomplished!")
 
     # 5) 将预测写回 csv（与最后一个时间步对齐）
     out_df = pd.read_csv(csv_path)

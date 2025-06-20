@@ -14,7 +14,7 @@ class CFG:
     batch: int = 256
     lr: float = 1e-5
     epochs: int = 50
-    patience: int = 3
+    patience: int = 2
     model: str = "transformer"
     hidden: int = 512
     layers: int = 3

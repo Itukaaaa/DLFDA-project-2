@@ -6,11 +6,26 @@ from pathlib import Path
 import torch.nn as nn
 from sklearn.utils.class_weight import compute_class_weight
 import numpy as np
+import torch, torch.nn.functional as F
 
+class SoftCM_Acc02Loss(torch.nn.Module):
+    def __init__(self, cls_w, eps=1e-6):
+        super().__init__()
+        self.eps = eps
+        self.cls_w = cls_w
+    def forward(self, logits, target):
+        p = F.softmax(logits, dim=1)                # [B,3]
+        y = F.one_hot(target, 3).float()            # [B,3]
+        cm = p.T @ y                                # [3,3] soft CM
+        _ = cm[0,0] + cm[2,2] - cm[2,0] * 1.1 - cm[0,2] * 1.1 - cm[0,1] * 0.1 - cm[2,1] * 0.1
+        P0 = cm[0,1] + cm[0,2] + cm[0,0]
+        P2 = cm[2,0] + cm[2,1] + cm[2,2]
+        acc02 = _ / (P0 + P2 + self.eps)
+        return 1.0 - acc02                          # minimise
 
 def acc(logits,y):return (logits.argmax(1)==y).float().mean().item()
 
-def validate(model, loader, criterion, device, log,
+def validate(model, loader, crit1, crit2, w1, w2, device, log,
              save_dir="confusion_val", epoch=None):
     """
     • 评估模式 (no grad)
@@ -28,7 +43,7 @@ def validate(model, loader, criterion, device, log,
         for x, y in loader:
             x, y = x.to(device), y.to(device)
             out = model(x)
-            loss = criterion(out, y)
+            loss = crit1(out, y) * w1 + crit2(out, y) * w2
 
             tot_loss += loss.item()
             tot_acc  += (out.argmax(1) == y).float().mean().item()
@@ -72,7 +87,7 @@ def validate(model, loader, criterion, device, log,
 
     # return avg_loss, avg_acc
 
-def run_epoch(model, loader, criterion, optimizer, device, log, train=True):
+def run_epoch(model, loader, crit1, crit2, w1, w2, optimizer, device, log, train=True):
     """
     单个 epoch 的训练或评估。
     ──────────────────────────────
@@ -95,7 +110,7 @@ def run_epoch(model, loader, criterion, optimizer, device, log, train=True):
 
         with torch.set_grad_enabled(train):
             outputs = model(x)
-            loss = criterion(outputs, y)
+            loss = crit1(outputs, y) * w1 + crit2(outputs, y) * w2
 
             if train:
                 loss.backward()
@@ -125,7 +140,7 @@ def train_model(cfg, model, loaders, log):
     cls_w = compute_class_weight('balanced', classes=torch.arange(n_cls).numpy(), y=labels_for_weights)
     cls_w = torch.tensor(cls_w, dtype=torch.float32).to(cfg.device)
     # cls_w[1] *= 1.5
-    crit = nn.CrossEntropyLoss(weight=cls_w)
+    celoss = nn.CrossEntropyLoss(weight=cls_w)
 
     # 优化器与学习率调度器
     opt = torch.optim.AdamW(model.parameters(), lr=cfg.lr)
@@ -140,14 +155,25 @@ def train_model(cfg, model, loaders, log):
     best_acc_focus = 0
     no_improve = 0
 
+    cmloss = SoftCM_Acc02Loss(cls_w = cls_w)
+
     for epoch in range(1, cfg.epochs + 1):
-        tr_loss, tr_acc = run_epoch(model, train_loader, crit, opt, cfg.device, log, train=True)
-        val_loss, val_acc, val_acc_focus = validate(model, val_loader, crit, cfg.device, log,
+        if epoch == 1:
+            w1 = 1.0
+            w2 = 0.0
+        else :
+            w1 = 0.05
+            w2 = 0.95
+        tr_loss, tr_acc = run_epoch(model, train_loader, celoss, cmloss, w1, w2, opt, cfg.device, log, train=True)
+        val_loss, val_acc, val_acc_focus = validate(model, val_loader, celoss, cmloss, w1, w2, cfg.device, log,
                                                     save_dir=str(cm_dir), epoch=epoch)
         sched.step(val_loss)
 
         log(f"Epoch {epoch:02d} | train {tr_loss:.4f}/{tr_acc:.4f} | "
             f"val {val_loss:.4f}/{val_acc:.4f} | lr {opt.param_groups[0]['lr']:.2e}")
+
+        if epoch == 1:
+            continue
 
         if val_acc_focus > best_acc_focus:
             best_acc_focus = val_acc_focus
@@ -162,7 +188,7 @@ def train_model(cfg, model, loaders, log):
 
     # 加载最佳模型
     model.load_state_dict(torch.load(ckpt / 'best.pt'))
-    te_loss, te_acc = run_epoch(model, test_loader, crit, opt, cfg.device, log, train=False)
+    te_loss, te_acc = run_epoch(model, test_loader, celoss, cmloss, 0.1, 0.9, opt, cfg.device, log, train=False)
     log(f"[TEST] loss/acc = {te_loss:.4f} / {te_acc:.4f}")
 
     # 画混淆矩阵

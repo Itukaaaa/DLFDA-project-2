@@ -31,7 +31,7 @@ df['label'] = df.apply(create_label, axis=1)
 df = df.dropna().reset_index(drop=True)
 
 # 保存结果
-df.to_csv('data/BTCUSDT_feature_derived.csv', index=False)
+df.to_csv('data/BTCUSDT_feature_new.csv', index=False)
 
 print(f"特征衍生完成，共处理 {len(df)} 条数据")
 print(f"标签分布:")
